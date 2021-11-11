@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\MechanicsController;
+use App\Http\Controllers\VehcileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +18,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('master');
+
 });
+
+Route::get('/admin',[AdminController::class,'admin']);
+Route::get('/user',[UserController::class,'User']);
+Route::get('/mechanics',[MechanicsController::class,'mechanics']);
+Route::get('/home',[HomeController::class,'home']);
+
+
+
