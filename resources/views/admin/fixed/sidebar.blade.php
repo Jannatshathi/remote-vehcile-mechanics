@@ -1,7 +1,7 @@
 <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboard.html">
+            <a class="nav-link" href="{{route('home')}}">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
@@ -14,22 +14,34 @@
           </li>
 
           
-          <li class="nav-item ">
-            <a class="nav-link" href="{{url('/user')}}">
+         <!-- <li class="nav-item ">
+            <a class="nav-link" href="#">
               <i class="material-icons">person</i>
               <p>User</p>
             </a>
-          </li>
+          </li>-->
           
           <!--content(typography)--> 
 
           <!--content(icon)--> 
+          <li class="nav-item ">
+            <a class="nav-link" href="{{url('/user')}}">
+              <i class="material-icons">person</i>
+              <p>user</p>
+            </a>
+          </li>
 
           
           <li class="nav-item ">
-            <a class="nav-link" href="{{url('/mechanics')}}">
+            <a class="nav-link" href="{{route('mechanics')}}">
               <i class="material-icons">person</i>
               <p>Mechanics</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{{url('/service')}}">
+              <i class="material-icons">content_paste</i>
+              <p>service</p>
             </a>
           </li>
 
@@ -40,12 +52,7 @@
             </a>
           </li>
 
-          <li class="nav-item ">
-            <a class="nav-link" href="./tables.html">
-              <i class="material-icons">content_paste</i>
-              <p>service</p>
-            </a>
-          </li>
+          
 
           <li class="nav-item ">
             <a class="nav-link" href="./tables.html">

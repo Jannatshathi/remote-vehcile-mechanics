@@ -2,14 +2,10 @@
 
 
 @section('content')
+<h1>Service List</h1>
 
 
-  
 
-<h1>Mechanics List</h1>
-
-
-<button type="button" class="btn btn-info">Chose Mechanics</button>
 
 <table class="table">
     <thead>

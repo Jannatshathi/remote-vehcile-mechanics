@@ -1,15 +1,11 @@
 @extends('master')
 
-
 @section('content')
 
 
-  
-
-<h1>Mechanics List</h1>
-
-
-<button type="button" class="btn btn-info">Chose Mechanics</button>
+<div>
+    <h1>Types of Vehcile</h1>
+    <button type="button" class="btn btn-info">Select Vehcile</button>
 
 <table class="table">
     <thead>
@@ -40,4 +36,6 @@
     </tr>
     </tbody>
 </table>
+</div>
+
 @endsection
