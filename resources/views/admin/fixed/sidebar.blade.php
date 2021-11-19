@@ -39,7 +39,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="{{url('/service')}}">
+            <a class="nav-link" href="{{route('service.list')}}">
               <i class="material-icons">content_paste</i>
               <p>service</p>
             </a>

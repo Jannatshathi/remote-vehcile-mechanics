@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
-    public function service(){
-        return view('pages.service');
+    public function servicelist(){
+        return view('pages.service.service-list');
     }
 }

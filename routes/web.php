@@ -38,7 +38,7 @@ Route::get('/mechanism',[MechanicsController::class,'mechanics'])->name('mechani
 Route::get('/',[HomeController::class,'home'])->name('home');
 Route::get('/register',[RegisterController::class,'register']);
 Route::get('/user',[UserController::class,'user']);
-Route::get('/service',[ServiceController::class,'service']);
+Route::get('/service-list',[ServiceController::class,'serviceList'])->name('service.list');
 Route::get('/vehcile',[VehcileController::class,'vehcile']);
 
 Route::post('/register/store',[RegisterController::class,'store'])->name('register.store');
