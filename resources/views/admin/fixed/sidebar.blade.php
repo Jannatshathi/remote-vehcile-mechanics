@@ -25,15 +25,15 @@
 
           <!--content(icon)--> 
           <li class="nav-item ">
-            <a class="nav-link" href="{{url('/user')}}">
+            <a class="nav-link" href="{{route('customer.list')}}">
               <i class="material-icons">person</i>
-              <p>user</p>
+              <p>customer</p>
             </a>
           </li>
 
           
           <li class="nav-item ">
-            <a class="nav-link" href="{{route('mechanics')}}">
+            <a class="nav-link" href="{{route('mechanics.list')}}">
               <i class="material-icons">person</i>
               <p>Mechanics</p>
             </a>
