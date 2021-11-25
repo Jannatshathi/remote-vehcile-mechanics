@@ -4,6 +4,27 @@
 @section('content')
 
 <h1>Create new category</h1>
+@if(session()->has('success'))
+<p class="alert alert-success">
+    {{session()->get('success')}}
+</p>
+@endif
+
+{{-- @if(session()->has('error'))
+<p class="alert alert-danger">
+    {{session()->get('error')}}
+</p>
+@endif --}}
+
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
 
 <form action="{{route('category.store')}}" method="POST">

@@ -25,7 +25,7 @@
   
 </div>
 
-<div class="callout__wrapper center-content">
+<!--<div class="callout__wrapper center-content">
 <div class="callout__text">
 <h2 class="callout__title">Description</h2>
 <div class="callout__content"><p>We curate purpose-driven digital solutions that solve business problems. 
@@ -61,7 +61,7 @@
       </div>
     </div>
   </div>
-</div>
+</div>-->
 
 
 @endsection

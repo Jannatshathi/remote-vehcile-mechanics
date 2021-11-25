@@ -14,6 +14,28 @@
   Add service
 </button>
 <a class="btn btn-primary" href="{{route('service.category')}}" role="button">Add category</a>
+ 
+{{-- @if(session()->has('success'))
+<p class="alert alert-success">
+    {{session()->get('success')}}
+</p>
+@endif
+
+{{-- @if(session()->has('error'))
+<p class="alert alert-danger">
+    {{session()->get('error')}}
+</p>
+@endif --}}
+
+{{-- @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif --}} --}}
 
 <table class="table">
   <thead>
@@ -55,12 +77,7 @@
         
       <!-- form  -->
 
-      @if(session()->has('success'))
-      <p class="alert alert-success">
-          {{session()->get('success')}}
-      </p>
-      @endif
-
+      
       <form action="{{route('service.store')}}" method='POST'>
         @csrf
  

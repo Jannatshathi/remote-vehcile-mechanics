@@ -24,6 +24,7 @@ class ServiceController extends Controller
             'category_id'=>$request->category
         
         ]);
-        return redirect()->back()->with('success','service-list created successfully.');
+         return redirect()->back();
+        //  ->with('success','service-category created successfully.');
     }
 }

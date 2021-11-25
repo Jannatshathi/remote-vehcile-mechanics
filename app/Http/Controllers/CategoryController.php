@@ -29,11 +29,19 @@ class CategoryController extends Controller
         return view('pages.service.category');
     }
     public function store(Request $request){
+
+
+        $request->validate([
+            'name'=>'required',
+            //  | min:11|max:11
+            'details'=>'required'
+        ]);
+
         Category::create([
             'name'=>$request->name,
             'details'=>$request->details
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('success','category created successfully.');
 
     
 
