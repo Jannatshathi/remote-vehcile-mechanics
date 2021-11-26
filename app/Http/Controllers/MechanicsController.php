@@ -10,7 +10,7 @@ class MechanicsController extends Controller
     public function mechanicslist(){
         $mechanics=Mechanics::all();
         //dd($mechanics);
-        return view('pages.mechanics.mechanics-list',compact('mechanics'));
+        return view('admin.pages.mechanics.mechanics-list',compact('mechanics'));
     }
     public function store(Request $request){
         //dd($request->all());
@@ -18,7 +18,7 @@ class MechanicsController extends Controller
           
             'name'=>$request->name,
             'email'=>$request->email,
-            'pass'=>$request->pass,
+            'password'=>$request->password,
             'phone'=>$request->phone,
             'address'=>$request->address,
         ]);

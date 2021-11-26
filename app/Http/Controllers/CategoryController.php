@@ -12,7 +12,7 @@ class CategoryController extends Controller
     //}
 
     public function categoryCreate(){
-        return view('pages.category-create');
+        return view('admin.pages.category-create');
     }
 
     // public function add(Request $request){
@@ -26,7 +26,7 @@ class CategoryController extends Controller
 
     public function category()
     {
-        return view('pages.service.category');
+        return view('admin.pages.service.category');
     }
     public function store(Request $request){
 

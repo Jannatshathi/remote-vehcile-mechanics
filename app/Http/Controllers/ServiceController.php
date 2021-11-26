@@ -9,12 +9,18 @@ use App\Models\Category;
 class ServiceController extends Controller
 {
     public function servicelist(){
-        $service=Service::all();
+        $service=Service::with('category')->get();
         $data=Category::all();
         //dd($data);
-        return view('pages.service.service-list',compact('service', 'data'));
+        return view('admin.pages.service.service-list',compact('service', 'data'));
     }
     public function store(Request $request){
+        $request->validate([
+            'name'=>'required',
+            'cost'=>'required',
+            'details'=>'required',
+        ]);
+        
          //dd($request->all());
         Service::create([
            
@@ -24,7 +30,6 @@ class ServiceController extends Controller
             'category_id'=>$request->category
         
         ]);
-         return redirect()->back();
-        //  ->with('success','service-category created successfully.');
+         return redirect()->back()->with('success','service-category created successfully.');
     }
 }

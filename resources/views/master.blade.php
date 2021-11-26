@@ -83,7 +83,9 @@
           Remote Vehcile Mechanics 
         </a>
       </div>
+
        @include('admin.fixed.sidebar')
+       
     </div>
     <div class="main-panel">
  

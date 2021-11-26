@@ -10,7 +10,7 @@
 </style>
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Add Mechanics
 </button>
 
@@ -49,41 +49,40 @@
         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body" style="background-color: white;">
+      <div class="modal-body" style="background-color: black;">
         
       <!-- form  -->
 
   
-  <form action="{{route('mechanics.store')}}" method='POST'>
+  <form action="{{route('admin.mechanics.store')}}" method='POST'>
     @csrf
     
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Mechanic Name</label>
-    <input style="color: black !important" name='name' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input style="color: white !important" name='name' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Email</label>
-    <input style="color: black !important" name='email' type="email" class="form-control" id="exampleInputPassword1">
+    <input style="color: white !important" name='email' type="email" class="form-control" id="exampleInputPassword1">
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input style="color: black !important" name='pass' type="password" class="form-control" id="exampleInputPassword1">
+    <input style="color: white !important" name='password' type="password" class="form-control" id="exampleInputPassword1">
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Phone</label>
-    <input style="color: black !important" name='phone' type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input style="color: white !important" name='phone' type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Address</label>
-    <input style="color: black !important" name='address' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input style="color: white !important" name='address' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
       <div class="modal-footer" style="background-color: black;334">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

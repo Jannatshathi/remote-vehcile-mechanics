@@ -3,13 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 
-use App\Http\Controllers\MechanicsController;
-use App\Http\Controllers\VehcileController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\MechanicsController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\VehcileController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,8 +27,8 @@ use App\Http\Controllers\CategoryController;
 
 
     Route::get('/pages', function () {
-        return view('pages.home');
-    })->name('pages');
+        return view('admin.pages.home');
+    })->name('admin.pages');
 Route::get('/', function () {
     return view('master');
 
@@ -35,19 +36,20 @@ Route::get('/', function () {
 
 Route::get('/admin',[AdminController::class,'admin']);
 
-Route::get('/mechanism',[MechanicsController::class,'mechanicsList'])->name('mechanics.list');
 Route::get('/',[HomeController::class,'home'])->name('home');
-Route::get('/register',[RegisterController::class,'register']);
-Route::get('/customer-list',[CustomerController::class,'customerList'])->name('customer.list');
-Route::get('/service-list',[ServiceController::class,'serviceList'])->name('service.list');
-Route::get('/vehcile',[VehcileController::class,'vehcile']);
+Route::get('/customer-list',[CustomerController::class,'customerList'])->name('admin.customer.list');
+Route::get('/mechanics',[MechanicsController::class,'mechanicsList'])->name('admin.mechanics.list');
+Route::get('/service-list',[ServiceController::class,'serviceList'])->name('admin.service.list');
+Route::get('/service/category',[CategoryController::class,'category'])->name('admin.service.category');
 
-Route::post('/register/store',[RegisterController::class,'store'])->name('register.store');
-Route::post('/service/store',[ServiceController::class,'store'])->name('service.store');
-Route::post('/mechanics/store',[MechanicsController::class,'store'])->name('mechanics.store');
-Route::post('/customer/store',[CustomerController::class,'store'])->name('customer.store');
-Route::get('/mechanics/service',[ServiceController::class,'serviceList'])->name('service.list');
-Route::get('/service/category',[CategoryController::class,'category'])->name('service.category');
-Route::post('/category/store',[CategoryController::class,'store'])->name('category.store');
+Route::get('/vehcile',[VehcileController::class,'admin.vehcile']);
+
+Route::post('/customer/store',[CustomerController::class,'store'])->name('admin.customer.store');
+Route::post('/mechanics/store',[MechanicsController::class,'store'])->name('admin.mechanics.store');
+Route::post('/service/store',[ServiceController::class,'store'])->name('admin.service.store');
+Route::post('/category/store',[CategoryController::class,'store'])->name('admin.category.store');
+
+// Route::get('/mechanics/service',[ServiceController::class,'serviceList'])->name('admin.service.list');
+
 
 

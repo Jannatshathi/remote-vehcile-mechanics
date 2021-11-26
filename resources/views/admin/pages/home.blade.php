@@ -15,12 +15,8 @@
       An Auto Mechanic, or Service Technician, fixes vehicles and replaces their parts for customers.
       Their duties include inspecting the vehicle's mechanical components and its engine,
       diagnosing problems with vehicles and performing maintenance and repair work on cars,
-       trucks and other vehicles.</p>
-    <!--<a href="#" class="btn btn-primary">Go somewhere</a>--> 
-    <div class="d-grid gap-2 col-6 mx-auto">
-  <a href="register" class="btn btn-secondary" type="button">register</a>
-  <button class="btn btn-secondary" type="button">login</button>
-</div>
+       trucks and other vehicles.</p> 
+    
   </div>
   
 </div>

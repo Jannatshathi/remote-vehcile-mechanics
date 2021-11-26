@@ -8,6 +8,6 @@ class VehcileController extends Controller
 {
     public function vehcile(){
 
-        return view('pages.vehcile');
+        return view('admin.pages.vehcile');
     }
 }

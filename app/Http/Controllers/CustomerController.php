@@ -10,15 +10,15 @@ class CustomerController extends Controller
     public function customerlist(){
         $customer=Customer::all();
         //dd($customer);
-        return view('pages.customer.customer-list',compact('customer'));
+        return view('admin.pages.customer.customer-list',compact('customer'));
     }
     public function store(Request $request){
         //dd($request->all());
         Customer::create([
         
-            'c_name'=>$request->c_name,
+            'name'=>$request->name,
             'email'=>$request->email,
-            'pass'=>$request->pass,
+            'password'=>$request->password,
             'phone'=>$request->phone,
             
         ]);

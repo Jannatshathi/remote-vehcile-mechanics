@@ -25,7 +25,7 @@
 
           <!--content(icon)--> 
           <li class="nav-item ">
-            <a class="nav-link" href="{{route('customer.list')}}">
+            <a class="nav-link" href="{{route('admin.customer.list')}}">
               <i class="material-icons">person</i>
               <p>customer</p>
             </a>
@@ -33,15 +33,21 @@
 
           
           <li class="nav-item ">
-            <a class="nav-link" href="{{route('mechanics.list')}}">
+            <a class="nav-link" href="{{route('admin.mechanics.list')}}">
               <i class="material-icons">person</i>
               <p>Mechanics</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="{{route('service.list')}}">
+            <a class="nav-link" href="{{route('admin.service.list')}}">
               <i class="material-icons">content_paste</i>
               <p>service</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{{route('admin.service.category')}}">
+              <i class="material-icons">content_paste</i>
+              <p>category</p>
             </a>
           </li>
 
