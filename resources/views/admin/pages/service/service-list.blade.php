@@ -40,12 +40,18 @@
       <th scope="col">Cost</th>
       <th scope="col">Details</th>
       <th scope="col">Category</th>
+      <th scope="col">Image</th>
     </tr>
   </thead>
   <tbody>
     @foreach($service as $x) <!--service as array-->
     <tr>
       <th scope="row">{{$x->id}}</th>
+      
+      <th>
+        <img style="border-radius: 4px;" width="100px;" src=" {{url('/uploads/'.$x->service_image)}}" alt="service">
+
+    </th>
      
       <td>{{$x->name}}</td>
       <td>{{$x->cost}}</td>
@@ -72,30 +78,35 @@
       <!-- form  -->
 
       
-      <form action="{{route('admin.service.store')}}" method='POST'>
+      <form action="{{route('admin.service.store')}}" method='POST' enctype="multipart/form-data">
         @csrf
  
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Service Name</label>
+    <label for="exampleInputPassword1" class="form-label">Service Name*</label>
     <input required style="color: white !important" name='name' type="text" class="form-control" id="exampleInputPassword1">
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Cost*</label>
-    <input required style="color: white !important" name='cost' type="text" class="form-control" id="exampleInputPassword1">
+    <input required style="color: white !important" name='cost' type="number" class="form-control" id="exampleInputPassword1">
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Details</label>
     <input required style="color: white !important" name='details' type="text" class="form-control" id="exampleInputPassword1">
   </div>
 
+{{-- for relation --}}
 
   <select name="category" class="form-select" aria-label="Default select example" >
-      <option selected>Open this select menu</option>
+      <option selected>Open this select menu*</option>
       @foreach ($data as $item)
       <option value="{{$item->id}}">{{$item->name}}</option>
       @endforeach
   </select>
 
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Service Image</label>
+    <input required style="color: white !important" name='service_image' type="file" class="form-control" id="exampleInputPassword1">
+  </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

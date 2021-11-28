@@ -15,6 +15,20 @@ class ServiceController extends Controller
         return view('admin.pages.service.service-list',compact('service', 'data'));
     }
     public function store(Request $request){
+        // $image_name=null;
+        // dd($request->all());
+//              step 1: check image exist in this request.
+                 if($request->hasFile('service_image'))
+                 {
+                     $file=$request->file('service_image');
+                     // step 2: generate file name
+                     $image_name=date('Ymdhis') .'.'. $file->getClientOriginalExtension();
+
+                     //step 3 : store into project directory
+
+                     $file->storeAs('/services',$image_name);
+                    }
+
         $request->validate([
             'name'=>'required',
             'cost'=>'required',
@@ -27,7 +41,9 @@ class ServiceController extends Controller
             'name'=>$request->name,
             'cost'=>$request->cost,
             'details'=>$request->details,
-            'category_id'=>$request->category
+            'image'=>$image_name,
+            'category_id'=>$request->category,
+            
         
         ]);
          return redirect()->back()->with('success','service-category created successfully.');

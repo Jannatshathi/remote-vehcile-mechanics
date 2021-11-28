@@ -19,6 +19,7 @@ class CreateServicesTable extends Migration
             $table->double('category_id');
             $table->float('cost');
             $table->string('details');
+            $table->string('image');
             $table->timestamps();
         });
     }

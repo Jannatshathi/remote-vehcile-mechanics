@@ -13,6 +13,12 @@ class CustomerController extends Controller
         return view('admin.pages.customer.customer-list',compact('customer'));
     }
     public function store(Request $request){
+        $request->validate([
+            'name'=>'required',
+            'email'=>'required',
+            'password'=>'required',
+            'phone'=>'required|max:11',
+        ]);
         //dd($request->all());
         Customer::create([
         
@@ -22,6 +28,6 @@ class CustomerController extends Controller
             'phone'=>$request->phone,
             
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('success','customer form created successfully.');
     }
 }
