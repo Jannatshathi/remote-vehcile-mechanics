@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class VehcileController extends Controller
+class DepositeController extends Controller
 {
-    public function vehcile(){
+    public function deposite(){
         return 'hello';
     }
 }

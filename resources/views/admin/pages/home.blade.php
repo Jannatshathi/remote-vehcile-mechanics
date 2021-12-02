@@ -6,9 +6,9 @@
 <div class="card text-center">
   <div class="card-header">
     <h1>
-  <p style="color:blue">Remote Vehcile Mechanics<p>
+  <p style="color:blue">Remote Vehicle Mechanics<p>
 </h1>
-  </div>
+  {{-- </div>
   <div class="card-body">
     <h2 class="card-title">Keep up with the trends</h2>
     <p class="card-text">
@@ -17,7 +17,7 @@
       diagnosing problems with vehicles and performing maintenance and repair work on cars,
        trucks and other vehicles.</p> 
     
-  </div>
+  </div> --}}
   
 </div>
 

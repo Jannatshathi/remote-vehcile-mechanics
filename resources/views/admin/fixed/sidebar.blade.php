@@ -12,6 +12,19 @@
               <p>Admin</p>
             </a>
           </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{{route('admin.service.type')}}">
+              <i class="material-icons">content_paste</i>
+              <p>Service Type</p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link" href="{{route('admin.service.list')}}">
+              <i class="material-icons">content_paste</i>
+              <p>service</p>
+            </a>
+          </li>
 
           
          <!-- <li class="nav-item ">
@@ -30,59 +43,48 @@
               <p>customer</p>
             </a>
           </li>
-
-          
+          <li class="nav-item ">
+            <a class="nav-link" href="{{route('admin.request.list')}}">
+              <i class="material-icons">content_paste</i>
+              <p>Request</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{{route('admin.vehcile')}}">
+              <i class="material-icons">content_paste</i>
+              <p>Vehcile</p>
+            </a>
+          </li>
           <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.mechanics.list')}}">
               <i class="material-icons">person</i>
               <p>Mechanics</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="{{route('admin.service.list')}}">
-              <i class="material-icons">content_paste</i>
-              <p>service</p>
-            </a>
-          </li>
-          <li class="nav-item ">
+          
+          {{-- <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.service.category')}}">
               <i class="material-icons">content_paste</i>
               <p>category</p>
             </a>
-          </li>
-
-          <li class="nav-item ">
-            <a class="nav-link" href="{{url('/vehcile')}}">
-              <i class="material-icons">content_paste</i>
-              <p>Vehcile</p>
-            </a>
-          </li>
-
+          </li> --}}
           
-
           <li class="nav-item ">
-            <a class="nav-link" href="./tables.html">
+            <a class="nav-link" href="{{route('admin.deposite')}}">
               <i class="material-icons">content_paste</i>
-              <p>Service-post</p>
+              <p>Deposite</p>
             </a>
           </li>
 
-          <li class="nav-item ">
-            <a class="nav-link" href="./tables.html">
-              <i class="material-icons">content_paste</i>
-              <p>Payment</p>
-            </a>
-          </li>
-
-          <li class="nav-item ">
+          {{-- <li class="nav-item ">
             <a class="nav-link" href="./tables.html">
               <i class="material-icons">content_paste</i>
               <p>Feedback</p>
             </a>
-          </li>
+          </li> --}}
 
           <li class="nav-item ">
-            <a class="nav-link" href="./tables.html">
+            <a class="nav-link" href="{{route('admin.report')}}">
               <i class="material-icons">content_paste</i>
               <p>Report</p>
             </a>

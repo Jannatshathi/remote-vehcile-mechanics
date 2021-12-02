@@ -31,6 +31,8 @@
 </button>
 {{-- <a class="btn btn-primary" href="{{route('service.category')}}" role="button">Add category</a> --}}
 
+{{-- table --}}
+
 <table class="table">
   <thead>
     <tr>
@@ -40,23 +42,22 @@
       <th scope="col">Cost</th>
       <th scope="col">Details</th>
       <th scope="col">Category</th>
-      <th scope="col">Image</th>
+      <th scope="col">Service Image</th>
     </tr>
   </thead>
   <tbody>
     @foreach($service as $x) <!--service as array-->
     <tr>
       <th scope="row">{{$x->id}}</th>
-      
-      <th>
-        <img style="border-radius: 4px;" width="100px;" src=" {{url('/uploads/'.$x->service_image)}}" alt="service">
-
-    </th>
      
       <td>{{$x->name}}</td>
       <td>{{$x->cost}}</td>
       <td>{{$x->details}}</td>
       <td>{{$x->category->name}}</td>
+      <th>
+        <img style="border-radius: 4px;" width="150px;" src=" {{url('/uploads/'.$x->image)}}" alt="service">
+
+    </th>
     </tr>
     @endforeach
   </tbody>

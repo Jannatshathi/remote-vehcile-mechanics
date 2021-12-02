@@ -2,7 +2,7 @@
 
 @section('content')
 
-
+{{-- 
 <div>
     <h1>Types of Vehcile</h1>
     <button type="button" class="btn btn-info">Select Vehcile</button>
@@ -36,6 +36,6 @@
     </tr>
     </tbody>
 </table>
-</div>
+</div> --}}
 
 @endsection

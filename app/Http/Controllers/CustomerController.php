@@ -28,6 +28,10 @@ class CustomerController extends Controller
             'phone'=>$request->phone,
             
         ]);
-        return redirect()->back()->with('success','customer form created successfully.');
+        return redirect()->route('home.front')->with('success','customer form created successfully.');
     }
+    public function customer(){
+        return view('website.pages.customer');
+        }
+       //return redirect()->back()
 }
