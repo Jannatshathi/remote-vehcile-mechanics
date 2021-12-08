@@ -82,10 +82,7 @@
 @include('website.fixed.header')
 
 
-      <div class="content">
-         @yield('content')
-      <!--content-->
-          </div>
+      
                     
             
 
@@ -98,7 +95,13 @@
 </div>
 </div>
 </div>
-</article><article class="video-testimonial">
+</article>
+
+<div class="content">
+    @yield('content')
+ <!--content-->
+     </div>
+{{-- <article class="video-testimonial">
 <div class="video-testimonial__wrapper center-content">
 <div class="video-testimonial__text">
 <div class="video-testimonial__content"><p>“I look at Terrostar as a partner. They are an extension of my team. They are an extension of my IT department. They know me, they know our company and they’re always willing to help. That’s why we continue to work with Terrostar.”</p>
@@ -109,7 +112,8 @@
 <div class="video-testimonial__video">
 <iframe loading="lazy" title="Client Success Stories: QCR Holdings" width="500" height="281" src="https://www.youtube.com/embed/oGwT2_co0_s?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
 </div>
-</article><article class="callout callout--has-description">
+</article> --}}
+<article class="callout callout--has-description">
 <div class="callout__wrapper center-content">
 <div class="callout__text">
 <h2 class="callout__title">Our Mission</h2>

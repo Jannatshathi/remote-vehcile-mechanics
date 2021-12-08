@@ -13,6 +13,8 @@ class Service_typeController extends Controller
     public function store(Request $request){
         Servicetype::create([
             'name'=>$request->name,
+            'status'=>$request->status,
+            'description'=>$request->description,
         ]);
         return redirect()->back();
 

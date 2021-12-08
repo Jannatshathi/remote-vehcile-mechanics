@@ -30,6 +30,16 @@
         <input name="name" required style="color: white !important" name="name" placeholder="Enter service Name" type="text" class="form-control" id="name" aria-describedby="emailHelp">
 
     </div>
+    <div class="mb-3">
+        <label for="name" class="form-label">Status</label>
+        <input name="status" required style="color: white !important" name="name" placeholder="Enter service status" type="text" class="form-control" id="name" aria-describedby="emailHelp">
+
+    </div>
+    <div class="mb-3">
+        <label for="name" class="form-label">Description</label>
+        <input name="description" required style="color: white !important" name="name" placeholder="Enter service description" type="text" class="form-control" id="name" aria-describedby="emailHelp">
+
+    </div>
 
 
     {{-- <div class="mb-3">

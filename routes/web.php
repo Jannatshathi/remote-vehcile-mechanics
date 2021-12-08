@@ -49,16 +49,22 @@ use App\Http\Controllers\Service_typeController;
 //Route::get('/admin',[AdminController::class,'admin']);
 
 Route::get('/admin',[HomeController::class,'home'])->name('home');
+
+//customer
 Route::get('/customer-list',[CustomerController::class,'customerList'])->name('admin.customer.list');
-Route::get('/mechanics',[MechanicsController::class,'mechanicsList'])->name('admin.mechanics.list');
-Route::get('/service-list',[ServiceController::class,'serviceList'])->name('admin.service.list');
-Route::get('/service/category',[CategoryController::class,'category'])->name('admin.service.category');
-
-
-
 Route::post('/customer/store',[CustomerController::class,'store'])->name('admin.customer.store');
+Route::get('/customer',[CustomerController::class,'customer'])->name('website.customer');
+
+//mechanics
+Route::get('/mechanics',[MechanicsController::class,'mechanicsList'])->name('admin.mechanics.list');
 Route::post('/mechanics/store',[MechanicsController::class,'store'])->name('admin.mechanics.store');
+
+//service
+Route::get('/service-list',[ServiceController::class,'serviceList'])->name('admin.service.list');
 Route::post('/service/store',[ServiceController::class,'store'])->name('admin.service.store');
+
+//category
+Route::get('/service/category',[CategoryController::class,'category'])->name('admin.service.category');
 Route::post('/category/store',[CategoryController::class,'store'])->name('admin.category.store');
 
 //servicetype
@@ -67,19 +73,20 @@ Route::post('/servicetype/store',[Service_typeController::class,'store'])->name(
 Route::get('/servicetype',[Service_typeController::class,'servicetypelist'])->name('admin.service.type');
 Route::get('/service/list',[Service_typeController::class,'serviceList'])->name('website.service.list');
 
-
-Route::get('/deposite',[DepositeController::class,'deposite'])->name('admin.deposite');
-Route::get('/vehcile',[VehcileController::class,'vehcile'])->name ('admin.vehcile');
-Route::get('/report',[ReportController::class,'report'])->name('admin.report');
-
+//request
 Route::get('/request/list',[RequestController::class,'requestList'])->name('admin.request.list');
 Route::post('/request/store',[RequestController::class,'store'])->name('admin.request.store');
 Route::get('/request',[RequestController::class,'request'])->name('admin.request');
 Route::get('/request/status/update/{id}',[RequestController::class,'viewRequest'])->name('admin.view.request');
 Route::put('/request/update/{id}',[RequestController::class,'updateRequest'])->name('admin.update.request');
  
+//deposite
+Route::get('/deposite',[DepositeController::class,'deposite'])->name('admin.deposite');
 
-//website
-Route::get('/customer',[CustomerController::class,'customer'])->name('website.customer');
+//vehcile
+Route::get('/vehcile',[VehcileController::class,'vehcile'])->name ('admin.vehcile');
+
+//report
+Route::get('/report',[ReportController::class,'report'])->name('admin.report');
 
 

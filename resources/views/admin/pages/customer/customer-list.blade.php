@@ -2,7 +2,7 @@
 
 
 @section('content')
-@section('content')
+
 @if(session()->has('success'))
 <p class="alert alert-success">
     {{session()->get('success')}}
