@@ -12,6 +12,12 @@ class CustomerController extends Controller
         //dd($customer);
         return view('admin.pages.customer.customer-list',compact('customer'));
     }
+    
+    public function customerform(){
+        return view('admin.pages.customer.customer-form');
+       
+    }
+
     public function store(Request $request){
         $request->validate([
             'name'=>'required',
@@ -28,7 +34,7 @@ class CustomerController extends Controller
             'phone'=>$request->phone,
             
         ]);
-        return redirect()->route('home.front')->with('success','customer form created successfully.');
+        return redirect()->route('admin.customer.list')->with('success','customer form created successfully.');
     }
     public function customer(){
         return view('website.pages.customer');

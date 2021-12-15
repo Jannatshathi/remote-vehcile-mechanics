@@ -4,16 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Service;
-use App\Models\Category;
+use App\Models\Servicetype;
 
 class ServiceController extends Controller
 {
     public function servicelist(){
-        $service=Service::with('category')->get();
-        $data=Category::all();
+        $service=Service::with('servicetypes')->get();
         //dd($data);
-        return view('admin.pages.service.service-list',compact('service', 'data'));
+        return view('website.pages.service-list',compact('service'));
     }
+   
+    public function serviceform()
+    {
+        $data=servicetype::all();
+        return view('admin.pages.service.service-form',compact('data'));
+    }
+
     public function store(Request $request){
         // $image_name=null;
         //dd($request->all());
@@ -41,7 +47,7 @@ class ServiceController extends Controller
             'name'=>$request->name,
             'cost'=>$request->cost,
             'details'=>$request->details,
-            'category_id'=>$request->category,
+            'servicetypes_id'=>$request->servicetype,
             'image'=>$image_name,
             
         

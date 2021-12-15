@@ -14,9 +14,9 @@ class Service extends Model
     // protected $fillable=['name','price','details'];
     protected $guarded=[];
     
-    public function category()
+    public function servicetypes()
     {
-        return $this-> belongsTo(Category::class);
+        return $this-> belongsTo(Servicetype::class);
         //service->category_id,id
     }
 }

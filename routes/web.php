@@ -10,10 +10,13 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\VehcileController;
 use App\Http\Controllers\DepositeController;
-use App\Http\Controllers\RequestController;
+use App\Http\Controllers\RequestController\website;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\Service_typeController;
-
+use App\Http\Controllers\HomewebController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,9 +43,28 @@ use App\Http\Controllers\Service_typeController;
 
     // website
 
-    Route::get('/',function(){
+    Route::get('/', function () {
+            return redirect()->route('webhome');
+        });
+    Route::get('/website',function(){
         return view('website.master');
-    })->name('home.front');
+    })->name('webhome');
+
+    Route::get('/website/home',[HomewebController::class,'webhome'])->name('webhome');
+    Route::get('/user/registration',[LoginController::class,'registration'])->name('user.registration');
+    Route::post('/user/registration',[LoginController::class,'registrationPost'])->name('user.post.registration');
+
+    Route::post('/user/do/login',[LoginController::class,'doLogin'])->name('user.do.login');
+    Route::get('/admin/user/list',[UserController::class,'userList'])->name('admin.user.list');
+    Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout');
+
+//login
+Route::get('/login',[LoginController::class,'login'])->name('website.login');
+
+
+//register
+Route::get('/register',[LoginController::class,'register'])->name('website.register');
+Route::post('/register/store',[LoginController::class,'store'])->name('website.register.store');
 
 
 
@@ -52,7 +74,11 @@ Route::get('/admin',[HomeController::class,'home'])->name('home');
 
 //customer
 Route::get('/customer-list',[CustomerController::class,'customerList'])->name('admin.customer.list');
+Route::get('/customer-form',[CustomerController::class,'customerform'])->name('admin.customer.form');
 Route::post('/customer/store',[CustomerController::class,'store'])->name('admin.customer.store');
+
+
+
 Route::get('/customer',[CustomerController::class,'customer'])->name('website.customer');
 
 //mechanics
@@ -60,7 +86,8 @@ Route::get('/mechanics',[MechanicsController::class,'mechanicsList'])->name('adm
 Route::post('/mechanics/store',[MechanicsController::class,'store'])->name('admin.mechanics.store');
 
 //service
-Route::get('/service-list',[ServiceController::class,'serviceList'])->name('admin.service.list');
+Route::get('/service-list',[ServiceController::class,'servicelist'])->name('admin.service.list');
+Route::get('/service-form',[ServiceController::class,'serviceform'])->name('admin.service.form');
 Route::post('/service/store',[ServiceController::class,'store'])->name('admin.service.store');
 
 //category
@@ -88,5 +115,8 @@ Route::get('/vehcile',[VehcileController::class,'vehcile'])->name ('admin.vehcil
 
 //report
 Route::get('/report',[ReportController::class,'report'])->name('admin.report');
+
+
+
 
 

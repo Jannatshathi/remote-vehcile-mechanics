@@ -20,7 +20,7 @@
           </li>
 
           <li class="nav-item ">
-            <a class="nav-link" href="{{route('admin.service.list')}}">
+            <a class="nav-link" href="{{route('admin.service.form')}}">
               <i class="material-icons">content_paste</i>
               <p>service</p>
             </a>
@@ -68,7 +68,12 @@
               <p>category</p>
             </a>
           </li> --}}
-          
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.user.list')}}">
+                <span data-feather="file"></span>
+                User list
+            </a>
+        </li>
           <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.deposite')}}">
               <i class="material-icons">content_paste</i>
