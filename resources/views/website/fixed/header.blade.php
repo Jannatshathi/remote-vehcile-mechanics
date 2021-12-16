@@ -23,8 +23,8 @@
     <div class="page-header__bottom" data-uk-sticky>
       <div class="uk-container uk-container-xlarge">
         <div class="page-header__inner">
-        
-          {{-- <div class="page-header__logo logo"><a class="logo__link" href="index.html"><img class="logo__img" src="https://pro-theme.com/html/cardan/assets/img/logo.png" alt="logo"></a></div> --}}
+        {{-- header logo --}}
+         <div class="page-header__logo logo"><a class="logo__link" href="index.html"><img class="logo__img" src="https://pro-theme.com/html/cardan/assets/img/logo.png" alt="logo"></a></div> 
           <div class="page-header__menu mainmenu">
             <nav class="uk-navbar-container uk-navbar-transparent" data-uk-navbar="">
               <ul class="uk-navbar-nav">
@@ -45,12 +45,15 @@
 
                   @if(auth()->user())
                   <a class="btn btn-success" href="{{route('user.logout')}}">logout</a>
+                  <li><a href="{{route('website.myrequest')}}">My Request</a></li>
                   @else
                   <li><a href="{{route('website.login')}}">Login</a></li>
                   @endif
+                  
                 </li>
+                
                 <li><a href="{{route('website.register')}}">Register</a></li>
-                <li><a href="#">My Request</a></li>
+               
                   <div class="uk-navbar-dropdown">
                     <ul class="uk-nav uk-navbar-dropdown-nav">
                       {{-- <li><a href="https://pro-theme.com/html/cardan/page-blog-grid.html">Blog grid</a></li> --}}

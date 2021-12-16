@@ -17,6 +17,7 @@ use App\Http\Controllers\HomewebController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\MyrequestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -106,7 +107,10 @@ Route::post('/request/store',[RequestController::class,'store'])->name('admin.re
 Route::get('/request',[RequestController::class,'request'])->name('admin.request');
 Route::get('/request/status/update/{id}',[RequestController::class,'viewRequest'])->name('admin.view.request');
 Route::put('/request/update/{id}',[RequestController::class,'updateRequest'])->name('admin.update.request');
- 
+
+//myrequest
+Route::get('/myrequest',[MyrequestController::class,'myreq'])->name('website.myrequest');
+Route::post('/myrequest/store',[MyrequestController::class,'store'])->name('website.myrequest.store');
 //deposite
 Route::get('/deposite',[DepositeController::class,'deposite'])->name('admin.deposite');
 

@@ -49,9 +49,11 @@
       <td>{{$x->status}}</td>
       <td>
         @if($x->status == 0)
-        <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-primary">view</a>
+        <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-primary">Accepted</a>
         @else
         <a href="" class="btn btn-danger">Delete</a>
+        <a href="" class="btn btn-danger">Pending</a>
+        
         @endif
       </td>
       

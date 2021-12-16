@@ -9,7 +9,7 @@
         <th scope="col">Service Name</th>
         <th scope="col">Cost</th>
         <th scope="col">Details</th>
-        <th scope="col">Category</th>
+        <th scope="col">Service Type</th>
         <th scope="col">Service Image</th>
       </tr>
     </thead>
