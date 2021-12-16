@@ -12,7 +12,7 @@
                   <div class="first-screen__title" data-uk-slideshow-parallax="x: 100,-100"><span>We’re Leaders in Auto Repair, Maintenance & Inspection</span>
                     <div class="uk-h2">Your One-Stop Solution For<br> All Auto Repair Needs</div>
                   </div>
-                  <div class="first-screen__btns" data-uk-slideshow-parallax="x: 200,-200"><a class="uk-button uk-button-danger uk-button-large" href="#!" data-uk-icon="triangle-right">Learn more</a><a class="uk-button uk-button-default uk-button-large" href="#!" data-uk-icon="triangle-right">Free estimate</a></div>
+                  <div class="first-screen__btns" data-uk-slideshow-parallax="x: 200,-200"><a class="uk-button uk-button-danger uk-button-large" href="{{route('admin.request')}}" data-uk-icon="triangle-right">Request</a><a class="uk-button uk-button-default uk-button-large" href="#!" data-uk-icon="triangle-right">Free estimate</a></div>
                 </div>
               </div>
             </li>
@@ -24,7 +24,7 @@
                     <div class="first-screen__title" data-uk-slideshow-parallax="x: 100,-100">
                       <div class="uk-h2">We Make Your Vehicle<br> In Good Shape</div><span>Minim veniam quis nostrud exercitation ullamco laboris nisu<br> ex sed ipsum ea reprehen deritin voluptate.</span>
                     </div>
-                    <div class="first-screen__btns" data-uk-slideshow-parallax="x: 200,-200"><a class="uk-button uk-button-danger uk-button-large" href="#!" data-uk-icon="triangle-right">Learn more</a><a class="uk-button uk-button-large" href="#!" data-uk-icon="triangle-right">Free estimate</a></div>
+                    <div class="first-screen__btns" data-uk-slideshow-parallax="x: 200,-200"><a class="uk-button uk-button-danger uk-button-large" href="{{route('admin.request')}}" data-uk-icon="triangle-right">Request</a><a class="uk-button uk-button-large" href="#!" data-uk-icon="triangle-right">Free estimate</a></div>
                   </div>
                 </div>
               </div>

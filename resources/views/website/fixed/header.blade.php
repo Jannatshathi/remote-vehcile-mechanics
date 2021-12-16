@@ -44,13 +44,13 @@
                 <li><a href="#">Machanics<span data-uk-icon="chevron-down"></span></a>
 
                   @if(auth()->user())
-                  <a class="btn btn-danger" href="{{route('user.logout')}}">logout</a>
+                  <a class="btn btn-success" href="{{route('user.logout')}}">logout</a>
                   @else
                   <li><a href="{{route('website.login')}}">Login</a></li>
                   @endif
                 </li>
                 <li><a href="{{route('website.register')}}">Register</a></li>
-                
+                <li><a href="#">My Request</a></li>
                   <div class="uk-navbar-dropdown">
                     <ul class="uk-nav uk-navbar-dropdown-nav">
                       {{-- <li><a href="https://pro-theme.com/html/cardan/page-blog-grid.html">Blog grid</a></li> --}}
@@ -62,13 +62,13 @@
               </ul>
             </nav>
           </div>
-          <div class="page-header__callback block-with-icon"><a class="block-with-icon__link" href="tel:8109200664">
+          {{-- <div class="page-header__callback block-with-icon"><a class="block-with-icon__link" href="tel:8109200664">
               <div class="block-with-icon__icon"><img src="https://pro-theme.com/html/cardan/assets/img/ico-callback.svg" alt="ico-callback"></div>
-              {{-- <div class="block-with-icon__desc">
+              <div class="block-with-icon__desc">
                 <div class="block-with-icon__label">Talk With Our Experts</div>
                 <div class="block-with-icon__value">(810) 920-0664</div>
-              </div> --}}
-            </a></div>
+              </div>
+            </a></div> --}}
           <div class="page-header__btn-menu"><a href="#offcanvas" data-uk-toggle data-uk-icon="menu"></a></div>
         </div>
       </div>

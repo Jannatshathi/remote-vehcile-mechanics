@@ -27,7 +27,7 @@
         
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Image</label>
-          <input name="image" type="file" class="form-control" id="exampleInputPassword1">
+          <input name="user_image" type="file" class="form-control" id="exampleInputPassword1">
         </div>
   
       <button type="submit" class="btn btn-primary">Submit</button>

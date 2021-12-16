@@ -1,17 +1,17 @@
 <footer class="page-footer">
     <div class="page-footer-top">
       <div class="uk-container">
-        <div class="uk-grid uk-child-width-1-4@l uk-child-width-1-2@s" data-uk-grid>
+        <div class="uk-grid uk-child-width-1-5@l uk-child-width-1-3@s" data-uk-grid>
           <div class="uk-flex-first@l">
             {{-- <div class="logo"><a class="logo__link" href="https://pro-theme.com/"><img class="logo__img" src="https://pro-theme.com/html/cardan/assets/img/logo-white.png" alt="logo"></a></div> --}}
-            <p>Emod tempor incididunt sed labore dnim ad minim ips veniam quis nosts exercitation ullamco.</p><img src="https://pro-theme.com/html/cardan/assets/img/decor-line-right-accent.svg" alt="">
+            {{-- <p>Emod tempor incididunt sed labore dnim ad minim ips veniam quis nosts exercitation ullamco.</p><img src="https://pro-theme.com/html/cardan/assets/img/decor-line-right-accent.svg" alt="">
             <div class="block-with-icon"><a class="block-with-icon__link" href="tel:8109204660">
                 <div class="block-with-icon__icon"><img src="https://pro-theme.com/html/cardan/assets/img/ico-comment.svg" alt="ico-comment"></div>
-                {{-- <div class="block-with-icon__desc">
+                <div class="block-with-icon__desc">
                   <div class="block-with-icon__label">Talk With Our Experts</div>
                   <div class="block-with-icon__value">(810) 920-4660</div>
-                </div> --}}
-              </a></div>
+                </div>
+              </a></div> --}}
             {{-- <ul class="social">
               <li class="social-item"><a class="social-item__link" href="#!"><i class="fab fa-facebook-f"></i></a></li>
               <li class="social-item"><a class="social-item__link" href="#!"><i class="fab fa-twitter"></i></a></li>
@@ -41,7 +41,7 @@
                 <div class="contacts-list-item__icon"><img src="https://pro-theme.com/html/cardan/assets/img/ico-mail.svg" data-uk-svg alt="Send Us Email"></div>
                 <div class="contacts-list-item__desc">
                   <div class="contacts-list-item__label">Send Us Email</div>
-                  <div class="contacts-list-item__content"> <a href="mailto:repair@my-domain.com">jannatAktherShathi.com</a></div>
+                  <div class="contacts-list-item__content"> <a href="mailto:repair@my-domain.com">jannatakthershathi.com</a></div>
                 </div>
               </li>
             </ul>

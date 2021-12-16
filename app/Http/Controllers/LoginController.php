@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
-use Illuminate\Http\Request;
+ use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
 {
@@ -23,7 +24,7 @@ class LoginController extends Controller
                      $file->storeAs('/uploads',$image_name);
                     }
         User::create([
-            'image'=>$request->image,
+            'image'=>$image_name,
             'name'=>$request->name,
             'phone'=>$request->phone,
             'email'=>$request->email,
@@ -47,7 +48,7 @@ class LoginController extends Controller
             // dd(Auth::attempt($userpost));
         if (Auth::attempt($userpost)) {
             // dd("true");
-            return redirect()->route('website.login');
+            return redirect()->route('webhome');
         }
         else
         return redirect()->route('website.login');

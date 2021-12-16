@@ -96,7 +96,16 @@
 
 
       <div class="content">
+
+
+
+
+        
          @yield('content')
+
+
+
+
       <!--content-->
           </div>
          <!--card--> 

@@ -2,15 +2,17 @@
 
 @section('content')
 
-    <h1>Order list</h1>
+    <h1>User list</h1>
 
     <table class="table">
     <thead>
     <tr>
-        <th scope="col">#</th>
+        <th scope="col">id</th>
         <th scope="col">name</th>
         <th scope="col">email</th>
         <th scope="col">phone</th>
+        <th scope="col">image</th>
+
     </tr>
     </thead>
     <tbody>
@@ -20,6 +22,10 @@
         <td>{{$user->name}}</td>
         <td>{{$user->email}}</td>
         <td>{{$user->phone}}</td>
+        <th>
+            <img style="border-radius: 4px;" width="150px;" src=" {{url('/uploads/'.$user->image)}}" alt="user">
+    
+        </th>
     </tr>   
         @endforeach
     
