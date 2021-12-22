@@ -1,5 +1,14 @@
 @extends('website.master')
 @section('content')
+
+@if(session()->has('message'))
+ <p class="alert alert-success">{{session()->get('message')}}</p>
+@endif
+
+@if(session()->has('error'))
+ <p class="alert alert-danger">{{session()->get('error')}}</p>
+@endif
+
 <main class="page-main">
     <div class="section-first-screen">
       <div class="section-first-screen__shape">

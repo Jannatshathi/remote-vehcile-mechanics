@@ -6,12 +6,12 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item ">
+          {{-- <li class="nav-item ">
             <a class="nav-link" href="{{url('/admin')}}">
               <i class="material-icons">person</i>
               <p>Admin</p>
             </a>
-          </li>
+          </li> --}}
           <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.service.type')}}">
               <i class="material-icons">content_paste</i>

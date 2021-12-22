@@ -52,7 +52,7 @@ class LoginController extends Controller
             // dd(Auth::attempt($userpost));
         if (Auth::attempt($userpost)) {
             // dd("true");
-            return redirect()->route('webhome');
+            return redirect()->route('webhome')->with('message', 'Login successfull');
         }
         else
         return redirect()->route('website.login');

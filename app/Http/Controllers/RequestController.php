@@ -44,7 +44,7 @@ class RequestController extends Controller
         Myrequest::find($id)->update([
             'status'=>$request->status
         ]);
-        return redirect()->back();
+        return redirect()->route('admin.request.list');
     }
 
 }

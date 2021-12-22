@@ -22,10 +22,10 @@ class MyrequestController extends Controller
             'service'=>$request->service,
 
         ]);
-        return redirect()->back();
+        return redirect()->route('website.myrequest');
     }
     public function viewRequest($id){
-         dd($id);
+         //dd($id);
         $status = Request_service::find($id);
         if ($status) {
             return view('admin.pages.request',compact('status'));

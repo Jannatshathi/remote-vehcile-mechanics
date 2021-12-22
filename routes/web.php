@@ -19,6 +19,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\MyrequestController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,98 +31,115 @@ use App\Http\Controllers\MyrequestController;
 |
 */
 // Route::get('/', function () {
-//     return redirect()->route('pages');
-// });
-
-
-    Route::get('/pages', function () {
-        return view('admin.pages.home');
-    })->name('admin.pages');
-
-// Route::get('/', function () {
-//     return view('master');
-// });
-
-    // website
-
-    Route::get('/', function () {
+    //     return redirect()->route('pages');
+    // });
+    Route::group(['prefix'=>'admin'],function(){
+        
+        Route::get('/',[AdminController::class,'login'])->name('admin.login');
+        Route::post('/admin/do-login',[AdminController::class,'doLogin'])->name('admin.doLogin');
+        
+        Route::group(['middleware'=>'auth'],function(){
+            
+            Route::get('/pages', function () {
+                return view('admin.pages.home');
+            })->name('admin.pages');
+            //Route::get('/admin',[AdminController::class,'admin']);
+            
+            Route::get('/admin',[HomeController::class,'home'])->name('home');
+            // Route::get('/', function () {
+                //     return view('master');
+                // });
+                
+                //user
+                Route::get('/user/list',[UserController::class,'userList'])->name('admin.user.list');
+                
+                //customer
+                Route::get('/customer-list',[CustomerController::class,'customerList'])->name('admin.customer.list');
+                Route::get('/customer-form',[CustomerController::class,'customerform'])->name('admin.customer.form');
+                Route::post('/customer/store',[CustomerController::class,'store'])->name('admin.customer.store');
+                
+                //mechanics
+                Route::get('/mechanics',[MechanicsController::class,'mechanicsList'])->name('admin.mechanics.list');
+                Route::post('/mechanics/store',[MechanicsController::class,'store'])->name('admin.mechanics.store');
+                
+                
+                //service
+                Route::get('/service-list',[ServiceController::class,'servicelist'])->name('admin.service.list');
+                Route::get('/service-form',[ServiceController::class,'serviceform'])->name('admin.service.form');
+                Route::post('/service/store',[ServiceController::class,'store'])->name('admin.service.store');
+                
+                //category
+                Route::get('/service/category',[CategoryController::class,'category'])->name('admin.service.category');
+                Route::post('/category/store',[CategoryController::class,'store'])->name('admin.category.store');
+                
+                //servicetype
+                Route::get('/service-type',[Service_typeController::class,'servicetype'])->name('admin.service.type');
+                Route::post('/servicetype/store',[Service_typeController::class,'store'])->name('admin.service.type.store');
+                Route::get('/servicetype',[Service_typeController::class,'servicetypelist'])->name('admin.service.type');
+                
+                
+                //request
+                Route::get('/request/list',[RequestController::class,'requestList'])->name('admin.request.list');
+                Route::post('/request/store',[RequestController::class,'store'])->name('admin.request.store');
+                Route::get('/request',[RequestController::class,'request'])->name('admin.request');
+                Route::get('/request/status/update/{id}',[RequestController::class,'viewRequest'])->name('admin.view.request');
+                Route::put('/request/update/{id}',[RequestController::class,'updateRequest'])->name('admin.update.request');
+                
+                
+                //deposite
+                Route::get('/deposite',[DepositeController::class,'deposite'])->name('admin.deposite');
+                
+                //vehcile
+                Route::get('/vehcile',[VehcileController::class,'vehcile'])->name ('admin.vehcile');
+                
+                //report
+                Route::get('/report',[ReportController::class,'report'])->name('admin.report');
+            });
+        });
+        //admin
+        
+        
+        // website
+        
+        Route::get('/', function () {
             return redirect()->route('webhome');
         });
-    Route::get('/website',function(){
-        return view('website.master');
-    })->name('webhome');
-
-    Route::get('/website/home',[HomewebController::class,'webhome'])->name('webhome');
-    Route::get('/user/registration',[LoginController::class,'registration'])->name('user.registration');
-    Route::post('/user/registration',[LoginController::class,'registrationPost'])->name('user.post.registration');
-
-    Route::post('/user/do/login',[LoginController::class,'doLogin'])->name('user.do.login');
-    Route::get('/admin/user/list',[UserController::class,'userList'])->name('admin.user.list');
-    Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout');
-
-//login
-Route::get('/login',[LoginController::class,'login'])->name('website.login');
-
-
-//register
-Route::get('/register',[LoginController::class,'register'])->name('website.register');
-Route::post('/register/store',[LoginController::class,'store'])->name('website.register.store');
-
-
-
-//Route::get('/admin',[AdminController::class,'admin']);
-
-Route::get('/admin',[HomeController::class,'home'])->name('home');
-
-//customer
-Route::get('/customer-list',[CustomerController::class,'customerList'])->name('admin.customer.list');
-Route::get('/customer-form',[CustomerController::class,'customerform'])->name('admin.customer.form');
-Route::post('/customer/store',[CustomerController::class,'store'])->name('admin.customer.store');
-
-
-
-Route::get('/customer',[CustomerController::class,'customer'])->name('website.customer');
-
-//mechanics
-Route::get('/mechanics',[MechanicsController::class,'mechanicsList'])->name('admin.mechanics.list');
-Route::post('/mechanics/store',[MechanicsController::class,'store'])->name('admin.mechanics.store');
-Route::get('/mechanics/list',[MechanicsController::class,'meclist'])->name('website.mechanics.list');
-
-//service
-Route::get('/service-list',[ServiceController::class,'servicelist'])->name('admin.service.list');
-Route::get('/service-form',[ServiceController::class,'serviceform'])->name('admin.service.form');
-Route::post('/service/store',[ServiceController::class,'store'])->name('admin.service.store');
-
-//category
-Route::get('/service/category',[CategoryController::class,'category'])->name('admin.service.category');
-Route::post('/category/store',[CategoryController::class,'store'])->name('admin.category.store');
-
-//servicetype
-Route::get('/service-type',[Service_typeController::class,'servicetype'])->name('admin.service.type');
-Route::post('/servicetype/store',[Service_typeController::class,'store'])->name('admin.service.type.store');
-Route::get('/servicetype',[Service_typeController::class,'servicetypelist'])->name('admin.service.type');
-Route::get('/service/list',[Service_typeController::class,'serviceList'])->name('website.service.list');
-
-//request
-Route::get('/request/list',[RequestController::class,'requestList'])->name('admin.request.list');
-Route::post('/request/store',[RequestController::class,'store'])->name('admin.request.store');
-Route::get('/request',[RequestController::class,'request'])->name('admin.request');
-Route::get('/request/status/update/{id}',[RequestController::class,'viewRequest'])->name('admin.view.request');
-Route::put('/request/update/{id}',[RequestController::class,'updateRequest'])->name('admin.update.request');
-
-//myrequest
-Route::get('/myrequest',[MyrequestController::class,'myreq'])->name('website.myrequest');
-Route::post('/myrequest/store/',[MyrequestController::class,'store'])->name('website.myrequest.store');
-//deposite
-Route::get('/deposite',[DepositeController::class,'deposite'])->name('admin.deposite');
-
-//vehcile
-Route::get('/vehcile',[VehcileController::class,'vehcile'])->name ('admin.vehcile');
-
-//report
-Route::get('/report',[ReportController::class,'report'])->name('admin.report');
-
-
-
-
-
+        Route::get('/website',function(){
+            return view('website.master');
+        })->name('webhome');
+        
+        Route::get('/website/home',[HomewebController::class,'webhome'])->name('webhome');
+        Route::get('/user/registration',[LoginController::class,'registration'])->name('user.registration');
+        Route::post('/user/registration',[LoginController::class,'registrationPost'])->name('user.post.registration');
+        
+        Route::post('/user/do/login',[LoginController::class,'doLogin'])->name('user.do.login');
+        Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout');
+        
+        //login
+        Route::get('/login',[LoginController::class,'login'])->name('website.login');
+        
+        
+        //register
+        Route::get('/register',[LoginController::class,'register'])->name('website.register');
+        Route::post('/register/store',[LoginController::class,'store'])->name('website.register.store');
+        
+        //customer
+        Route::get('/customer',[CustomerController::class,'customer'])->name('website.customer');
+        
+        //mechanics
+        Route::get('/mechanics/list',[MechanicsController::class,'meclist'])->name('website.mechanics.list');
+        
+        //servicetype
+        Route::get('/service/list',[Service_typeController::class,'serviceList'])->name('website.service.list');
+        
+        //myrequest
+        Route::get('/myrequest',[MyrequestController::class,'myreq'])->name('website.myrequest');
+        Route::post('/myrequest/store/',[MyrequestController::class,'store'])->name('website.myrequest.store');
+        
+        
+        
+        
+        
+        
+        
+        
