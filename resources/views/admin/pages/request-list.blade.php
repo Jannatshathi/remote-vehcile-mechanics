@@ -46,13 +46,28 @@
       <td>{{$x->address}}</td>
       <td>{{$x->location}}</td>
       <td>{{$x->service}}</td>
-      <td>{{$x->status}}</td>
       <td>
-        @if($x->status == 0)
-        <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-primary">Accepted</a>
+        @if($x->status == 'pending')
+        <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-danger">Pending</a>
+        @elseif($x->status == 'confirm')
+        <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-success">confirmed</a>
+        
         @else
-        <a href="" class="btn btn-danger">Delete</a>
-        <a href="" class="btn btn-danger">Pending</a>
+        <a href="" class="btn btn-info">Accepted</a>
+        
+        @endif
+      </td>
+
+      <td>
+        @if($x->status == 'pending')
+        <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-primary">Accept</a>
+        <a href="" class="btn btn-success">Delete</a>
+
+        @elseif($x->status == 'confirm')
+        
+        @else
+        <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-danger">Pending</a>
+        <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-danger">Confirmed</a>
         
         @endif
       </td>

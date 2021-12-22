@@ -1,5 +1,15 @@
 @extends('website.master')
 @section('content')
+
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 <div class="row">
 
   <div class="col-md-2"></div>
@@ -22,7 +32,7 @@
       </div>
       <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Phone</label>
-          <input name="phone" type="number" class="form-control" id="exampleInputPassword1">
+          <input required name="phone" type="text" class="form-control" id="exampleInputPassword1">
         </div>
         
         <div class="mb-3">

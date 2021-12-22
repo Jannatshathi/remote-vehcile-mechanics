@@ -9,10 +9,10 @@
     <div class="form__wrapper center-content">
         <h1>Request Panel</h1>
         
-        <form action="{{route('admin.request.store')}}" method='POST'>
+        <form action="{{route('website.myrequest.store')}}" method='POST'>
             @csrf
             
-    <div class="acf-fields acf-form-fields -top">
+        <div class="acf-fields acf-form-fields -top">
         
         <div class="acf-field acf-field-text acf-field-60783ed916570 is-required" data-name="name-first"
             data-type="text" data-key="field_60783ed916570" data-required="1">
@@ -51,7 +51,7 @@
         </div>
     </div>
     
-        <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button>
   
     </form>
     </div>

@@ -9,10 +9,22 @@
               <div class="first-screen__item">
                 <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left"><img src="https://pro-theme.com/html/cardan/assets/img/slideshow-home-1.jpg" alt data-uk-cover></div>
                 <div class="uk-position-center uk-position-small uk-text-center">
-                  <div class="first-screen__title" data-uk-slideshow-parallax="x: 100,-100"><span>We’re Leaders in Auto Repair, Maintenance & Inspection</span>
-                    <div class="uk-h2">Your One-Stop Solution For<br> All Auto Repair Needs</div>
+                  <div class="first-screen__title" data-uk-slideshow-parallax="x: 100,-100"><span>We’re Leaders in Vehicle Repair, Maintenance & Inspection</span>
+                    <div class="uk-h2">Your One-Stop Solution For<br> All Vehicle Repair Needs</div>
                   </div>
-                  <div class="first-screen__btns" data-uk-slideshow-parallax="x: 200,-200"><a class="uk-button uk-button-danger uk-button-large" href="{{route('admin.request')}}" data-uk-icon="triangle-right">Request</a><a class="uk-button uk-button-default uk-button-large" href="#!" data-uk-icon="triangle-right">Free estimate</a></div>
+                  <div class="first-screen__btns" data-uk-slideshow-parallax="x: 200,-200">
+
+                    @if(auth()->user())
+                    <a class="uk-button uk-button-danger uk-button-large" href="{{route('admin.request')}}" data-uk-icon="triangle-right">Request</a>
+                    
+                    <a class="uk-button uk-button-default uk-button-large" href="{{route('user.logout')}}" data-uk-icon="triangle-right">Logout</a>
+                    <a class="uk-button uk-button-default uk-button-large" href="{{route('website.myrequest')}}" data-uk-icon="triangle-right">Myrequest</a>
+
+                    @else
+                    <a class="uk-button uk-button-default uk-button-large" href="{{route('website.login')}}" data-uk-icon="triangle-right">Login</a>
+
+                    @endif
+                  </div>
                 </div>
               </div>
             </li>
@@ -21,16 +33,28 @@
                 <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left"><img src="https://pro-theme.com/html/cardan/assets/img/slideshow-home-2.jpg" alt data-uk-cover></div>
                 <div class="uk-position-center-left uk-position-small uk-text-left uk-width-1-1">
                   <div class="uk-container uk-width-1-1">
-                    <div class="first-screen__title" data-uk-slideshow-parallax="x: 100,-100">
                       <div class="uk-h2">We Make Your Vehicle<br> In Good Shape</div><span>Minim veniam quis nostrud exercitation ullamco laboris nisu<br> ex sed ipsum ea reprehen deritin voluptate.</span>
                     </div>
-                    <div class="first-screen__btns" data-uk-slideshow-parallax="x: 200,-200"><a class="uk-button uk-button-danger uk-button-large" href="{{route('admin.request')}}" data-uk-icon="triangle-right">Request</a><a class="uk-button uk-button-large" href="#!" data-uk-icon="triangle-right">Free estimate</a></div>
+                    <div class="first-screen__btns" data-uk-slideshow-parallax="x: 200,-200">
+                      
+                      
+                      @if(auth()->user())
+                      <a class="uk-button uk-button-danger uk-button-large" href="{{route('admin.request')}}" data-uk-icon="triangle-right">Request</a>
+ 
+                    <a class="uk-button uk-button-default uk-button-large" href="{{route('user.logout')}}" data-uk-icon="triangle-right">Logout</a>
+
+                    <a class="uk-button uk-button-default uk-button-large" href="{{route('website.myrequest')}}" data-uk-icon="triangle-right">Myrequest</a>
+                    @else
+                    <a class="uk-button uk-button-default uk-button-large" href="{{route('website.login')}}" data-uk-icon="triangle-right">Login</a>
+
+                    @endif
+                  </div>
                   </div>
                 </div>
               </div>
             </li>
           </ul>
-          <div class="uk-visible@s"><a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" data-uk-slidenav-previous data-uk-slideshow-item="previous"></a><a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" data-uk-slidenav-next data-uk-slideshow-item="next"></a></div>
+          <div class="uk-visible@s"><a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" data-uk-slidenav-previous data-uk-slideshow-item="previous"></a><a class="uk-position-center-right uk-position-small uk-hidden-hover" href="" data-uk-slidenav-next data-uk-slideshow-item="next"></a></div>
           <div class="uk-hidden@s">
             <div class="uk-position-bottom-center uk-position-small uk-light">
               <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin-bottom"></ul>
@@ -89,8 +113,8 @@
             </div>
           </div>
           <div class="uk-width-1-2@m">
-            <div class="section-title"> <span>About Cardan Repair Services</span>
-              <h3 class="uk-h2">We’re Committed To AutoRepair<br> Meets The Quality Standards</h3>
+            <div class="section-title"> <span>About our Services</span>
+              <h3 class="uk-h2">We’re Committed To Repair<br> Meets The Quality Standards</h3>
             </div>
             <div class="section-content">
               <p>Kiusmod tempor incididunt ut labore sed dolore magnas aliquay enim ad minim veniam quis nostrud exercitation ullamco laboris nisut aliquip ex sed ipsum ea reprehen deritin voluptate.</p>
@@ -113,7 +137,7 @@
     <div class="section-partners uk-section-large">
       <div class="uk-container">
         <div class="partners-title">
-          <h3 class="uk-h2">CARDAN</h3><span>Trusted by our millions of satisfied partners</span>
+          {{-- <h3 class="uk-h2">CARDAN</h3><span>Trusted by our millions of satisfied partners</span> --}}
         </div>
         <div data-uk-slider>
           <div class="uk-position-relative" tabindex="-1">
@@ -411,7 +435,7 @@
         </div>
       </div>
     </div>
-    <div class="section-types-of-cars uk-section-large">
+    {{-- <div class="section-types-of-cars uk-section-large">
       <div class="uk-container">
         <div class="section-title uk-text-center"><span>Fixing Any Kind Of Vehicles At Cardan</span>
           <h3 class="uk-h2">Types Of Cars We Repair</h3>
@@ -486,11 +510,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
     <div class="section-projects">
       <div class="section-projects__shape">
         <div class="uk-container">
-          <div class="section-title uk-text-center"><span>Cardan Is Leader In Auto Repair</span>
+          <div class="section-title uk-text-center"><span>It Is Leader of Repair</span>
             <h3 class="uk-h2">Our Recent Projects</h3>
           </div>
           <div class="section-container">
@@ -768,7 +792,7 @@
         </div>
       </div>
     </div>
-    <div class="section-subscribe">
+    {{-- <div class="section-subscribe">
       <div class="section-subscribe__content">
         <div class="uk-container">
           <div class="subscribe-box">
@@ -788,7 +812,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> --}}
     </div>
   </main>
 @endsection

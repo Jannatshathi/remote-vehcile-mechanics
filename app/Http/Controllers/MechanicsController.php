@@ -13,6 +13,20 @@ class MechanicsController extends Controller
         return view('admin.pages.mechanics.mechanics-list',compact('mechanics'));
     }
     public function store(Request $request){
+
+        // $image_name = '';
+
+        if($request->hasFile('image'))
+                 {
+                     $file=$request->file('image');
+                     // step 2: generate file name
+                     $image_name=date('Ymdhms').'.'.$file->getClientOriginalExtension();
+
+                     //step 3 : store into project directory
+
+                     $file->storeAs('/uploads',$image_name);
+                    }
+
         //dd($request->all());
         Mechanics::create([
           
@@ -21,10 +35,15 @@ class MechanicsController extends Controller
             'password'=>$request->password,
             'phone'=>$request->phone,
             'address'=>$request->address,
+            'image'=>$image_name,
         ]);
         return redirect()->back();
     }
-    
+    public function meclist(){
+        $mechanics=Mechanics::all();
+
+        return view('website.pages.mechanics-list',compact('mechanics'));
+    }
 
    
 }

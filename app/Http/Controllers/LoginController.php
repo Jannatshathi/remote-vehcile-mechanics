@@ -23,6 +23,9 @@ class LoginController extends Controller
 
                      $file->storeAs('/uploads',$image_name);
                     }
+                    $request->validate([
+                        'phone'=>'required |max:11',
+                    ]);
         User::create([
             'image'=>$image_name,
             'name'=>$request->name,
@@ -33,6 +36,7 @@ class LoginController extends Controller
         return redirect()->route('website.login');
         
     }
+    
     public function login(){
         return view('website.pages.login');
     }

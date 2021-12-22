@@ -95,12 +95,12 @@
             </a>
           </li>
 
-          <li class="nav-item ">
+          {{-- <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.user.list')}}">
               <i class="material-icons">user list</i>
               <p>Report</p>
             </a>
-          </li>
+          </li> --}}
           
         </ul>
       </div>

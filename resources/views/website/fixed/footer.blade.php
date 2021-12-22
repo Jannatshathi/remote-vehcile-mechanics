@@ -1,24 +1,9 @@
 <footer class="page-footer">
-    <div class="page-footer-top">
+    {{-- <div class="page-footer-top">
       <div class="uk-container">
         <div class="uk-grid uk-child-width-1-5@l uk-child-width-1-3@s" data-uk-grid>
           <div class="uk-flex-first@l">
-            {{-- <div class="logo"><a class="logo__link" href="https://pro-theme.com/"><img class="logo__img" src="https://pro-theme.com/html/cardan/assets/img/logo-white.png" alt="logo"></a></div> --}}
-            {{-- <p>Emod tempor incididunt sed labore dnim ad minim ips veniam quis nosts exercitation ullamco.</p><img src="https://pro-theme.com/html/cardan/assets/img/decor-line-right-accent.svg" alt="">
-            <div class="block-with-icon"><a class="block-with-icon__link" href="tel:8109204660">
-                <div class="block-with-icon__icon"><img src="https://pro-theme.com/html/cardan/assets/img/ico-comment.svg" alt="ico-comment"></div>
-                <div class="block-with-icon__desc">
-                  <div class="block-with-icon__label">Talk With Our Experts</div>
-                  <div class="block-with-icon__value">(810) 920-4660</div>
-                </div>
-              </a></div> --}}
-            {{-- <ul class="social">
-              <li class="social-item"><a class="social-item__link" href="#!"><i class="fab fa-facebook-f"></i></a></li>
-              <li class="social-item"><a class="social-item__link" href="#!"><i class="fab fa-twitter"></i></a></li>
-              <li class="social-item"><a class="social-item__link" href="#!"><i class="fab fa-google-plus-g"></i></a></li>
-              <li class="social-item"><a class="social-item__link" href="#!"><i class="fab fa-linkedin-in"></i></a></li>
-              <li class="social-item"><a class="social-item__link" href="#!"><i class="fab fa-vimeo-v"></i></a></li>
-            </ul> --}}
+            
           </div>
           <div class="uk-flex-last@l">
             <div class="uk-h5">Get in touch</div>
@@ -72,10 +57,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
     <div class="page-footer-bottom">
       <div class="uk-container"><span>(c) 2021 <b>Shathi</b> - Vehicle Repair Services. All rights reserved.</span><a href="#!">Terms & Conditions</a></div>
-    </div><!-- Дополнительные блоки-->
+    </div>
     <div id="offcanvas" data-uk-offcanvas="overlay: true">
       <div class="uk-offcanvas-bar uk-flex uk-flex-column uk-flex-between"><button class="uk-offcanvas-close" type="button" data-uk-close=""></button>
         <div>

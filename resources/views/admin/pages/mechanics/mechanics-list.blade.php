@@ -24,6 +24,7 @@
       <th scope="col">Password</th>
       <th scope="col">Phone</th>
       <th scope="col">Address</th>
+      <th scope="col">Image</th>
     </tr>
   </thead>
   <tbody>
@@ -36,6 +37,9 @@
       <td>{{$x->password}}</td>
       <td>{{$x->phone}}</td>
       <td>{{$x->address}}</td>
+      <td>
+        <img src="{{url('/uploads/'.$x->image)}}"width="100px" alt="service">
+      </td>
     </tr>
     @endforeach
   </tbody>
@@ -54,7 +58,7 @@
       <!-- form  -->
 
   
-  <form action="{{route('admin.mechanics.store')}}" method='POST'>
+  <form action="{{route('admin.mechanics.store')}}" method='POST', enctype="multipart/form-data">
     @csrf
     
   <div class="mb-3">
@@ -76,6 +80,10 @@
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Address</label>
     <input style="color: white !important" name='address' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Image</label>
+    <input style="color: white !important" name='image' type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   
   <button type="submit" class="btn btn-primary">Submit</button>

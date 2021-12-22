@@ -1,47 +1,147 @@
 
 @extends('website.master')
 @section('content')
+
+<style>
+    body {
+  background:url('http://cdn.wallpapersafari.com/13/6/Mpsg2b.jpg');
+  margin:0px;
+  font-family: 'Ubuntu', sans-serif;
+	background-size: 100% 110%;
+}
+h1, h2, h3, h4, h5, h6, a {
+  margin:0; padding:0;
+}
+.login {
+  margin:0 auto;
+  max-width:500px;
+}
+.login-header {
+  color:#fff;
+  text-align:center;
+  font-size:300%;
+}
+/* .login-header h1 {
+   text-shadow: 0px 5px 15px #000; */
+}
+.login-form {
+  border:.5px solid #fff;
+  background:#4facff;
+  border-radius:10px;
+  box-shadow:0px 0px 10px #000;
+}
+.login-form h3 {
+  text-align:left;
+  margin-left:40px;
+  color:#fff;
+}
+.login-form {
+  box-sizing:border-box;
+  padding-top:15px;
+	padding-bottom:10%;
+  margin:5% auto;
+  text-align:center;
+}
+.login input[type="text"],
+.login input[type="password"] {
+  max-width:400px;
+	width: 80%;
+  line-height:3em;
+  font-family: 'Ubuntu', sans-serif;
+  margin:1em 2em;
+  border-radius:5px;
+  border:2px solid #f2f2f2;
+  outline:none;
+  padding-left:10px;
+}
+.login-form input[type="button"] {
+  height:30px;
+  width:100px;
+  background:#fff;
+  border:1px solid #f2f2f2;
+  border-radius:20px;
+  color: slategrey;
+  text-transform:uppercase;
+  font-family: 'Ubuntu', sans-serif;
+  cursor:pointer;
+}
+.sign-up{
+  color:#f2f2f2;
+  margin-left:-70%;
+  cursor:pointer;
+  text-decoration:underline;
+}
+.no-access {
+  color:#E86850;
+  margin:20px 0px 20px -57%;
+  text-decoration:underline;
+  cursor:pointer;
+}
+.try-again {
+  color:#f2f2f2;
+  text-decoration:underline;
+  cursor:pointer;
+}
+
+/*Media Querie*/
+@media only screen and (min-width : 150px) and (max-width : 530px){
+  .login-form h3 {
+    text-align:center;
+    margin:0;
+  }
+  .sign-up, .no-access {
+    margin:10px 0;
+  }
+  .login-button {
+    margin-bottom:10px;
+  }
+}
+</style>
 <div class="row">
 
   <div class="col-md-2"></div>
   <div class="col-md-8">
-    <form action="{{route('user.do.login')}}", method="POST" >
+    <form action="{{route('user.do.login')}}", method="POST">
       @csrf
-      <div class="row">
-        <div class="col-lg-12">
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input required id="email" name="email" type="email" placeholder="Email Address" >
-            </div>
+      <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+
+      <div class="login">
+        <div class="login-header">
+          <h1>Login</h1>
         </div>
-        <div class="col-lg-12">
-            <div class="form-group">
-                <label for="pwd">Password</label>
-                <input id="password" name="password" type="password" placeholder="Password">
-            </div>
+        <div class="login-form">
+          <h3>email</h3>
+          <input name='email' type="text" placeholder="email"/><br>
+          <h3>Password:</h3>
+          <input name='password' type="password" placeholder="Password"/>
+          <br>
+          <br>
+          <button >login</button>
+          <br>
+          <h6 class="no-access">Can't access your account?</h6>
         </div>
-        
-        <!-- <div class="col-lg-6 col-md-6 col-6 text-end mb-20">
-            <a href="forgot-pwd.html" class="link">Forgot Password?</a>
-        </div> -->
-        <div class="col-lg-12">
-            <div class="form-group">
-                <button class="btn v1">Log In</button>
-            </div>
-        </div>
-        
-        
-        <div class="col-md-12 text-center">
-            <p class="mb-0">Don’t Have an Account? <a class="link" href="{{route('user.registration')}}">Create One</a></p>
-        </div>
-    </div>
-            
-        
+      </div>
+      <div class="error-page">
+        <div class="try-again">Error: Try again?</div>
+      </div>
     </form>
   </div>
   <div class="col-md-2"></div>
 
 </div>
 
+<script>
+    $('.error-page').hide(0);
+
+$('.login-button , .no-access').click(function(){
+  $('.login').slideUp(500);
+  $('.error-page').slideDown(1000);
+});
+
+$('.try-again').click(function(){
+  $('.error-page').hide(0);
+  $('.login').slideDown(1000);
+});
+</script>
   
 @endsection

@@ -85,6 +85,7 @@ Route::get('/customer',[CustomerController::class,'customer'])->name('website.cu
 //mechanics
 Route::get('/mechanics',[MechanicsController::class,'mechanicsList'])->name('admin.mechanics.list');
 Route::post('/mechanics/store',[MechanicsController::class,'store'])->name('admin.mechanics.store');
+Route::get('/mechanics/list',[MechanicsController::class,'meclist'])->name('website.mechanics.list');
 
 //service
 Route::get('/service-list',[ServiceController::class,'servicelist'])->name('admin.service.list');
@@ -110,7 +111,7 @@ Route::put('/request/update/{id}',[RequestController::class,'updateRequest'])->n
 
 //myrequest
 Route::get('/myrequest',[MyrequestController::class,'myreq'])->name('website.myrequest');
-Route::post('/myrequest/store',[MyrequestController::class,'store'])->name('website.myrequest.store');
+Route::post('/myrequest/store/',[MyrequestController::class,'store'])->name('website.myrequest.store');
 //deposite
 Route::get('/deposite',[DepositeController::class,'deposite'])->name('admin.deposite');
 

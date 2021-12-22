@@ -28,8 +28,10 @@
       <div class="form-group">
         <label for="exampleFormControlSelect1">Example select</label>
         <select name="status" class="form-control" id="exampleFormControlSelect1">
-          <option style="color: black" value="1" >Accepted</option>
-          <option style="color: black" value="0" >Delete</option>
+          <option style="color: black" value="accepted" >Accepted</option>
+          {{-- <option style="color: black" value="" >Delete</option> --}}
+          <option style="color: black" value="confirm" >Confirm</option>
+
         </select>
       </div>
     

@@ -1,8 +1,8 @@
 @extends('website.master')
 @section('content')
 
-<div class="col-md-2"></div>
-  <div class="col-md-8">
+
+  
 <table class="table">
     <thead>
       <tr>
@@ -15,26 +15,42 @@
         <th scope="col">Status</th>
       </tr>
     </thead>
-    @foreach ($req as $item)
-    <th scope="row">{{$item->id}}</th>
+    <tbody>
       
-    <td>{{$item->name}}</td>
-    <td>{{$item->address}}</td>
-    <td>{{$item->location}}</td>
-    <td>{{$item->service}}</td>
-    <td>{{$item->status}}</td>
-    <td>
-      @if($item->status == 0)
-      <a href="{{route('admin.view.request',$item->id)}}" class="btn btn-primary">Accepted</a>
-      @else
-      <a href="" class="btn btn-danger">Deleted</a>
-      <a href="" class="btn btn-danger">Pending</a>
-      
-      @endif
-    </td>
-    @endforeach
+        @foreach ($req as $key=>$item)
+        <tr>
+        
+          <td>{{$key+1}}</td>
+        <td>{{$item->name}}</td>
+        <td>{{$item->address}}</td>
+        <td>{{$item->location}}</td>
+        <td>{{$item->service}}</td>
+        {{-- <td>{{$item->status}}</td> --}}
+        
+          @if($item->status == 0)
+          <td>
+            <a href="" class="btn btn-danger">Pending</a>
+          
+          </td>
+          @elseif($item->status == 1)
+          <td>
+          {{-- <a href="" class="btn btn-danger">Completed</a> --}}
+          <a href="{{route('admin.view.request',$item->id)}}" class="btn btn-primary">Accepted</a>
+        </td>
+        @else
+        <td>
+          <a href="{{route('admin.view.request',$item->id)}}" class="btn btn-success">Confirmed</a>
+
+        </td>
+          @endif
+        
+      </tr>
+        @endforeach
+     
+    </tbody>
+   
   </table>
-</div>
-<div class="col-md-2"></div>
+
+
     
 @endsection

@@ -20,6 +20,7 @@ class CreateMechanicsTable extends Migration
             $table->string('password');
             $table->integer('phone');
             $table->string('address');
+            $table->string('image');
             $table->timestamps();
         });
     }
