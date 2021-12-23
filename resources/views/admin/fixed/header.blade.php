@@ -54,6 +54,7 @@
                 </a>
               </li>
             </ul> --}}
+            <button >logout</button>
           </div>
         </div>
       </nav>

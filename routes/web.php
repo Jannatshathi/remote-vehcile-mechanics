@@ -32,11 +32,15 @@ use App\Http\Controllers\MyrequestController;
 */
 // Route::get('/', function () {
     //     return redirect()->route('pages');
-    // });
+    // }); 
+
+    
     Route::group(['prefix'=>'admin'],function(){
         
         Route::get('/',[AdminController::class,'login'])->name('admin.login');
         Route::post('/admin/do-login',[AdminController::class,'doLogin'])->name('admin.doLogin');
+        Route::get('/admin/logout',[AdminController::class,'logout'])->name('admin.logout');
+
         
         Route::group(['middleware'=>'auth'],function(){
             

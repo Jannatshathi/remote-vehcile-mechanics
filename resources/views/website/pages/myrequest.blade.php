@@ -27,12 +27,12 @@
         <td>{{$item->service}}</td>
         {{-- <td>{{$item->status}}</td> --}}
         
-          @if($item->status == 0)
+          @if($item->status == "pending")
           <td>
             <a href="" class="btn btn-danger">Pending</a>
           
           </td>
-          @elseif($item->status == 1)
+          @elseif($item->status == "accepted")
           <td>
           {{-- <a href="" class="btn btn-danger">Completed</a> --}}
           <a href="{{route('admin.view.request',$item->id)}}" class="btn btn-primary">Accepted</a>
