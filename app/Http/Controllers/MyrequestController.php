@@ -24,11 +24,11 @@ class MyrequestController extends Controller
         ]);
         return redirect()->route('website.myrequest');
     }
-    public function viewRequest($id){
-         //dd($id);
-        $status = Request_service::find($id);
-        if ($status) {
-            return view('admin.pages.request',compact('status'));
-        }
-}
+//     public function viewRequest($id){
+//          //dd($id);
+//         $status = Request_service::find($id);
+//         if ($status) {
+//             return view('admin.pages.request',compact('status'));
+//         }
+// }
 }

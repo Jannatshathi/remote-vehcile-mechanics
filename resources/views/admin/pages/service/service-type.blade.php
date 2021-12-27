@@ -4,22 +4,6 @@
 @section('content')
 
 <h1>Service Type</h1>
-@if(session()->has('success'))
-<p class="alert alert-success">
-    {{session()->get('success')}}
-</p>
-@endif
-
-
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
 
 
 <form action="{{route('admin.service.type.store')}}" method='POST' >

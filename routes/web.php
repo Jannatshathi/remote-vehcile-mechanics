@@ -56,6 +56,8 @@ use App\Http\Controllers\MyrequestController;
                 
                 //user
                 Route::get('/user/list',[UserController::class,'userList'])->name('admin.user.list');
+                Route::get('/user/edit/{id}',[UserController::class,'userEdit'])->name('admin.user.edit');
+                Route::patch('/user/edited/{id}',[UserController::class,'userEdited'])->name('admin.user.edited');
                 
                 //customer
                 Route::get('/customer-list',[CustomerController::class,'customerList'])->name('admin.customer.list');
@@ -68,24 +70,24 @@ use App\Http\Controllers\MyrequestController;
                 
                 
                 //service
-                Route::get('/service-list',[ServiceController::class,'servicelist'])->name('admin.service.list');
                 Route::get('/service-form',[ServiceController::class,'serviceform'])->name('admin.service.form');
                 Route::post('/service/store',[ServiceController::class,'store'])->name('admin.service.store');
+                Route::get('/service/list',[ServiceController::class,'sList'])->name('admin.service.list');
                 
                 //category
                 Route::get('/service/category',[CategoryController::class,'category'])->name('admin.service.category');
                 Route::post('/category/store',[CategoryController::class,'store'])->name('admin.category.store');
                 
                 //servicetype
-                Route::get('/service-type',[Service_typeController::class,'servicetype'])->name('admin.service.type');
+                Route::get('/service-type-form',[Service_typeController::class,'servicetype'])->name('admin.service.type');
                 Route::post('/servicetype/store',[Service_typeController::class,'store'])->name('admin.service.type.store');
-                Route::get('/servicetype',[Service_typeController::class,'servicetypelist'])->name('admin.service.type');
+                Route::get('/servicetype',[Service_typeController::class,'servicetypelist'])->name('admin.service.type.list');
                 
                 
                 //request
+                Route::get('/request',[RequestController::class,'request'])->name('admin.request');
                 Route::get('/request/list',[RequestController::class,'requestList'])->name('admin.request.list');
                 Route::post('/request/store',[RequestController::class,'store'])->name('admin.request.store');
-                Route::get('/request',[RequestController::class,'request'])->name('admin.request');
                 Route::get('/request/status/update/{id}',[RequestController::class,'viewRequest'])->name('admin.view.request');
                 Route::put('/request/update/{id}',[RequestController::class,'updateRequest'])->name('admin.update.request');
                 
@@ -133,8 +135,9 @@ use App\Http\Controllers\MyrequestController;
         //mechanics
         Route::get('/mechanics/list',[MechanicsController::class,'meclist'])->name('website.mechanics.list');
         
-        //servicetype
-        Route::get('/service/list',[Service_typeController::class,'serviceList'])->name('website.service.list');
+        //service
+        Route::get('/service-list',[ServiceController::class,'servicelist'])->name('website.service.list');
+        //Route::get('/service/list',[Service_typeController::class,'serviceList'])->name('website.service.list');
         
         //myrequest
         Route::get('/myrequest',[MyrequestController::class,'myreq'])->name('website.myrequest');

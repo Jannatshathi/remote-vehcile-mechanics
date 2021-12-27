@@ -8,17 +8,18 @@ use App\Models\Servicetype;
 
 class ServiceController extends Controller
 {
-    public function servicelist(){
-        $service=Service::with('servicetypes')->get();
-        //dd($data);
-        return view('website.pages.service-list',compact('service'));
-    }
    
     public function serviceform()
     {
         $data=servicetype::all();
         return view('admin.pages.service.service-form',compact('data'));
     }
+
+   public function sList(){
+    $service=Service::with('servicetypes')->get();
+    //dd($data);
+    return view('admin.pages.service.service-list',compact('service'));
+   }
 
     public function store(Request $request){
         // $image_name=null;
@@ -54,6 +55,10 @@ class ServiceController extends Controller
         ]);
          return redirect()->back()->with('success','service-category created successfully.');
     }
-   
+    public function servicelist(){
+        $service=Service::with('servicetypes')->get();
+        //dd($data);
+        return view('website.pages.service-list',compact('service'));
+    }
 }
 

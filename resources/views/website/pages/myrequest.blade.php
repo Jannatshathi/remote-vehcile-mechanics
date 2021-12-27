@@ -35,11 +35,11 @@
           @elseif($item->status == "accepted")
           <td>
           {{-- <a href="" class="btn btn-danger">Completed</a> --}}
-          <a href="{{route('admin.view.request',$item->id)}}" class="btn btn-primary">Accepted</a>
+          <a href="" class="btn btn-primary">Accepted</a>
         </td>
         @else
         <td>
-          <a href="{{route('admin.view.request',$item->id)}}" class="btn btn-success">Confirmed</a>
+          <a href="" class="btn btn-success">Confirmed</a>
 
         </td>
           @endif

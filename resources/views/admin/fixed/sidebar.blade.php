@@ -12,27 +12,37 @@
               <p>Admin</p>
             </a>
           </li> --}}
-          <li class="nav-item ">
-            <a class="nav-link" href="{{route('admin.service.type')}}">
-              <i class="material-icons">content_paste</i>
-              <p>Service Type</p>
-            </a>
-          </li>
 
-          <li class="nav-item ">
-            <a class="nav-link" href="{{route('admin.service.form')}}">
-              <i class="material-icons">content_paste</i>
-              <p>service</p>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.user.list')}}">
+                <span data-feather="file"></span>
+                <i class="material-icons">person</i>
+                <p>User list</p>
             </a>
-          </li>
+        </li>
 
+        <li class="nav-item ">
+          <a class="nav-link" href="{{route('admin.mechanics.list')}}">
+            <i class="material-icons">person</i>
+            <p>Mechanics</p>
+          </a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="{{route('admin.service.type.list')}}">
+            <i class="material-icons">content_paste</i>
+            <p>Service type</p>
+          </a>
+        </li>
           
-         <!-- <li class="nav-item ">
-            <a class="nav-link" href="#">
-              <i class="material-icons">person</i>
-              <p>User</p>
+          
+          <li class="nav-item ">
+            <a class="nav-link" href="{{route('admin.service.list')}}">
+              <i class="material-icons">content_paste</i>
+              <p>Service</p>
             </a>
-          </li>-->
+          </li>
+          
           
           <!--content(typography)--> 
 
@@ -55,12 +65,6 @@
               <p>Vehcile</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="{{route('admin.mechanics.list')}}">
-              <i class="material-icons">person</i>
-              <p>Mechanics</p>
-            </a>
-          </li>
           
           {{-- <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.service.category')}}">
@@ -68,12 +72,7 @@
               <p>category</p>
             </a>
           </li> --}}
-          <li class="nav-item">
-            <a class="nav-link" href="{{route('admin.user.list')}}">
-                <span data-feather="file"></span>
-                User list
-            </a>
-        </li>
+          
           <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.deposite')}}">
               <i class="material-icons">content_paste</i>

@@ -8,7 +8,7 @@ use App\Models\Servicetype;
 class Service_typeController extends Controller
 {
     public function servicetype(){
-        return view('admin.pages.service-type');
+        return view('admin.pages.service.service-type');
     }
     public function store(Request $request){
         Servicetype::create([
@@ -22,12 +22,12 @@ class Service_typeController extends Controller
     public function servicetypelist(){
         $stype=Servicetype::all();
 
-        return view('admin.pages.service-type',compact('stype'));
+        return view('admin.pages.service.service-type-list',compact('stype'));
     }
 
-    public function serviceList(){
-        $services = Servicetype::all();
-        // dd($services);
-        return view('website.pages.service-type-list',compact('services'));
-    }
-}
+//     public function serviceList(){
+//         $services = Servicetype::all();
+//         // dd($services);
+//         return view('website.pages.service-type-list',compact('services'));
+//     }
+ }

@@ -32,7 +32,7 @@
                  
                 </li>
                 <li><a href="#">About us</a></li>
-                <li><a href="{{route('admin.service.list')}}">Services<span data-uk-icon="chevron-down"></span></a>
+                <li><a href="{{route('website.service.list')}}">Services<span data-uk-icon="chevron-down"></span></a>
                   <div class="uk-navbar-dropdown">
                     <ul class="uk-nav uk-navbar-dropdown-nav">
                       {{-- <li><a href="https://pro-theme.com/html/cardan/page-services-grid.html">Services Grid</a></li> --}}

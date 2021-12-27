@@ -54,7 +54,7 @@
                 </a>
               </li>
             </ul> --}}
-            <button >logout</button>
+            <a href="{{route('admin.logout')}}" class="btn btn-primary">Logout</a>
           </div>
         </div>
       </nav>

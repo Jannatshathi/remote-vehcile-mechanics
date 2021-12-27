@@ -12,6 +12,8 @@
         <th scope="col">email</th>
         <th scope="col">phone</th>
         <th scope="col">image</th>
+        <th scope="col">action</th>
+
 
     </tr>
     </thead>
@@ -26,6 +28,10 @@
             <img style="border-radius: 4px;" width="150px;" src=" {{url('/uploads/'.$user->image)}}" alt="user">
     
         </th>
+        <td>
+            <a href="{{route('admin.user.edit',$user->id)}}" class="btn btn-primary">Edit</a>
+
+        </td>
     </tr>   
         @endforeach
     

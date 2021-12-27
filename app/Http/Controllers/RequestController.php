@@ -9,6 +9,10 @@ use App\Models\Myrequest;
 
 class RequestController extends Controller
 {
+    public function request(){
+        return view('website.pages.request');
+    }
+
     public function requestList(){
         $request=Myrequest::all();
         // dd($request);
@@ -26,10 +30,7 @@ class RequestController extends Controller
         
         return redirect()->back();
     }
-    public function request(){
-        return view('website.pages.request');
-    }
-
+    
     public function viewRequest($id){
         // dd($id);
         $status = Myrequest::find($id);
