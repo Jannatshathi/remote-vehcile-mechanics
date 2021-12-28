@@ -1,3 +1,4 @@
+
 <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
@@ -59,8 +60,9 @@
               <p>Request</p>
             </a>
           </li>
+
           <li class="nav-item ">
-            <a class="nav-link" href="{{route('admin.vehcile')}}">
+            <a class="nav-link" href="{{route('admin.vehcile.list')}}">
               <i class="material-icons">content_paste</i>
               <p>Vehcile</p>
             </a>

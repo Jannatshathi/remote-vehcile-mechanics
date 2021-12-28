@@ -2,40 +2,27 @@
 
 @section('content')
 
-{{-- 
-<div>
-    <h1>Types of Vehcile</h1>
-    <button type="button" class="btn btn-info">Select Vehcile</button>
+<form action="{{route('admin.vehcile.store')}}" method="POST" enctype="multipart/form-data">
+    @csrf
+    
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Type*</label>
+    <input required style="color: white !important" name='type' type="text" class="form-control" id="exampleInputText" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Model*</label>
+    <input required style="color: white !important" name='model' type="text" class="form-control" id="exampleInputText" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Color*</label>
+    <input required style="color: white !important" name='color' type="text" class="form-control" id="exampleInputText" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Image*</label>
+    <input required style="color: white !important" name='image' type="file" class="form-control" id="exampleInputText" aria-describedby="emailHelp">
+  </div>
+  
 
-<table class="table">
-    <thead>
-    <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-    </tr>
-    <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-    </tr>
-    <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-    </tr>
-    </tbody>
-</table>
-</div> --}}
-
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form> 
 @endsection

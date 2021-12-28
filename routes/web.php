@@ -97,6 +97,8 @@ use App\Http\Controllers\MyrequestController;
                 
                 //vehcile
                 Route::get('/vehcile',[VehcileController::class,'vehcile'])->name ('admin.vehcile');
+                Route::get('/vehcile/list',[VehcileController::class,'vehcileList'])->name ('admin.vehcile.list');
+                Route::post('/vehcile/store',[VehcileController::class,'vehcileStore'])->name ('admin.vehcile.store');
                 
                 //report
                 Route::get('/report',[ReportController::class,'report'])->name('admin.report');
