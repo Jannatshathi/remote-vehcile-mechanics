@@ -42,14 +42,12 @@
                   </div>
                 </li>
                 <li><a href="{{route('website.mechanics.list')}}">Machanics<span data-uk-icon="chevron-down"></span></a>
-
-                 
-                  
                 </li>
                 
-                <li><a href="{{route('website.register')}}">Register</a></li>
+                <li><a href="{{route('website.vehcile.list')}}">Vehicle</a></li>
                 
-               
+                <li><a href="{{route('website.register')}}">Register</a></li>
+
                   <div class="uk-navbar-dropdown">
                     <ul class="uk-nav uk-navbar-dropdown-nav">
                       {{-- <li><a href="https://pro-theme.com/html/cardan/page-blog-grid.html">Blog grid</a></li> --}}

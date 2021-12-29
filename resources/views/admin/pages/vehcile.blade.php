@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <form action="{{route('admin.vehcile.store')}}" method="POST" enctype="multipart/form-data">
     @csrf
     

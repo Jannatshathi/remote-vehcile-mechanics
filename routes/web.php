@@ -145,6 +145,12 @@ use App\Http\Controllers\MyrequestController;
         Route::get('/myrequest',[MyrequestController::class,'myreq'])->name('website.myrequest');
         Route::post('/myrequest/store/',[MyrequestController::class,'store'])->name('website.myrequest.store');
         
+        //vehicle
+        Route::get('/vehcile/list',[VehcileController::class,'vehList'])->name ('website.vehcile.list');
+
+        //mechanics panel
+        Route::get('/mec',[MechanicsController::class,'mec'])->name('website.mec');
+
         
         
         

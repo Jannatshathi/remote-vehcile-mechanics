@@ -35,4 +35,8 @@ class VehcileController extends Controller
         return redirect()->back();
 
     }
+    public function vehList(){
+        $vehcile=Vehcile::all();
+        return view('website.pages.vehcile-list',compact('vehcile'));
+    }
 }
