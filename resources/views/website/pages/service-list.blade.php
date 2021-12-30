@@ -1,6 +1,8 @@
 @extends('website.master')
 @section('content')
 
+
+
 <table class="table">
     <thead>
       <tr>

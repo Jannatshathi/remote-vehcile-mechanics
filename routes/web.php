@@ -93,7 +93,8 @@ use App\Http\Controllers\MyrequestController;
                 
                 
                 //deposite
-                Route::get('/deposite',[DepositeController::class,'deposite'])->name('admin.deposite');
+                Route::get('/deposite/list',[DepositeController::class,'depositeList'])->name('admin.deposite.list');
+                Route::post('/deposite/store',[DepositeController::class,'store'])->name('admin.deposite.store');
                 
                 //vehcile
                 Route::get('/vehcile',[VehcileController::class,'vehcile'])->name ('admin.vehcile');
@@ -102,6 +103,9 @@ use App\Http\Controllers\MyrequestController;
                 
                 //report
                 Route::get('/report',[ReportController::class,'report'])->name('admin.report');
+
+            
+
             });
         });
         //admin
@@ -148,8 +152,10 @@ use App\Http\Controllers\MyrequestController;
         //vehicle
         Route::get('/vehcile/list',[VehcileController::class,'vehList'])->name ('website.vehcile.list');
 
-        //mechanics panel
-        Route::get('/mec',[MechanicsController::class,'mec'])->name('website.mec');
+        //deposite
+        Route::get('/deposite',[DepositeController::class,'deposite'])->name('website.deposite');
+        Route::post('/deposite',[DepositeController::class,'depositeStore'])->name('website.deposite.store');
+
 
         
         

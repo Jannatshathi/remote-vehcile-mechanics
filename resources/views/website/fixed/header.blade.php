@@ -41,7 +41,7 @@
                     </ul>
                   </div>
                 </li>
-                <li><a href="{{route('website.mechanics.list')}}">Machanics<span data-uk-icon="chevron-down"></span></a>
+                <li><a href="{{route('website.mechanics.list')}}">Our Machanics<span data-uk-icon="chevron-down"></span></a>
                 </li>
                 
                 <li><a href="{{route('website.vehcile.list')}}">Vehicle</a></li>

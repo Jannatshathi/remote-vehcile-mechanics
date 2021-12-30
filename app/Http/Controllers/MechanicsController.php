@@ -44,9 +44,6 @@ class MechanicsController extends Controller
 
         return view('website.pages.mechanics-list',compact('mechanics'));
     }
-    public function mec(){
-        return view('website.pages.mechanics-panel');
-    }
-
+  
    
 }

@@ -76,7 +76,7 @@
           </li> --}}
           
           <li class="nav-item ">
-            <a class="nav-link" href="{{route('admin.deposite')}}">
+            <a class="nav-link" href="{{route('admin.deposite.list')}}">
               <i class="material-icons">content_paste</i>
               <p>Deposite</p>
             </a>

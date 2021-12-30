@@ -26,7 +26,7 @@
                     @if(auth()->user())
                     <a class="uk-button uk-button-danger uk-button-large" href="{{route('admin.request')}}" data-uk-icon="triangle-right">Request</a>
                     <a class="uk-button uk-button-default uk-button-large" href="{{route('website.myrequest')}}" data-uk-icon="triangle-right">Myrequest</a>
-                    <a class="uk-button uk-button-default uk-button-large" href="{{route('website.mec')}}" data-uk-icon="triangle-right">Mechanics panel</a>
+                    <a class="uk-button uk-button-default uk-button-large" href="{{route('website.deposite')}}" data-uk-icon="triangle-right">Mechanics panel</a>
                     <a class="uk-button uk-button-default uk-button-large" href="{{route('user.logout')}}" data-uk-icon="triangle-right">Logout</a>
                     <a>{{auth()->user()->name}}</a>
                     
@@ -55,7 +55,7 @@
                     <a class="uk-button uk-button-default uk-button-large" href="{{route('user.logout')}}" data-uk-icon="triangle-right">Logout</a>
 
                     <a class="uk-button uk-button-default uk-button-large" href="{{route('website.myrequest')}}" data-uk-icon="triangle-right">Myrequest</a>
-                    <a class="uk-button uk-button-default uk-button-large" href="{{route('website.mec')}}" data-uk-icon="triangle-right">Mechanics panel</a>
+                    <a class="uk-button uk-button-default uk-button-large" href="{{route('website.deposite')}}" data-uk-icon="triangle-right">Mechanics panel</a>
                     @else
                     <a class="uk-button uk-button-default uk-button-large" href="{{route('website.login')}}" data-uk-icon="triangle-right">Login</a>
 

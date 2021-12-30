@@ -16,9 +16,19 @@ class ServiceController extends Controller
     }
 
    public function sList(){
+       $key=null;
+       if(request()->search){
+           $key=request()->search;
+           $service=Service::with('servicetypes')
+           ->where('name','Like','%'.$key.'%')
+           ->get();
+           return view('admin.pages.service.service-list',compact('service','key'));
+       }
+
+
     $service=Service::with('servicetypes')->get();
     //dd($data);
-    return view('admin.pages.service.service-list',compact('service'));
+    return view('admin.pages.service.service-list',compact('service','key'));
    }
 
     public function store(Request $request){
