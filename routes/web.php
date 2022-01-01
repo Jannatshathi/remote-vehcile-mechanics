@@ -90,11 +90,15 @@ use App\Http\Controllers\MyrequestController;
                 Route::post('/request/store',[RequestController::class,'store'])->name('admin.request.store');
                 Route::get('/request/status/update/{id}',[RequestController::class,'viewRequest'])->name('admin.view.request');
                 Route::put('/request/update/{id}',[RequestController::class,'updateRequest'])->name('admin.update.request');
+                Route::get('/request/delete/{id}',[RequestController::class,'deleteRequest'])->name('admin.delete.request');
                 
                 
                 //deposite
                 Route::get('/deposite/list',[DepositeController::class,'depositeList'])->name('admin.deposite.list');
-                Route::post('/deposite/store',[DepositeController::class,'store'])->name('admin.deposite.store');
+                Route::post('/deposite/store',[DepositeController::class,'depositeStore'])->name('admin.deposite.store');
+                Route::get('/deposite/status/update/{id}',[DepositeController::class,'viewDeposite'])->name('admin.view.deposite');
+                Route::put('/deposite/update/{id}',[DepositeController::class,'updateDeposite'])->name('admin.update.deposite');
+                Route::get('/deposite/delete/{id}',[DepositeController::class,'deleteDeposite'])->name('admin.delete.deposite');
                 
                 //vehcile
                 Route::get('/vehcile',[VehcileController::class,'vehcile'])->name ('admin.vehcile');

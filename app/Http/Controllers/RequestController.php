@@ -47,5 +47,9 @@ class RequestController extends Controller
         ]);
         return redirect()->route('admin.request.list');
     }
+    public function deleteRequest($id){
+        Myrequest::find($id)->delete();
+        return redirect()->back();
+    }
 
 }

@@ -61,7 +61,7 @@
       <td>
         @if($x->status == 'pending')
         <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-primary">Accept</a>
-        <a href="" class="btn btn-success">Delete</a>
+        <a href="{{route('admin.delete.request',$x->id)}}" class="btn btn-success">Delete</a>
 
         @elseif($x->status == 'confirm')
         

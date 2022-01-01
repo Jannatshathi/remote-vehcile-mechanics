@@ -1,5 +1,10 @@
 @extends('website.master')
 @section('content')
+@if(session()->has('success'))
+    <p class="alert alert-success">
+      {{session()->get('success')}}
+    </p>
+    @endif
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,12 +23,7 @@
    
     <hr>
 
-    @if(session()->has('success'))
-    <p class="alert alert-success">
-      {{session()->get('success')}}
-    </p>
-    @endif
-
+    
     @if ($errors->any())
               <div class="alert alert-danger">
                 <ul>
@@ -36,10 +36,14 @@
               </div>
   @endif
 
-    <form action="{{route('website.deposite.store')}}" method="POST" enctype="multipart/form-data">
-      @csrf
+    <form action="{{route('admin.deposite.store')}}" method="POST" enctype="multipart/form-data">
      
-    
+      @csrf
+      
+      <div class="form-group">
+        <label for="name" style="font-size:20px;"><b>User Id</label></b>
+        <input type="text" class="form-control" id="name"  placeholder="Enter Your User Id" name="user_id">
+        </div>
 
         <div class="form-group">
           <label for="name" style="font-size:20px;"><b>Remark</label></b>
@@ -48,7 +52,7 @@
 
           <div class="form-group">
             <label for="name" style="font-size:20px;"><b>Transaction Id</label></b>
-            <input type="number" class="form-control" id="name"  placeholder="Enter Your Transaction Id" name="transaction id">
+            <input type="number" class="form-control" id="name"  placeholder="Enter Your Transaction_Id" name="transaction_id">
             </div>
 
         
@@ -61,7 +65,7 @@
 
     <div class="form-group">
       <label for="amount" style="font-size:20px;"><b>Reciept</label></b>
-      <input type="file" class="form-control" id="amount"  placeholder="Enter the receipt" name="receipt">
+      <input type="file" class="form-control" id="amount"  placeholder="Enter the receipt" name='image'>
      
     </div>
      
