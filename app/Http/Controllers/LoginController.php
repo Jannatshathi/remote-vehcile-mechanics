@@ -12,7 +12,7 @@ class LoginController extends Controller
     }
 
     public function registrationPost(Request $request){
-        // dd($request->all());
+        //  dd($request->all());
         if($request->hasFile('user_image'))
                  {
                      $file=$request->file('user_image');
@@ -32,6 +32,8 @@ class LoginController extends Controller
             'phone'=>$request->phone,
             'email'=>$request->email,
             'password'=>bcrypt( $request->password),
+            'role'=>$request->role,
+            'amount'=>$request->amount
         ]);
         return redirect()->route('website.login');
         

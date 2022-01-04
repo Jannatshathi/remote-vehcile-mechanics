@@ -1,6 +1,7 @@
 
 <div class="sidebar-wrapper">
         <ul class="nav">
+          @if(auth()->user()->role=='admin')
           <li class="nav-item active  ">
             <a class="nav-link" href="{{route('home')}}">
               <i class="material-icons">dashboard</i>
@@ -54,12 +55,15 @@
               <p>customer</p>
             </a>
           </li>
+          @endif
+          
           <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.request.list')}}">
               <i class="material-icons">content_paste</i>
               <p>Request</p>
             </a>
           </li>
+          @if(auth()->user()->role=='admin')
 
           <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.vehcile.list')}}">
@@ -95,6 +99,7 @@
               <p>Report</p>
             </a>
           </li>
+          @endif
 
           {{-- <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.user.list')}}">

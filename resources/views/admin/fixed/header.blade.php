@@ -55,7 +55,8 @@
                 </a>
               </li>
             </ul> --}}
-            <a href="{{route('admin.logout')}}" class="btn btn-primary">Logout</a>
+            <a class="nav-link px-3" href="{{route('admin.logout')}}">{{auth()->user()->name}} ({{auth()->user()->role}}) |  Logout</a>
+           
           </div>
         </div>
       </nav>

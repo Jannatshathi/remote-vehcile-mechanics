@@ -34,6 +34,16 @@
           <label for="exampleInputPassword1" class="form-label">Phone</label>
           <input required name="phone" type="text" class="form-control" id="exampleInputPassword1">
         </div>
+
+        <select name="role" class="form-select form-select-sm mb-5" aria-label=".form-select-sm example">
+          <option selected>Role</option>
+          <option value="user">User</option>
+          <option value="mechanics">Mechanics</option>
+        </select>
+
+        <label for="exampleInputPassword1" class="form-label">amount</label>
+        <input required name="amount" type="number" class="form-control" id="exampleInputPassword1">
+      </div>
         
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Image</label>

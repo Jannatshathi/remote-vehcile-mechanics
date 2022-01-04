@@ -42,7 +42,7 @@ use App\Http\Controllers\MyrequestController;
         Route::get('/admin/logout',[AdminController::class,'logout'])->name('admin.logout');
 
         
-        Route::group(['middleware'=>'auth'],function(){
+        Route::group(['middleware'=>['auth','admin']],function(){
             
             Route::get('/pages', function () {
                 return view('admin.pages.home');
