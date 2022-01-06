@@ -36,30 +36,25 @@
               </div>
   @endif
 
-    <form action="{{route('admin.deposite.store')}}" method="POST" enctype="multipart/form-data">
+    <form action="{{route('admin.deposite.store',$dep->id)}}" method="POST" enctype="multipart/form-data">
      
       @csrf
-      
-      <div class="form-group">
-        <label for="name" style="font-size:20px;"><b>User Id</label></b>
-        <input type="text" class="form-control" id="name"  placeholder="Enter Your User Id" name="user_id">
-        </div>
-
+      @method("PATCH")
         <div class="form-group">
           <label for="name" style="font-size:20px;"><b>Remark</label></b>
-          <input type="text" class="form-control" id="name"  placeholder="Remark" name="remark">
+          <input type="text" class="form-control" id="name"  value="{{$dep->remark}}" name="remark">
           </div>
 
           <div class="form-group">
             <label for="name" style="font-size:20px;"><b>Transaction Id</label></b>
-            <input type="number" class="form-control" id="name"  placeholder="Enter Your Transaction_Id" name="transaction_id">
+            <input type="number" class="form-control" id="name"  value="{{$dep->transaction_id}}" name="transaction_id">
             </div>
 
         
 
         <div class="form-group">
           <label for="address" style="font-size:20px;"><b>Amount</label></b>
-          <input type="text" class="form-control" id="address"  placeholder="Enter the Amount" name="amount">
+          <input type="text" class="form-control" id="address"  value="{{$dep->amount}}" name="amount">
          
         </div>
 

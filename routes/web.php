@@ -95,7 +95,7 @@ use App\Http\Controllers\MyrequestController;
                 
                 //deposite
                 Route::get('/deposite/list',[DepositeController::class,'depositeList'])->name('admin.deposite.list');
-                Route::post('/deposite/store',[DepositeController::class,'depositeStore'])->name('admin.deposite.store');
+                Route::patch('/deposite/store/{id}',[DepositeController::class,'depositeStore'])->name('admin.deposite.store');
                 Route::get('/deposite/status/update/{id}',[DepositeController::class,'viewDeposite'])->name('admin.view.deposite');
                 Route::put('/deposite/update/{id}',[DepositeController::class,'updateDeposite'])->name('admin.update.deposite');
                 Route::get('/deposite/delete/{id}',[DepositeController::class,'deleteDeposite'])->name('admin.delete.deposite');
@@ -108,11 +108,13 @@ use App\Http\Controllers\MyrequestController;
                 //report
                 Route::get('/report',[ReportController::class,'report'])->name('admin.report');
 
+
+               
+
             
 
             });
         });
-        //admin
         
         
         // website
@@ -157,8 +159,11 @@ use App\Http\Controllers\MyrequestController;
         Route::get('/vehcile/list',[VehcileController::class,'vehList'])->name ('website.vehcile.list');
 
         //deposite
-        Route::get('/deposite',[DepositeController::class,'deposite'])->name('website.deposite');
+        Route::get('/deposite/',[DepositeController::class,'deposite'])->name('website.deposite');
         Route::post('/deposite',[DepositeController::class,'depositeStore'])->name('website.deposite.store');
+
+         //profile
+         Route::get('/profile',[UserController::class,'profile'])->name('website.profile');
 
 
         

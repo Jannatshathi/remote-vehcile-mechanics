@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\User;
  use Illuminate\Http\Request;
+ use App\Models\Deposite;
 
 use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
@@ -34,6 +35,13 @@ class LoginController extends Controller
             'password'=>bcrypt( $request->password),
             'role'=>$request->role,
             'amount'=>$request->amount
+        ]);
+        Deposite::create([
+            'user_id'=>Auth::user()->id,
+            'remark'=>'null',
+            'transaction_id'=>234,
+            'amount'=>$request->amount,
+            'reciept'=>$image_name
         ]);
         return redirect()->route('website.login');
         

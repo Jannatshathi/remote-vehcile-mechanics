@@ -47,6 +47,7 @@
                 <li><a href="{{route('website.vehcile.list')}}">Vehicle</a></li>
                 
                 <li><a href="{{route('website.register')}}">Register</a></li>
+                <li><a href="{{route('website.profile')}}">Profile</a></li>
 
                   <div class="uk-navbar-dropdown">
                     <ul class="uk-nav uk-navbar-dropdown-nav">
