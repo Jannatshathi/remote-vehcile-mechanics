@@ -9,7 +9,14 @@ use App\Models\Deposite;
 class HomewebController extends Controller
 {
     public function webhome(){
-        $dep = Deposite::where('user_id','=',Auth::user()->id)->first();
-        return view('website.pages.webhome',compact('dep'));
+        if (!empty(auth()->user())) {
+            $dep = Deposite::where('user_id',auth()->user()->id)->first();
+            return view('website.pages.webhome',compact('dep'));
+        }
+        else {
+            $dep = 0;
+            return view('website.pages.webhome',compact('dep'));
+        }
+        
     }
 }

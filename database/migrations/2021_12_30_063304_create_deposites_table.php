@@ -19,9 +19,8 @@ class CreateDepositesTable extends Migration
             $table->string('remark');
             $table->integer('transaction_id');
             $table->string('amount');
-            $table->string('reciept');
+            $table->string('reciept')->nullable();
             $table->string('status')->default('0');
-
             $table->timestamps();
         });
     }

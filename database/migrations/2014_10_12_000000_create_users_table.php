@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->double('phone');
             $table->string('role');
-            $table->integer('amount');
+            $table->integer('amount')->default('0');
             $table->string('image');
             $table->rememberToken();
             $table->timestamps();

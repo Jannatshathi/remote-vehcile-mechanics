@@ -36,13 +36,13 @@ class LoginController extends Controller
             'role'=>$request->role,
             'amount'=>$request->amount
         ]);
-        Deposite::create([
-            'user_id'=>Auth::user()->id,
-            'remark'=>'null',
-            'transaction_id'=>234,
-            'amount'=>$request->amount,
-            'reciept'=>$image_name
-        ]);
+        // Deposite::create([
+        //     'user_id'=>Auth::user()->id,
+        //     'remark'=>'null',
+        //     'transaction_id'=>234,
+        //     'amount'=>$request->amount,
+        //     'reciept'=>$image_name
+        // ]);
         return redirect()->route('website.login');
         
     }

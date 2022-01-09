@@ -18,6 +18,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\MyrequestController;
+use App\Http\Controllers\ProfileController;
 
 
 /*
@@ -159,11 +160,13 @@ use App\Http\Controllers\MyrequestController;
         Route::get('/vehcile/list',[VehcileController::class,'vehList'])->name ('website.vehcile.list');
 
         //deposite
-        Route::get('/deposite/',[DepositeController::class,'deposite'])->name('website.deposite');
+        Route::get('/deposite/{id}',[DepositeController::class,'deposite'])->name('website.deposite');
         Route::post('/deposite',[DepositeController::class,'depositeStore'])->name('website.deposite.store');
 
          //profile
-         Route::get('/profile',[UserController::class,'profile'])->name('website.profile');
+         Route::get('/website/profile',[ProfileController::class,'profile'])->name('website.user.profile');
+         Route::get('/website/profile/edit/{id}',[ProfileController::class,'edit'])->name('website.profile.edit');
+         Route::put('/website/profile/update/{id}',[ProfileController::class,'update'])->name('website.profile.update');
 
 
         

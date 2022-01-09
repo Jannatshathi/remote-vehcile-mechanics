@@ -8,12 +8,22 @@ use App\Models\Deposite;
 
 class DepositeController extends Controller
 {
-    public function deposite(){
-        // dd('here');
-        $dep = Deposite::where('user_id','=',Auth::user()->id)->first();
+    public function deposite($id){
+        //dd($id);
+        return view('website.pages.depositeform');
+        // // dd('here');
+        // $dep = Deposite::where('user_id',auth()->user()->id)->get();
+        // //dd($dep);
+        // if (!empty($dep)) {
+        //     return view('website.pages.deposite',compact('dep'));
+        // }
+        // else {
+        //     // $dep = ;
+        //     // return view('website.pages.deposite',compact('dep'));
+        // }
         // dd($dep->id);
-        return view('website.pages.deposite',compact('dep'));
-    }
+        
+        }
     public function depositeList(){
         $deposite=Deposite::all();
         //dd($deposite);
@@ -21,14 +31,21 @@ class DepositeController extends Controller
     }
 
 
-    public function depositeStore($id, Request $request){
-        $dep= Deposite::find($id)->first();
-        $amount = $dep->amount+$request->amount;
-        $dep->update([
-            'amount'=>$amount,
-            'remark'=>$request->remark,
-            'transaction_id'=>$request->transaction_id
+    public function depositeStore( Request $request){ 
+        // dd($request->all());
+        Deposite::create([
+            'user_id'=>auth()->user()->id,
+            'amount'=>$request->amount,
+              'remark'=>$request->remark,
+              'transaction_id'=>$request->transaction_id
         ]);
+        // $dep= Deposite::find($id)->first();
+        // $amount = $dep->amount+$request->amount;
+        // $dep->update([
+        //     'amount'=>$amount,
+        //     'remark'=>$request->remark,
+        //     'transaction_id'=>$request->transaction_id
+        // ]);
         return redirect()->back()->with('success','Sucessfully deposite send');
     }
 

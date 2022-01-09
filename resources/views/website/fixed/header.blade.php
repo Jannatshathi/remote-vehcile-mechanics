@@ -47,7 +47,30 @@
                 <li><a href="{{route('website.vehcile.list')}}">Vehicle</a></li>
                 
                 <li><a href="{{route('website.register')}}">Register</a></li>
-                <li><a href="{{route('website.profile')}}">Profile</a></li>
+               
+                @if(auth()->user())
+               
+                <li><a href="{{route('admin.request')}}">Request</a></li>
+                <li><a href="{{route('website.myrequest')}}">Myrequest</a></li>
+                <li><a href="{{route('website.user.profile')}}">Profile</a></li>
+                @auth
+                {{-- <li><a href="{{route('website.deposite')}}">Mechanics panel</a></li> --}}
+                @endauth
+                <li><a href="{{route('user.logout')}}">Logout</a></li>
+                @else
+                <li><a href="{{route('website.login')}}">Login</a></li>
+                @endif
+
+
+
+
+
+
+
+
+
+
+
 
                   <div class="uk-navbar-dropdown">
                     <ul class="uk-nav uk-navbar-dropdown-nav">

@@ -23,18 +23,21 @@
                   </div>
                   <div class="first-screen__btns" data-uk-slideshow-parallax="x: 200,-200">
 
-                    @if(auth()->user())
+                   
+                    {{-- <a class="uk-button uk-button-danger uk-button-large" href="{{route('website.user.profile')}}" data-uk-icon="triangle-right"></a>
                     <a class="uk-button uk-button-danger uk-button-large" href="{{route('admin.request')}}" data-uk-icon="triangle-right">Request</a>
-                    <a class="uk-button uk-button-default uk-button-large" href="{{route('website.myrequest')}}" data-uk-icon="triangle-right">Myrequest</a>
-                    <a class="uk-button uk-button-default uk-button-large" href="{{route('website.deposite')}}" data-uk-icon="triangle-right">Mechanics panel</a>
+                    <a class="uk-button uk-button-default uk-button-large" href="{{route('website.myrequest')}}" data-uk-icon="triangle-right"></a>
+                   
+                   <a class="uk-button uk-button-default uk-button-large" href="{{route('website.deposite')}}" data-uk-icon="triangle-right"></a>
+               
                     <a class="uk-button uk-button-default uk-button-large" href="{{route('user.logout')}}" data-uk-icon="triangle-right">Logout</a>
-                    <a>{{auth()->user()->name}}</a>
+                    
                     
 
-                    @else
+                   
                     <a class="uk-button uk-button-default uk-button-large" href="{{route('website.login')}}" data-uk-icon="triangle-right">Login</a>
 
-                    @endif
+                  --}}
                   </div>
                 </div>
               </div>
@@ -49,7 +52,7 @@
                     <div class="first-screen__btns" data-uk-slideshow-parallax="x: 200,-200">
                       
                       
-                      @if(auth()->user())
+                      {{-- @if(auth()->user())
                       <a class="uk-button uk-button-danger uk-button-large" href="{{route('admin.request')}}" data-uk-icon="triangle-right">Request</a>
  
                     <a class="uk-button uk-button-default uk-button-large" href="{{route('user.logout')}}" data-uk-icon="triangle-right">Logout</a>
@@ -59,7 +62,7 @@
                     @else
                     <a class="uk-button uk-button-default uk-button-large" href="{{route('website.login')}}" data-uk-icon="triangle-right">Login</a>
 
-                    @endif
+                    @endif --}}
                   </div>
                   </div>
                 </div>
