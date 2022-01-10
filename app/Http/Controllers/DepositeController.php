@@ -13,6 +13,7 @@ class DepositeController extends Controller
         return view('website.pages.depositeform');
         // // dd('here');
         // $dep = Deposite::where('user_id',auth()->user()->id)->get();
+        // $total = $dep->amount+$request->cost;
         // //dd($dep);
         // if (!empty($dep)) {
         //     return view('website.pages.deposite',compact('dep'));
@@ -59,8 +60,19 @@ class DepositeController extends Controller
 
     public function updateDeposite( Request $request,$id){
         // dd($id);
+        // dd($request->all());
+        $test = Deposite::find($id); 
+        $old = $test->amount;
+        $newAmmount = $request->amount;
+        $total = $old + $newAmmount;
+        // dd($total);
+        $percent = 10;
+        $final = ($percent / 100)*$total;
+        // dd($final);
+
         Deposite::find($id)->update([
-            'status'=>$request->status
+            'status'=>$request->status,
+            'amount'=> $final
         ]);
         
         // if(auth()->User()->id){

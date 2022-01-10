@@ -14,12 +14,12 @@ class MyrequestController extends Controller
         return view('website.pages.myrequest', compact('req'));
     }
     public function store(Request $request){
-        // dd($request->all());
+        //dd($request->all());
         Myrequest::create([
             'name'=>$request->name,
             'address'=>$request->address,
             'location'=>$request->location,
-            'service'=>$request->service,
+            'service_id'=>$request->service_id,
 
         ]);
         return redirect()->route('website.myrequest');

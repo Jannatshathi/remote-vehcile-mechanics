@@ -44,23 +44,15 @@
 
 
         <label for="category">Service Type</label><br>
-        <select id="category" name="service">
+        <select id="category" name="service_id">
           <option value="Service type">Service type</option>
-          <option value="Washing">Washing</option>
-          <option value="Repair">Repair</option>
-          <option value="Tool fix">Tool fix</option>
-          <option value="Parts Change">Parts Change</option>
+          <option value="1" placeholder="washing" >Washing</option>
+          <option value="2" placeholder="repair" >Repair</option>
+          <option value="3" placeholder="tool fix">Tool fix</option>
+          <option value="4"placeholder="parts change">Parts Change</option>
           <option value="Others Services">Others Services</option>
           
         </select><br> <br>
-        {{-- <div class="acf-field acf-field-textarea acf-field-60783f1216574" data-name="project" data-type="textarea"
-            data-key="field_60783f1216574">
-            <div class="acf-label">
-                
-            <div class="acf-input">
-                <textarea id="acf-field_60783f1216574" name="service" rows="1"></textarea></div>
-        </div>
-    </div> --}}
     
     <button type="submit" class="btn btn-primary">Submit</button>
   

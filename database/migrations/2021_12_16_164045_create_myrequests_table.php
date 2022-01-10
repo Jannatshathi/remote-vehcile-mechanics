@@ -18,8 +18,9 @@ class CreateMyrequestsTable extends Migration
             $table->string('name');
             $table->string('address');
             $table->string('location');
-            $table->string('service');
+            $table->integer('service_id');
             $table->string('status')->default('pending');
+            $table->integer('mechanics_id')->nullable();
             $table->timestamps();
         });
     }

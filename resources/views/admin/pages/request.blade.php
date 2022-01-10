@@ -22,7 +22,7 @@
 
       <div class="form-group">
         <label for="exampleFormControlInput1">Service</label>
-        <input value="{{$status->service}}" name="service" type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <input value="{{$status->service_id}}" name="service" type="text" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
       </div>
 
       <div class="form-group">

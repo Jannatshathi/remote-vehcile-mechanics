@@ -20,6 +20,7 @@ class CreateRequestTable extends Migration
             $table->string('location');
             $table->string('service');
             $table->string('status')->default('0');
+            $table->integer('mechanics_id')->nullable();
             $table->timestamps();
         });
     }

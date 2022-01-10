@@ -43,7 +43,8 @@ class RequestController extends Controller
         // dd($request->all());
         // dd($id);
         Myrequest::find($id)->update([
-            'status'=>$request->status
+            'status'=>$request->status,
+            'mechanics_id'=>auth()->user()->id
         ]);
         return redirect()->route('admin.request.list');
     }
