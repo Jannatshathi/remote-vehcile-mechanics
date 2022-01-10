@@ -32,7 +32,7 @@ class MechanicsController extends Controller
           
             'name'=>$request->name,
             'email'=>$request->email,
-            'password'=>$request->password,
+            'password'=>bcrypt( $request->password),
             'phone'=>$request->phone,
             'address'=>$request->address,
             'image'=>$image_name,

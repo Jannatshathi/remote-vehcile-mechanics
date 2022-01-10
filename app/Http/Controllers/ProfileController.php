@@ -2,14 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Deposite;
+use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
     public function profile()
     {
-           return view('website.pages.user-profile');
+        $status=false;
+        $profile=Deposite::where('user_id',auth()->user()->id)->get();
+        //dd($profile);
+        if ($profile->isEmpty()) {
+            return view('website.pages.user-profile', compact('status'));
+        } else {
+            $status=true;
+            return view('website.pages.user-profile', compact('status'));
+        }
+        
+           
     }
 
     public function edit($id)

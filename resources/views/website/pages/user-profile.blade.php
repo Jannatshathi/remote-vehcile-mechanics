@@ -126,9 +126,15 @@
                     </div>
                     <br>
                     <br>
+                    @if($status==false && auth()->user()->role=='mechanics')
                     <div class="col-sm-12">
                       <a class="btn btn-info "  href="{{route('website.deposite',auth()->user()->id)}}">Create account</a>
                     </div>
+                    @else
+                    <div class="col-sm-12">
+                      <a class="btn btn-info "  href="">Deposite account</a>
+                    </div>
+                    @endif
                   </div>
                 </div>
               </div>
