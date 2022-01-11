@@ -110,7 +110,7 @@
                     </div>
                   </div>
                   
-                  <hr>
+                  {{-- <hr>
                   <div class="row">
                     <div class="col-sm-3">
                       <h6 class="mb-0">Address</h6>
@@ -118,7 +118,7 @@
                     <div class="col-sm-9 text-secondary">
                     {{auth()->user()->address}}
                     </div>
-                  </div>
+                  </div> --}}
                   <hr>
                   <div class="row">
                     <div class="col-sm-12">

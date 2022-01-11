@@ -51,7 +51,6 @@
             {{-- @elseif($x->status == 'confirm') --}}
             
             @else
-            <a href="{{route('admin.view.deposite',$x->id)}}" class="btn btn-danger">Pending</a>
             {{-- <a href="{{route('admin.view.deposite',$x->id)}}" class="btn btn-danger">Confirmed</a> --}}
 
             <button class="btn btn-primary" type="submit" onClick="PrintDiv('printreciept');" value="Print">Print</button>

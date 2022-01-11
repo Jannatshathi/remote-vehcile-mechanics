@@ -61,18 +61,18 @@ class DepositeController extends Controller
     public function updateDeposite( Request $request,$id){
         // dd($id);
         // dd($request->all());
-        $test = Deposite::find($id); 
-        $old = $test->amount;
-        $newAmmount = $request->amount;
-        $total = $old + $newAmmount;
-        // dd($total);
-        $percent = 10;
-        $final = ($percent / 100)*$total;
+        // $test = Deposite::find($id); 
+        // $old = $test->amount;
+        // $newAmmount = $request->amount;
+        // $total = $old + $newAmmount;
+        // // dd($total);
+        // $percent = 10;
+        // $final = ($percent / 100)*$total;
         // dd($final);
 
         Deposite::find($id)->update([
             'status'=>$request->status,
-            'amount'=> $final
+            'amount'=> 100
         ]);
         
         // if(auth()->User()->id){

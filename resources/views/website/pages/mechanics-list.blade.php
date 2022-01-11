@@ -1,7 +1,7 @@
 @extends('website.master')
 @section('content')
 
-
+<div class="container">
 <div class="row">
   @foreach($mechanics as $x) <!--mechanics as array-->
     
@@ -9,7 +9,7 @@
      <div class="card h-100" >
             <h3> {{$x->name}} </h3>
         <div class="card-body">
-          <p><img src="{{url('uploads/'.$x->image)}}" height="20px"width="300px" alt="mechanic"></p>
+          <p><img src="{{url('uploads/'.$x->image)}}" height="20px"width="150px" alt="mechanic"></p>
            
            {{-- <h4><b>Model name:</b> {{$x->model}}</h4> --}}
            <h6>details: {{$x->address}} <br>

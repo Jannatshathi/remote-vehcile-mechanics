@@ -1,4 +1,11 @@
 @extends('website.master')
+@section('style')
+<link rel="stylesheet" href="/css/style.css">
+@endsection
+@section('javascript')
+<script src="/js/app.js"> </script>
+@endsection
+
 @section('content')
 
 @if ($errors->any())
@@ -35,17 +42,18 @@
           <input required name="phone" type="text" class="form-control" id="exampleInputPassword1">
         </div>
 
-        <select name="role" class="form-select form-select-sm mb-5" aria-label=".form-select-sm example">
-          <option selected>Role</option>
+        <select name="role" class="form-select form-select-sm mb-5" aria-label=".form-select-sm example" onchange="myFunction()">
+          <option selected value="role">Role</option>
           <option value="user">User</option>
           <option value="mechanics">Mechanics</option>
         </select>
-
+        <div class="amount fadeout">
         <label for="exampleInputPassword1" class="form-label">amount</label>
         <input required name="amount" type="number" class="form-control" id="exampleInputPassword1">
       </div>
+      </div>
         
-        <div class="mb-3">
+        <div class="mb-3 marge ip">
           <label for="exampleInputPassword1" class="form-label">Image</label>
           <input name="user_image" type="file" class="form-control" id="exampleInputPassword1">
         </div>

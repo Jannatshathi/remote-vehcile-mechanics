@@ -12,6 +12,7 @@
   <meta name="HandheldFriendly" content="true">
   <meta name="format-detection" content="telephone=no">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  @yield('style')
   <link rel="shortcut icon" href="https://pro-theme.com/html/cardan/assets/images/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="{{url('/css/website/uikit.min.css')}}">
   <link rel="stylesheet" href="{{url('/css/website/main.css')}}">
@@ -37,6 +38,7 @@
   <script src="https://pro-theme.com/html/cardan/assets/js/uikit-icons.min.js"></script>
   <script src="https://pro-theme.com/html/cardan/assets/js/main.js"></script>
   <script src="https://pro-theme.com/html/cardan/assets/js/fontawesome.all.min.js"></script>
+  @yield('javascript')
 </body>
 
 
