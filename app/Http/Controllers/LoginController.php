@@ -53,6 +53,9 @@ class LoginController extends Controller
     public function register(){
         return view('website.pages.registration');
     }
+    public function mechanicsregistration(){
+        return view('website.pages.mechanicsregistration');
+    }
 
 
     public function doLogin(Request $request){

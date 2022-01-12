@@ -36,7 +36,7 @@
               </div>
   @endif
 
-    <form action="{{route('admin.deposite.store',$dep->id)}}" method="POST" enctype="multipart/form-data">
+    <form action="{{route('admin.deposite.store',$dep->id)}}" method="POST" >
      
       @csrf
       @method("PATCH")
@@ -58,11 +58,11 @@
          
         </div>
 
-    <div class="form-group">
+    {{-- <div class="form-group">
       <label for="amount" style="font-size:20px;"><b>Reciept</label></b>
       <input type="file" class="form-control" id="amount"  placeholder="Enter the receipt" name='image'>
      
-    </div>
+    </div> --}}
      
     <button type="submit" class="button btn-submit">Submit</button>
      

@@ -7,7 +7,7 @@
     <thead>
       <tr>
        
-        <th scope="col">#</th>
+       
         <th scope="col">Name</th>
         <th scope="col">Address</th>
         <th scope="col">Location</th>
@@ -20,7 +20,7 @@
         @foreach ($req as $key=>$item)
         <tr>
         
-          <td>{{$key+1}}</td>
+          
         <td>{{$item->name}}</td>
         <td>{{$item->address}}</td>
         <td>{{$item->location}}</td>

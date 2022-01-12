@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Service;
+use App\Models\Myrequest;
 use Illuminate\Http\Request;
 use App\Models\Request_service;
-use App\Models\Myrequest;
 
 
 class RequestController extends Controller
@@ -42,11 +44,44 @@ class RequestController extends Controller
     public function updateRequest( Request $request,$id){
         // dd($request->all());
         // dd($id);
-        Myrequest::find($id)->update([
-            'status'=>$request->status,
-            'mechanics_id'=>auth()->user()->id
-        ]);
-        return redirect()->route('admin.request.list');
+        if ($request->status == "confirm") {
+            $request = Myrequest::find($id)->update([
+                'status'=>$request->status,
+                'mechanics_id'=>auth()->user()->id
+            ]);
+            $request = Myrequest::find($id);
+            // dd($request);
+            $service_id = $request->service_id;
+            // dd($service_id);
+            $worker_id = $request->mechanics_id;
+            // dd($worker_id);
+            $service = Service::where('id',$service_id)->get();
+            // dd($service->cost);
+            $service_cost = $service->pluck('cost');
+            // dd($service_cost);
+            $user = User::where('id',$worker_id)->get();
+            // dd($user);
+            $user_ammount = $user->pluck('amount');
+            // dd($user_ammount);
+            $total_ammount = $user_ammount[0] + $service_cost[0];
+            // dd($total_ammount);
+            $userUpdate = User::find($worker_id);
+            // dd($userUpdate);
+            $userUpdate->update([
+                'amount'=>$total_ammount
+            ]);
+            return redirect()->back();
+
+
+        } else {
+            Myrequest::find($id)->update([
+                'status'=>$request->status,
+                'mechanics_id'=>auth()->user()->id
+            ]);
+            return redirect()->route('admin.request.list');
+        }
+        
+       
     }
     public function deleteRequest($id){
         Myrequest::find($id)->delete();

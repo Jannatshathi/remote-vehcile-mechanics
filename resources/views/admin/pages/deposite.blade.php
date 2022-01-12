@@ -55,11 +55,11 @@
          
         </div>
 
-    <div class="form-group">
+    {{-- <div class="form-group">
       <label for="amount" style="font-size:20px;"><b>Reciept</label></b>
       <input value="{{$status->reciept}}"  type="file" class="form-control" id="amount"  placeholder="Enter the receipt" name="receipt">
      
-    </div>
+    </div> --}}
     
     <div class="form-group">
       <label for="exampleFormControlSelect1">Example select</label>

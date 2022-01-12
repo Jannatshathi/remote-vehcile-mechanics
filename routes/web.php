@@ -86,7 +86,7 @@ use App\Http\Controllers\ProfileController;
                 
                 
                 //request
-                Route::get('/request',[RequestController::class,'request'])->name('admin.request');
+                // Route::get('/request',[RequestController::class,'request'])->name('admin.request');
                 Route::get('/request/list',[RequestController::class,'requestList'])->name('admin.request.list');
                 Route::post('/request/store',[RequestController::class,'store'])->name('admin.request.store');
                 Route::get('/request/status/update/{id}',[RequestController::class,'viewRequest'])->name('admin.view.request');
@@ -130,7 +130,8 @@ use App\Http\Controllers\ProfileController;
         Route::get('/website/home',[HomewebController::class,'webhome'])->name('webhome');
         Route::get('/user/registration',[LoginController::class,'registration'])->name('user.registration');
         Route::post('/user/registration',[LoginController::class,'registrationPost'])->name('user.post.registration');
-        
+        Route::get('/mechanics/registration',[LoginController::class,'mechanicsregistration'])->name('mechanics.registration');
+
         Route::post('/user/do/login',[LoginController::class,'doLogin'])->name('user.do.login');
         Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout');
         
@@ -153,6 +154,7 @@ use App\Http\Controllers\ProfileController;
         //Route::get('/service/list',[Service_typeController::class,'serviceList'])->name('website.service.list');
         
         //myrequest
+        Route::get('/request',[RequestController::class,'request'])->name('website.request');
         Route::get('/myrequest',[MyrequestController::class,'myreq'])->name('website.myrequest');
         Route::post('/myrequest/store/',[MyrequestController::class,'store'])->name('website.myrequest.store');
         
