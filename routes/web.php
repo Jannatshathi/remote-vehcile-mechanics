@@ -41,7 +41,10 @@ use App\Http\Controllers\ProfileController;
         Route::get('/',[AdminController::class,'login'])->name('admin.login');
         Route::post('/admin/do-login',[AdminController::class,'doLogin'])->name('admin.doLogin');
         Route::get('/admin/logout',[AdminController::class,'logout'])->name('admin.logout');
-
+        
+        Route::get('/mechanics',[MechanicsController::class,'mechanicsList'])->name('admin.mechanics.list');
+        Route::post('/mechanics/store',[MechanicsController::class,'store'])->name('admin.mechanics.store');
+        
         
         Route::group(['middleware'=>['auth','admin']],function(){
             
@@ -66,8 +69,6 @@ use App\Http\Controllers\ProfileController;
                 Route::post('/customer/store',[CustomerController::class,'store'])->name('admin.customer.store');
                 
                 //mechanics
-                Route::get('/mechanics',[MechanicsController::class,'mechanicsList'])->name('admin.mechanics.list');
-                Route::post('/mechanics/store',[MechanicsController::class,'store'])->name('admin.mechanics.store');
                 
                 
                 //service
@@ -130,7 +131,8 @@ use App\Http\Controllers\ProfileController;
         Route::get('/website/home',[HomewebController::class,'webhome'])->name('webhome');
         Route::get('/user/registration',[LoginController::class,'registration'])->name('user.registration');
         Route::post('/user/registration',[LoginController::class,'registrationPost'])->name('user.post.registration');
-        Route::get('/mechanics/registration',[LoginController::class,'mechanicsregistration'])->name('mechanics.registration');
+        Route::post('/user/registration',[LoginController::class,'mecregistrationPost'])->name('user.post.mecregistration');
+       
 
         Route::post('/user/do/login',[LoginController::class,'doLogin'])->name('user.do.login');
         Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout');
@@ -140,8 +142,9 @@ use App\Http\Controllers\ProfileController;
         
         
         //register
-        Route::get('/register',[LoginController::class,'register'])->name('website.register');
-        Route::post('/register/store',[LoginController::class,'store'])->name('website.register.store');
+        Route::get('/register',[LoginController::class,'register'])->name('website.register'); //user registration form
+        Route::post('/register/store',[LoginController::class,'registrationPost'])->name('website.register.store'); //user registration form post
+        Route::get('/mecregister',[LoginController::class,'mecregister'])->name('website.mecregister');
         
         //customer
         Route::get('/customer',[CustomerController::class,'customer'])->name('website.customer');

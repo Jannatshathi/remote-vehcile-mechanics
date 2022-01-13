@@ -12,11 +12,12 @@ class LoginController extends Controller
         return view('website.pages.registration');
     }
 
-    public function registrationPost(Request $request){
+    public function mecregistrationPost(Request $request){
         //  dd($request->all());
-        if($request->hasFile('user_image'))
+         $image_name = '';
+        if($request->hasFile('image_name'))
                  {
-                     $file=$request->file('user_image');
+                     $file=$request->file('image_name');
                      // step 2: generate file name
                      $image_name=date('Ymdhms').'.'.$file->getClientOriginalExtension();
 
@@ -34,8 +35,12 @@ class LoginController extends Controller
             'email'=>$request->email,
             'password'=>bcrypt( $request->password),
             'role'=>$request->role,
-            'amount'=>$request->amount
+            'address'=>$request->address,
+            'workexperience'=>$request->workexperience,
+            'amount'=>$request->amount,
+            // 'status'=>$request->status 
         ]);
+        
         // Deposite::create([
         //     'user_id'=>Auth::user()->id,
         //     'remark'=>'null',
@@ -53,11 +58,37 @@ class LoginController extends Controller
     public function register(){
         return view('website.pages.registration');
     }
-    public function mechanicsregistration(){
-        return view('website.pages.mechanicsregistration');
+    public function mecregister(){
+        return view('website.pages.mechanics-registration');
     }
 
+    public function registrationPost(Request $request){
+       //dd($request->all());
+        $user_image = '';
+        if($request->hasFile('user_image'))
+                 {
+                     $file=$request->file('user_image');
+                     // step 2: generate file name
+                     $user_image=date('Ymdhms').'.'.$file->getClientOriginalExtension();
 
+                     //step 3 : store into project directory
+
+                     $file->storeAs('/uploads',$user_image);
+                    }
+                    $request->validate([
+                        'phone'=>'required |max:11',
+                    ]);
+        User::create([
+            'image'=>$user_image,
+            'name'=>$request->name,
+            'phone'=>$request->phone,
+            'email'=>$request->email,
+            'password'=>bcrypt( $request->password),
+            'address'=>$request->address,
+          
+        ]);
+        return redirect()->route('website.login');  
+    }
     public function doLogin(Request $request){
         // dd($request->all());
         $userpost=$request->except('_token');

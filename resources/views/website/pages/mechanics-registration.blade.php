@@ -21,21 +21,26 @@
 
   <div class="col-md-2"></div>
   <div class="col-md-8">
-    <form  enctype="multipart/form-data" >
+    <form action="{{route('user.post.mecregistration')}}" method='POST' enctype="multipart/form-data">
       @csrf
       <div class="mb-3">
   
           <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Name</label>
-              <input required name="name" type="text" class="form-control" id="exampleInputPassword1">
+              <label for="exampleInputPassword1" class="form-label">Mechanic Name</label>
+              <input name="name" type="text" class="form-control" id="exampleInputPassword1">
             </div>
             
         <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input required name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  
+        <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            
+        <div class="mb-3">
+          {{-- <label for="exampleInputPassword1" class="form-label">Password</label> --}}
+          <input hidden value="mechanics" name="role" type="text" class="form-control" id="exampleInputPassword1">
+        </div>
+
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input required name="password" type="password" class="form-control" id="exampleInputPassword1">
+        <input name="password" type="password" class="form-control" id="exampleInputPassword1">
       </div>
       <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Phone</label>
@@ -44,7 +49,12 @@
 
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Address</label>
-          <input required name="address" type="text" class="form-control" id="exampleInputPassword1">
+          <input name="address" type="text" class="form-control" id="exampleInputPassword1">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Work Experience</label>
+          <input name="workexperience" type="text" class="form-control" id="exampleInputPassword1">
         </div>
 
       <div class="mb-3">
@@ -53,11 +63,11 @@
       </div>
        <br>
        <br><br><br>
-    
+      
         
         <div class="mb-3 marge ip">
           <label for="exampleInputPassword1" class="form-label">Image</label>
-          <input required name="user_image" type="file" class="form-control" id="exampleInputPassword1">
+          <input name="image_name" type="file" class="form-control" id="exampleInputPassword1">
         </div>
   
       <button type="submit" class="btn btn-primary">Submit</button>

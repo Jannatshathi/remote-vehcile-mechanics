@@ -48,7 +48,7 @@
                 
                 <li><a href="{{route('website.register')}}">Register</a></li>
 
-                <li><a href="{{route('mechanics.registration')}}">Mechanics Register</a></li>
+                <li><a href="{{route('website.mecregister')}}">Mechanics Register</a></li>
                 @if(auth()->user())
                
                 <li><a href="{{route('website.request')}}">Request</a></li>

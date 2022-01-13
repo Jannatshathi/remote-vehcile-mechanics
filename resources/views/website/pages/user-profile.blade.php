@@ -110,7 +110,7 @@
                     </div>
                   </div>
                   
-                  {{-- <hr>
+                   <hr>
                   <div class="row">
                     <div class="col-sm-3">
                       <h6 class="mb-0">Address</h6>
@@ -118,7 +118,7 @@
                     <div class="col-sm-9 text-secondary">
                     {{auth()->user()->address}}
                     </div>
-                  </div> --}}
+                  </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-12">
@@ -132,9 +132,15 @@
                     </div>
                     @else
                     @if (auth()->user()->role=='mechanics')
-                      <div class="col-sm-12">
-                        <a class="btn btn-info "  href="">Deposite account</a>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <h6 class="mb-0">Amount</h6>
                       </div>
+                      <div class="col-sm-9 text-secondary">
+                      {{auth()->user()->amount}}
+                      </div>
+                    </div>
                     @else
                         
                     @endif

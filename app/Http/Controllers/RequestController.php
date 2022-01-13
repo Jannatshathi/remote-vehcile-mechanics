@@ -59,11 +59,14 @@ class RequestController extends Controller
             // dd($service->cost);
             $service_cost = $service->pluck('cost');
             // dd($service_cost);
+            $percent = 10;
+            $final = ($percent / 100)*$service_cost[0];
+            // dd($final);
             $user = User::where('id',$worker_id)->get();
             // dd($user);
             $user_ammount = $user->pluck('amount');
             // dd($user_ammount);
-            $total_ammount = $user_ammount[0] + $service_cost[0];
+            $total_ammount = $user_ammount[0] + $final;
             // dd($total_ammount);
             $userUpdate = User::find($worker_id);
             // dd($userUpdate);

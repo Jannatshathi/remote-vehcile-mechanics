@@ -8,11 +8,7 @@
    }     /* oranges! yey */
 }
 </style>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Add Mechanics
-</button>
+<h2>Mechanics list</h2>
 
 <table class="table">
   <thead>
@@ -24,6 +20,9 @@
       <th scope="col">Password</th>
       <th scope="col">Phone</th>
       <th scope="col">Address</th>
+      <th scope="col">Work Experience</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Status</th>
       <th scope="col">Image</th>
     </tr>
   </thead>
@@ -37,15 +36,17 @@
       <td>{{$x->password}}</td>
       <td>{{$x->phone}}</td>
       <td>{{$x->address}}</td>
+      <td>{{$x->workexperience}}</td>
+      <td>{{$x->amount}}</td>
       <td>
-        <img src="{{url('/uploads/'.$x->image)}}"width="100px" alt="service">
+        <img src="{{url('/uploads/'.$x->image)}}"width="100px" alt="mechanic">
       </td>
     </tr>
     @endforeach
   </tbody>
 </table>
 
-<!-- Modal -->
+{{-- <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -101,4 +102,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
 
-@endsection
+ --}}
+ @endsection

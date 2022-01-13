@@ -13,12 +13,12 @@ class MechanicsController extends Controller
         return view('admin.pages.mechanics.mechanics-list',compact('mechanics'));
     }
     public function store(Request $request){
+        // dd($request->all());
+        $image_name = '';
 
-        // $image_name = '';
-
-        if($request->hasFile('image'))
+        if($request->hasFile('image_name'))
                  {
-                     $file=$request->file('image');
+                     $file=$request->file('image_name');
                      // step 2: generate file name
                      $image_name=date('Ymdhms').'.'.$file->getClientOriginalExtension();
 

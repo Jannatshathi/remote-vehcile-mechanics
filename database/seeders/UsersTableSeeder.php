@@ -21,6 +21,7 @@ class UsersTableSeeder extends Seeder
                 'password'=>bcrypt('12345'),
                 'phone'=>'016000000',
                 'image'=>'',
+                'status'=>'',
                 'role'=>'admin',
             ]
         );

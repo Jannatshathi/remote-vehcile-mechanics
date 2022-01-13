@@ -21,7 +21,7 @@
 
   <div class="col-md-2"></div>
   <div class="col-md-8">
-    <form action="{{route('user.post.registration')}}", method="POST" enctype="multipart/form-data" >
+    <form action="{{route('website.register.store')}}", method="POST" enctype="multipart/form-data" >
       @csrf
       <div class="mb-3">
   
@@ -41,18 +41,15 @@
           <label for="exampleInputPassword1" class="form-label">Phone</label>
           <input required name="phone" type="text" class="form-control" id="exampleInputPassword1">
         </div>
-
-        <select name="role" class="form-select form-select-sm mb-5" aria-label=".form-select-sm example" onchange="myFunction()">
-          <option selected value="role">Role</option>
-          <option value="user">User</option>
-          <option value="mechanics">Mechanics</option>
-        </select>
-      </div>
-
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Address</label>
+          <input name="address" type="text" class="form-control" id="exampleInputPassword1">
+        </div>
+{{-- 
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Amount</label>
         <input required name="amount" type="number" class="form-control" id="exampleInputPassword1">
-      </div>
+      </div> --}}
        <br>
        <br><br><br>
         {{-- <div class="amount fadeout">
