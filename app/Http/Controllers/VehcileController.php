@@ -32,7 +32,7 @@ class VehcileController extends Controller
             'color'=>$request->color,
             'image'=>$filename,
         ]);
-        return redirect()->back();
+        return redirect()->route('admin.vehcile.list');
 
     }
     public function vehList(){

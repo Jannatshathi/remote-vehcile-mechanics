@@ -11,8 +11,12 @@
         <th scope="col">name</th>
         <th scope="col">email</th>
         <th scope="col">phone</th>
+        <th scope="col">address</th>
+        <th scope="col">workexperience</th>
+        <th scope="col">role</th>
+        <th scope="col">status</th>
         <th scope="col">image</th>
-        <th scope="col">action</th>
+        
 
 
     </tr>
@@ -24,14 +28,14 @@
         <td>{{$user->name}}</td>
         <td>{{$user->email}}</td>
         <td>{{$user->phone}}</td>
+        <td>{{$user->address}}</td>
+        <td>{{$user->workexperience}}</td>
+        <td>{{$user->role}}</td>
+        <td>{{$user->status}}</td>
         <th>
-            <img style="border-radius: 4px;" width="150px;" src=" {{url('/uploads/'.$user->image)}}" alt="user">
+            <img style="border-radius: 4px;" width="50px;" src=" {{url('/uploads/'.$user->image)}}" alt="user">
     
         </th>
-        <td>
-            <a href="{{route('admin.user.edit',$user->id)}}" class="btn btn-primary">Edit</a>
-
-        </td>
     </tr>   
         @endforeach
     

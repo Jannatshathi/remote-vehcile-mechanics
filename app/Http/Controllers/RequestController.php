@@ -30,7 +30,7 @@ class RequestController extends Controller
 
         ]);
         
-        return redirect()->back();
+        return redirect()->route('admin.request.list')->with('success', 'Your requested has been responded');
     }
     
     public function viewRequest($id){

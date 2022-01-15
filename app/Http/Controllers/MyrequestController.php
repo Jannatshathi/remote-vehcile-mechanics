@@ -24,7 +24,7 @@ class MyrequestController extends Controller
             'service_id'=>$request->service_id,
 
         ]);
-        return redirect()->route('website.myrequest');
+        return redirect()->route('website.myrequest')->with('success','Request sended');
     }
 //     public function viewRequest($id){
 //          //dd($id);

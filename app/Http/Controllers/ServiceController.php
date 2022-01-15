@@ -63,7 +63,7 @@ class ServiceController extends Controller
             
         
         ]);
-         return redirect()->back()->with('success','service-type created successfully.');
+         return redirect()->route('admin.service.list')->with('success','service created successfully.');
     }
     public function servicelist(){
         $service=Service::with('servicetypes')->get();

@@ -2,9 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
-
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\MechanicsController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\CategoryController;
@@ -60,16 +58,6 @@ use App\Http\Controllers\ProfileController;
                 
                 //user
                 Route::get('/user/list',[UserController::class,'userList'])->name('admin.user.list');
-                Route::get('/user/edit/{id}',[UserController::class,'userEdit'])->name('admin.user.edit');
-                Route::patch('/user/edited/{id}',[UserController::class,'userEdited'])->name('admin.user.edited');
-                
-                //customer
-                Route::get('/customer-list',[CustomerController::class,'customerList'])->name('admin.customer.list');
-                Route::get('/customer-form',[CustomerController::class,'customerform'])->name('admin.customer.form');
-                Route::post('/customer/store',[CustomerController::class,'store'])->name('admin.customer.store');
-                
-                //mechanics
-                
                 
                 //service
                 Route::get('/service-form',[ServiceController::class,'serviceform'])->name('admin.service.form');
@@ -131,7 +119,7 @@ use App\Http\Controllers\ProfileController;
         Route::get('/website/home',[HomewebController::class,'webhome'])->name('webhome');
         Route::get('/user/registration',[LoginController::class,'registration'])->name('user.registration');
         Route::post('/user/registration',[LoginController::class,'registrationPost'])->name('user.post.registration');
-        Route::post('/user/registration',[LoginController::class,'mecregistrationPost'])->name('user.post.mecregistration');
+        Route::post('/mec/registration',[LoginController::class,'mecregistrationPost'])->name('user.post.mecregistration');
        
 
         Route::post('/user/do/login',[LoginController::class,'doLogin'])->name('user.do.login');
@@ -146,8 +134,6 @@ use App\Http\Controllers\ProfileController;
         Route::post('/register/store',[LoginController::class,'registrationPost'])->name('website.register.store'); //user registration form post
         Route::get('/mecregister',[LoginController::class,'mecregister'])->name('website.mecregister');
         
-        //customer
-        Route::get('/customer',[CustomerController::class,'customer'])->name('website.customer');
         
         //mechanics
         Route::get('/mechanics/list',[MechanicsController::class,'meclist'])->name('website.mechanics.list');

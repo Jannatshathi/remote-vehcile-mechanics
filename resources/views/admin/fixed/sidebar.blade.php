@@ -49,12 +49,6 @@
           <!--content(typography)--> 
 
           <!--content(icon)--> 
-          <li class="nav-item ">
-            <a class="nav-link" href="{{route('admin.customer.list')}}">
-              <i class="material-icons">person</i>
-              <p>customer</p>
-            </a>
-          </li>
           @endif
           
           <li class="nav-item ">

@@ -16,7 +16,7 @@ class Service_typeController extends Controller
             'status'=>$request->status,
             'description'=>$request->description,
         ]);
-        return redirect()->back();
+        return redirect()->route('admin.service.type.list')->with('success','service-type created successfully.');
 
     }
     public function servicetypelist(){
@@ -24,10 +24,4 @@ class Service_typeController extends Controller
 
         return view('admin.pages.service.service-type-list',compact('stype'));
     }
-
-//     public function serviceList(){
-//         $services = Servicetype::all();
-//         // dd($services);
-//         return view('website.pages.service-type-list',compact('services'));
-//     }
  }
