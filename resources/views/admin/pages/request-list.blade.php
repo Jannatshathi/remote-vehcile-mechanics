@@ -41,11 +41,11 @@
   @foreach($request as $x) <!--request as array-->
     <tr>
       <th scope="row">{{$x->id}}</th>
-      
+      {{-- @dd($x->service); --}}
       <td>{{$x->name}}</td>
       <td>{{$x->address}}</td>
       <td>{{$x->location}}</td>
-      <td>{{$x->service}}</td>
+      <td>{{$x->service->name}}</td>
       <td>
         @if($x->status == 'pending')
         <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-danger">Pending</a>

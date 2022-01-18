@@ -24,7 +24,7 @@
         <td>{{$item->name}}</td>
         <td>{{$item->address}}</td>
         <td>{{$item->location}}</td>
-        <td>{{$item->service}}</td>
+        <td>{{$item->service->name}}</td>
         {{-- <td>{{$item->status}}</td> --}}
         
           @if($item->status == "pending")

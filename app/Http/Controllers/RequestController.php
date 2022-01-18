@@ -42,7 +42,8 @@ class RequestController extends Controller
     }
 
     public function updateRequest( Request $request,$id){
-        // dd($request->all());
+        //  dd($request->all());
+        
         // dd($id);
         if ($request->status == "confirm") {
             $request = Myrequest::find($id)->update([
@@ -64,6 +65,9 @@ class RequestController extends Controller
             // dd($final);
             $user = User::where('id',$worker_id)->get();
             // dd($user);
+            // $user->update([
+            //     'status'=>'available'
+            // ]);
             $user_ammount = $user->pluck('amount');
             // dd($user_ammount);
             $total_ammount = $user_ammount[0] + $final;
@@ -73,10 +77,17 @@ class RequestController extends Controller
             $userUpdate->update([
                 'amount'=>$total_ammount
             ]);
-            return redirect()->back();
+            User::where('id',auth()->user()->id)->update([
+                'status'=>'available'
+            ]);
+            return redirect()->route('admin.request.list');
 
 
         } else {
+            // dd(auth()->user()->id);
+            $user = User::where('id',auth()->user()->id)->update([
+                'status'=>'engazed'
+            ]);
             Myrequest::find($id)->update([
                 'status'=>$request->status,
                 'mechanics_id'=>auth()->user()->id

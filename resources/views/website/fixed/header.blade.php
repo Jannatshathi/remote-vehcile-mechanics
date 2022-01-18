@@ -41,7 +41,7 @@
                     </ul>
                   </div>
                 </li>
-                <li><a href="{{route('website.mechanics.list')}}">Our Machanics<span data-uk-icon="chevron-down"></span></a>
+                {{-- <li><a href="{{route('website.mechanics.list')}}">Our Machanics<span data-uk-icon="chevron-down"></span></a> --}}
                 </li>
                 
                 <li><a href="{{route('website.vehcile.list')}}">Vehicle</a></li>
@@ -50,9 +50,11 @@
 
                 <li><a href="{{route('website.mecregister')}}">Mechanics Register</a></li>
                 @if(auth()->user())
-               
+                @if (auth()->user()->role == "user")
                 <li><a href="{{route('website.request')}}">Request</a></li>
                 <li><a href="{{route('website.myrequest')}}">Myrequest</a></li>
+                @endif
+                
                 <li><a href="{{route('website.user.profile')}}">Profile</a></li>
                 @auth
                 {{-- <li><a href="{{route('website.deposite')}}">Mechanics panel</a></li> --}}
