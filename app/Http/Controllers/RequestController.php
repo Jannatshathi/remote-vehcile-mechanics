@@ -86,7 +86,7 @@ class RequestController extends Controller
         } else {
             // dd(auth()->user()->id);
             $user = User::where('id',auth()->user()->id)->update([
-                'status'=>'engazed'
+                'status'=>'engaged'
             ]);
             Myrequest::find($id)->update([
                 'status'=>$request->status,

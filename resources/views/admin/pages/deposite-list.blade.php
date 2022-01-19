@@ -1,6 +1,9 @@
 @extends('master')
 @section('content')
 
+
+
+
 <div id="printreciept">
 
 
@@ -8,7 +11,7 @@
     <thead>
       <tr>
         <th scope="col">#</th>
-        <th scope="col">User Id</th>
+        <th scope="" >User Id</th>
         <th scope="col">Remark</th>
         <th scope="col">Transaction Id</th>
         <th scope="col">Amount</th>
@@ -53,13 +56,15 @@
             @else
             <a href="{{route('admin.view.deposite',$x->id)}}" class="btn btn-danger">Confirmed</a> --}}
 
-            <button class="btn btn-primary" type="submit" onClick="PrintDiv('printreciept');" value="Print">Print</button>
+            
             
            
           </td>
       </tr>
       @endforeach
     </tbody>
+
+    <button style="float: right;" class="btn btn-primary" type="submit" onClick="PrintDiv('printreciept');" value="Print">Print</button>
   </table>
 </div>
 

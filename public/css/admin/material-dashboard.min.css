@@ -14431,6 +14431,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
     margin: 0;
     line-height: 30px;
     font-size: 14px;
+    font-weight: bold;
     position: relative;
     display: block;
     height: auto;
@@ -19140,7 +19141,8 @@ screen and (-ms-high-contrast:active) {
 .dark-edition .table>tfoot>tr>th,
 .dark-edition .table>thead>tr>td,
 .dark-edition .table>thead>tr>th {
-    color: #8b92a9;
+    color: gray;
+    font-weight: bold;
     border-color: hsla(0, 0%, 71%, .1)
 }
 

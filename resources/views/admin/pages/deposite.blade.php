@@ -55,21 +55,7 @@
          
         </div>
 
-    {{-- <div class="form-group">
-      <label for="amount" style="font-size:20px;"><b>Reciept</label></b>
-      <input value="{{$status->reciept}}"  type="file" class="form-control" id="amount"  placeholder="Enter the receipt" name="receipt">
-     
-    </div> --}}
     
-    <div class="form-group">
-      <label for="exampleFormControlSelect1">Example select</label>
-      <select name="status" class="form-control" id="exampleFormControlSelect1">
-        <option style="color: black" value="accepted" >Accepted</option>
-        {{-- <option style="color: black" value="" >Delete</option> --}}
-        {{-- <option style="color: black" value="confirm" >Confirm</option> --}}
-
-      </select>
-    </div>
      
     <button type="submit" class="button btn-submit">Submit</button>
      

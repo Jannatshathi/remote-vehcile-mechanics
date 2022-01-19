@@ -30,15 +30,15 @@
           </a>
         </li>
         
-        <li class="nav-item ">
+        <li class="nav-item">
           <a class="nav-link" href="{{route('admin.service.type.list')}}">
-            <i class="material-icons">content_paste</i>
+            <i class="fas fa-concierge-bell"></i>
             <p>Service type</p>
           </a>
         </li>
           
           
-          <li class="nav-item ">
+          <li class="nav-item">
             <a class="nav-link" href="{{route('admin.service.list')}}">
               <i class="material-icons">content_paste</i>
               <p>Service</p>
@@ -53,7 +53,7 @@
           
           <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.request.list')}}">
-              <i class="material-icons">content_paste</i>
+              <i class="fas fa-book"></i>
               <p>Request</p>
             </a>
           </li>
@@ -61,46 +61,27 @@
 
           <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.vehcile.list')}}">
-              <i class="material-icons">content_paste</i>
-              <p>Vehcile</p>
+              <i class="fas fa-truck-monster"></i>
+              <p>Vhicle</p>
             </a>
           </li>
           
-          {{-- <li class="nav-item ">
-            <a class="nav-link" href="{{route('admin.service.category')}}">
-              <i class="material-icons">content_paste</i>
-              <p>category</p>
-            </a>
-          </li> --}}
           
           <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.deposite.list')}}">
-              <i class="material-icons">content_paste</i>
+              <i class="fas fa-yin-yang"></i>
               <p>Deposite</p>
             </a>
           </li>
 
-          {{-- <li class="nav-item ">
-            <a class="nav-link" href="./tables.html">
-              <i class="material-icons">content_paste</i>
-              <p>Feedback</p>
-            </a>
-          </li> --}}
-
           <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.report')}}">
-              <i class="material-icons">content_paste</i>
+              <i class="far fa-address-book"></i>
               <p>Report</p>
             </a>
           </li>
           @endif
 
-          {{-- <li class="nav-item ">
-            <a class="nav-link" href="{{route('admin.user.list')}}">
-              <i class="material-icons">user list</i>
-              <p>Report</p>
-            </a>
-          </li> --}}
           
         </ul>
       </div>

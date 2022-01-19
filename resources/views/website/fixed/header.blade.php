@@ -60,6 +60,7 @@
                 {{-- <li><a href="{{route('website.deposite')}}">Mechanics panel</a></li> --}}
                 @endauth
                 <li><a href="{{route('user.logout')}}">Logout</a></li>
+                <li><button >{{(auth()->user()->name)}}</button></li>
                 @else
                 <li><a href="{{route('website.login')}}">Login</a></li>
                 @endif
