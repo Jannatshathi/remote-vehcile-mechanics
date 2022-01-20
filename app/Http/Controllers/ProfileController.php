@@ -12,8 +12,10 @@ class ProfileController extends Controller
     {
         $status=false;
         $profile=Deposite::where('user_id',auth()->user()->id)->get();
-        //dd($profile);
-        if ($profile->isEmpty()) {
+        // dd($profile);
+        $user_amount = auth()->user()->amount;
+        // dd($user);
+        if ($profile->isEmpty() || $user_amount == 0) {
             return view('website.pages.user-profile', compact('status'));
         } else {
             $status=true;

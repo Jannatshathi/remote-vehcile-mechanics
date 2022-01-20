@@ -7,7 +7,8 @@ use App\Models\User;
 class UserController extends Controller
 {
     public function userList(){
-    $users = User::all();
+    $users = User::where('role','user')->get();
+    //dd($users);
     return view('admin.pages.user.user-list', compact('users'));
    }
 

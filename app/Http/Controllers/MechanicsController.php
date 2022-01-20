@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Mechanics;
 use Illuminate\Http\Request;
-use App\Models\mechanics;
 
 class MechanicsController extends Controller
 {
     public function mechanicslist(){
-        $mechanics=Mechanics::all();
+        $mechanics=User::where('role','mechanics')->get();
         //dd($mechanics);
         return view('admin.pages.mechanics.mechanics-list',compact('mechanics'));
     }
@@ -43,6 +44,10 @@ class MechanicsController extends Controller
         $mechanics=Mechanics::all();
 
         return view('website.pages.mechanics-list',compact('mechanics'));
+    }
+    public function mecdelete($id){
+        User::find($id)->delete();
+        return redirect()->back();
     }
   
    

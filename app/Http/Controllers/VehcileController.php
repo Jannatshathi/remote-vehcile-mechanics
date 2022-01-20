@@ -27,9 +27,8 @@ class VehcileController extends Controller
                     }
 
         Vehcile::create([
-            'type'=>$request->type,
-            'model'=>$request->model,
-            'color'=>$request->color,
+            'name'=>$request->name,
+            'details'=>$request->details,
             'image'=>$filename,
         ]);
         return redirect()->route('admin.vehcile.list');

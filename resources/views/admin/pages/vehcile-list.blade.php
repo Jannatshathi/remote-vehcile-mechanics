@@ -13,9 +13,8 @@
     <tr>
       <th scope="col">#</th>
       
-      <th scope="col">Type</th>
-      <th scope="col">Model</th>
-      <th scope="col">Color</th>
+      <th scope="col">Name</th>
+      <th scope="col">Details</th>
       <th scope="col">Image</th>
     </tr>
   </thead>
@@ -24,9 +23,8 @@
     <tr>
       {{-- <th scope="row">{{$x->id}}</th> --}}
       <td>{{$key+1}}</td>
-      <td>{{$x->type}}</td>
-      <td>{{$x->model}}</td>
-      <td>{{$x->color}}</td>
+      <td>{{$x->name}}</td>
+      <td>{{$x->details}}</td>
       <td>
         <img src="{{url('/uploads/'.$x->image)}}"width="100px" alt="vehcile">
       </td>

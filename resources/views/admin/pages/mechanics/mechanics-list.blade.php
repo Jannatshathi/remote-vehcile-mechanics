@@ -2,7 +2,7 @@
 
 
 @section('content')
-<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+{{-- <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
   <div class="card card-stats">
     <div class="card-header card-header-warning card-header-icon">
       <div class="card-icon">
@@ -20,7 +20,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> --}}
 <style>
    .form-control{
      color: black !important;
@@ -36,29 +36,33 @@
       
       <th scope="col">Mechanic Name</th>
       <th scope="col">Email</th>
-      <th scope="col">Password</th>
+     
       <th scope="col">Phone</th>
       <th scope="col">Address</th>
       <th scope="col">Work Experience</th>
       <th scope="col">Amount</th>
       <th scope="col">Status</th>
       <th scope="col">Image</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
-    @foreach($mechanics as $x) <!--mechanics as array-->
+    @foreach($mechanics as $key=>$x) <!--mechanics as array-->
     <tr>
-      <th scope="row">{{$x->id}}</th>
+      <th scope="row">{{$key+1}}</th>
       
       <td>{{$x->name}}</td>
       <td>{{$x->email}}</td>
-      <td>{{$x->password}}</td>
       <td>{{$x->phone}}</td>
       <td>{{$x->address}}</td>
       <td>{{$x->workexperience}}</td>
       <td>{{$x->amount}}</td>
+      <td>{{$x->status}}</td>
       <td>
         <img src="{{url('/uploads/'.$x->image)}}"width="100px" alt="mechanic">
+      </td>
+      <td>
+        <a href="{{route('admin.delete.mechanics',$x->id)}}" class="btn btn-success">Delete</a>
       </td>
     </tr>
     @endforeach

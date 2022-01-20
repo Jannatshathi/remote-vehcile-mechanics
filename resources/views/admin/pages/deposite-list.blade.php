@@ -15,6 +15,7 @@
         <th scope="col">Remark</th>
         <th scope="col">Transaction Id</th>
         <th scope="col">Amount</th>
+        <th scope="col">Deposite Report</th>
         {{-- <th scope="col">Reciept</th>
         <th scope="col">Status</th>
         <th scope="col">Action</th> --}}
@@ -25,11 +26,13 @@
       @foreach($deposite as $x) <!--mechanics as array-->
       <tr>
         <th scope="row">{{$x->id}}</th>
-        <td>{{$x->user_id}}</td>
+        <td>{{$x->users->name}}</td>
         <td>{{$x->remark}}</td>
         <td>{{$x->transaction_id}}</td>
         <td>{{$x->amount}}</td>
-        
+        <td>
+          <a href="{{route('admin.report.deposite',$x->id)}}" class="btn btn-danger">View</a>
+        </td>
         {{-- <td>
             <img src="{{url('/uploads/'.$x->reciept)}}"width="100px" alt="reciept">
           </td>

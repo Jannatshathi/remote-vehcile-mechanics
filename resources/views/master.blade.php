@@ -86,6 +86,8 @@
         </a>
       </div>
 
+      
+
        @include('admin.fixed.sidebar')
        
     </div>

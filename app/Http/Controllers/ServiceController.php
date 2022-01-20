@@ -35,16 +35,7 @@ class ServiceController extends Controller
         // $image_name=null;
         //dd($request->all());
 //              step 1: check image exist in this request.
-                 if($request->hasFile('service_image'))
-                 {
-                     $file=$request->file('service_image');
-                     // step 2: generate file name
-                     $image_name=date('Ymdhms').'.'.$file->getClientOriginalExtension();
-
-                     //step 3 : store into project directory
-
-                     $file->storeAs('/uploads',$image_name);
-                    }
+                 
 
         $request->validate([
             'name'=>'required',
@@ -59,7 +50,7 @@ class ServiceController extends Controller
             'cost'=>$request->cost,
             'details'=>$request->details,
             'servicetypes_id'=>$request->servicetype,
-            'image'=>$image_name,
+            
             
         
         ]);

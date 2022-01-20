@@ -31,7 +31,6 @@
         <th scope="col">Cost</th>
         <th scope="col">Details</th>
         <th scope="col">Service Type</th>
-        <th scope="col">Service Image</th>
       </tr>
     </thead>
     <tbody>
@@ -43,10 +42,7 @@
         <td>{{$x->cost}}</td>
         <td>{{$x->details}}</td>
         <td>{{$x->servicetypes->name}}</td>
-        <th>
-          <img style="border-radius: 4px;" width="150px;" src=" {{url('/uploads/'.$x->image)}}" alt="service">
-  
-      </th>
+      
       </tr>
       @endforeach
     </tbody>

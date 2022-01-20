@@ -19,7 +19,6 @@ class CreateServicesTable extends Migration
             $table->double('servicetypes_id');
             $table->float('cost');
             $table->string('details');
-            $table->string('image');
             $table->timestamps();
         });
     }

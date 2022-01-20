@@ -39,9 +39,11 @@ use App\Http\Controllers\ProfileController;
         Route::get('/',[AdminController::class,'login'])->name('admin.login');
         Route::post('/admin/do-login',[AdminController::class,'doLogin'])->name('admin.doLogin');
         Route::get('/admin/logout',[AdminController::class,'logout'])->name('admin.logout');
-        
+
+        //mechanics
         Route::get('/mechanics',[MechanicsController::class,'mechanicsList'])->name('admin.mechanics.list');
         Route::post('/mechanics/store',[MechanicsController::class,'store'])->name('admin.mechanics.store');
+        Route::get('/mechanics/delete/{id}',[MechanicsController::class,'mecdelete'])->name('admin.delete.mechanics');
         
         
         Route::group(['middleware'=>['auth','admin']],function(){
@@ -89,6 +91,7 @@ use App\Http\Controllers\ProfileController;
                 Route::get('/deposite/status/update/{id}',[DepositeController::class,'viewDeposite'])->name('admin.view.deposite');
                 Route::put('/deposite/update/{id}',[DepositeController::class,'updateDeposite'])->name('admin.update.deposite');
                 Route::get('/deposite/delete/{id}',[DepositeController::class,'deleteDeposite'])->name('admin.delete.deposite');
+                Route::get('/deposite/report/{id}',[DepositeController::class,'report'])->name('admin.report.deposite');
                 
                 //vehcile
                 Route::get('/vehcile',[VehcileController::class,'vehcile'])->name ('admin.vehcile');

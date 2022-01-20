@@ -66,8 +66,8 @@
         @elseif($x->status == 'confirm')
         
         @else
-        <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-danger">Pending</a>
-        <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-danger">Confirmed</a>
+        {{-- <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-danger">Pending</a> --}}
+        <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-success">Confirmed</a>
         
         @endif
       </td>

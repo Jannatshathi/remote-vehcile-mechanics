@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Http\Request;
+use App\Models\User;
 use App\Models\Deposite;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DepositeController extends Controller
 {
@@ -34,12 +35,23 @@ class DepositeController extends Controller
 
     public function depositeStore( Request $request){ 
         // dd($request->all());
-        Deposite::create([
+       $deposite = Deposite::create([
             'user_id'=>auth()->user()->id,
             'amount'=>$request->amount,
               'remark'=>$request->remark,
               'transaction_id'=>$request->transaction_id
         ]);
+
+        // dd($deposite->user_id);
+        $user = User::find($deposite->user_id);
+        // dd($user);
+        $previous_amount = $user->amount;
+        // dd($previous_amount+$deposite->amount);
+        $new_amount = $previous_amount+$deposite->amount;
+        $user->update([
+            'amount'=>$new_amount
+        ]);
+
         // $dep= Deposite::find($id)->first();
         // $amount = $dep->amount+$request->amount;
         // $dep->update([
@@ -87,5 +99,10 @@ class DepositeController extends Controller
     public function deleteDeposite($id){
         Deposite::find($id)->delete();
         return redirect()->back();
+    }
+
+    public function report($id){
+        $deposite = Deposite::find($id);
+        return view('admin.pages.deposite-report', compact('deposite'));
     }
 }

@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->integer('amount')->default('0');
             $table->string('status')->default('available');
             $table->string('image');
+            $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();
         });

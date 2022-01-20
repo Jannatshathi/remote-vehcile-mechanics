@@ -65,9 +65,6 @@ class RequestController extends Controller
             // dd($final);
             $user = User::where('id',$worker_id)->get();
             // dd($user);
-            // $user->update([
-            //     'status'=>'available'
-            // ]);
             $user_ammount = $user->pluck('amount');
             // dd($user_ammount);
             $total_ammount = $user_ammount[0] + $final;
