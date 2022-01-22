@@ -49,8 +49,8 @@
       <td>
         @if($x->status == 'pending')
         <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-danger">Pending</a>
-        @elseif($x->status == 'confirm')
-        <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-success">confirmed</a>
+        @elseif($x->status == 'completed')
+        <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-success">Completed</a>
         
         @else
         <a href="" class="btn btn-info">Accepted</a>
@@ -63,11 +63,10 @@
         <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-primary">Accept</a>
         <a href="{{route('admin.delete.request',$x->id)}}" class="btn btn-success">Delete</a>
 
-        @elseif($x->status == 'confirm')
+        @elseif($x->status == 'completed')
         
         @else
-        {{-- <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-danger">Pending</a> --}}
-        <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-success">Confirmed</a>
+        <a href="{{route('admin.view.request',$x->id)}}" class="btn btn-success">Completed</a>
         
         @endif
       </td>

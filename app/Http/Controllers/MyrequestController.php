@@ -26,11 +26,4 @@ class MyrequestController extends Controller
         ]);
         return redirect()->route('website.myrequest')->with('success','Request sended');
     }
-//     public function viewRequest($id){
-//          //dd($id);
-//         $status = Request_service::find($id);
-//         if ($status) {
-//             return view('admin.pages.request',compact('status'));
-//         }
-// }
 }

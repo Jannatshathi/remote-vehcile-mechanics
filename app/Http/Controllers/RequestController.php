@@ -45,7 +45,7 @@ class RequestController extends Controller
         //  dd($request->all());
         
         // dd($id);
-        if ($request->status == "confirm") {
+        if ($request->status == "completed") {
             $request = Myrequest::find($id)->update([
                 'status'=>$request->status,
                 'mechanics_id'=>auth()->user()->id
@@ -56,18 +56,20 @@ class RequestController extends Controller
             // dd($service_id);
             $worker_id = $request->mechanics_id;
             // dd($worker_id);
-            $service = Service::where('id',$service_id)->get();
+            // $service = Service::where('id',$service_id)->get();
+            $service = Service::find($service_id);
             // dd($service->cost);
-            $service_cost = $service->pluck('cost');
+            $service_cost = $service->cost;
             // dd($service_cost);
             $percent = 10;
-            $final = ($percent / 100)*$service_cost[0];
+            $Admin_cost = ($service_cost*10)/100;
+            // dd($Admin_cost);
+            $final = $service_cost-$Admin_cost;
             // dd($final);
-            $user = User::where('id',$worker_id)->get();
-            // dd($user);
-            $user_ammount = $user->pluck('amount');
+            $user = User::find($worker_id);
+            // dd($user->amount);
             // dd($user_ammount);
-            $total_ammount = $user_ammount[0] + $final;
+            $total_ammount = ($user->amount) + $final;
             // dd($total_ammount);
             $userUpdate = User::find($worker_id);
             // dd($userUpdate);

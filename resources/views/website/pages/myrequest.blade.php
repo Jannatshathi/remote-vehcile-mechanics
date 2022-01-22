@@ -39,7 +39,7 @@
         </td>
         @else
         <td>
-          <a href="" class="btn btn-success">Confirmed</a>
+          <a href="" class="btn btn-success">Completed</a>
 
         </td>
           @endif

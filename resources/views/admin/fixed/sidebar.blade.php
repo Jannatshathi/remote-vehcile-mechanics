@@ -62,7 +62,7 @@
           <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.vehcile.list')}}">
               <i class="fas fa-truck-monster"></i>
-              <p>Vhicle</p>
+              <p>Vehicle</p>
             </a>
           </li>
           

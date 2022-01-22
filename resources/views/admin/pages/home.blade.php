@@ -16,48 +16,48 @@
 <div class="d-flex justify-content-around">
   <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title">User List</h5>
+      <a href="{{route('admin.user.list')}}" class="btn btn-primary">View</a>
     </div>
   </div>
   <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title">Mechanics</h5>
+      <a href="#" class="btn btn-primary">View</a>
     </div>
   </div>
   <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-</div>
-<div class="d-flex justify-content-around">
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title">Service Type</h5>
+      <a href="#" class="btn btn-primary">View</a>
     </div>
   </div>
 </div>
 <div class="d-flex justify-content-around">
   <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title">Service</h5>
+      <a href="#" class="btn btn-primary">View</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Request</h5>
+      <a href="#" class="btn btn-primary">View</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Vehicle</h5>
+      <a href="#" class="btn btn-primary">View</a>
+    </div>
+  </div>
+</div>
+<div class="d-flex justify-content-around">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Deposite</h5>
+      <a href="#" class="btn btn-primary">View</a>
     </div>
   </div>
   

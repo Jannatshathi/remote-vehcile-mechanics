@@ -29,8 +29,7 @@
         <label for="exampleFormControlSelect1">Example select</label>
         <select name="status" class="form-control" id="exampleFormControlSelect1">
           <option style="color: black" value="accepted" >Accepted</option>
-          {{-- <option style="color: black" value="" >Delete</option> --}}
-          <option style="color: black" value="confirm" >Confirm</option>
+          <option style="color: black" value="completed" >Completed</option>
 
         </select>
       </div>
