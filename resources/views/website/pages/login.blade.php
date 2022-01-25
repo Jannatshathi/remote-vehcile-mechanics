@@ -110,7 +110,7 @@ h1, h2, h3, h4, h5, h6, a {
           <h1>Login</h1>
         </div>
         <div class="login-form">
-          <h3>email</h3>
+          <h3>Email</h3>
           <input name='email' type="text" placeholder="email"/><br>
           <h3>Password:</h3>
           <input name='password' type="password" placeholder="Password"/>

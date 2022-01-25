@@ -8,7 +8,7 @@
     body {
         margin: 0;
         padding: 0;
-        background-color: #6e5c67;
+        background-color: #06aef0;
         height: 100vh;
     }
     #login .container #login-row #login-column #login-box {
@@ -39,7 +39,7 @@
                 <div id="login-box" class="col-md-12">
                     <form id="login-form" class="form" action="{{route('admin.doLogin')}}" method="post">
                         @csrf
-                        <h3 class="text-center text-info">Admin Login</h3>
+                        <h3 class="text-center text-info">Login</h3>
                         <div class="form-group">
                             <label for="email" class="text-info">Email:</label><br>
                             <input type="email" name="email" id="email" class="form-control">

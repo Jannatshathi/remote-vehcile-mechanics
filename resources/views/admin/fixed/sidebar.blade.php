@@ -74,12 +74,12 @@
             </a>
           </li>
 
-          <li class="nav-item ">
+          {{-- <li class="nav-item ">
             <a class="nav-link" href="{{route('admin.report')}}">
               <i class="far fa-address-book"></i>
               <p>Report</p>
             </a>
-          </li>
+          </li> --}}
           @endif
 
           

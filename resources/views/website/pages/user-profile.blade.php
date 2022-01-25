@@ -70,10 +70,9 @@
                     <img src="{{url('/uploads/',auth()->user()->image)}}" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
                       <h4>{{auth()->user()->name}}</h4>
-                      <p class="text-secondary mb-1">Full Stack Developer</p>
-                      <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
-                      <button class="btn btn-primary">Follow</button>
-                      <button class="btn btn-outline-primary">Message</button>
+                      <h6>{{auth()->user()->email}}</h6>
+                      <h6>{{auth()->user()->address}}</h6>
+                     
                     </div>
                   </div>
                 </div>
@@ -140,6 +139,14 @@
                       <div class="col-sm-9 text-secondary">
                       {{auth()->user()->amount}}
                       </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-sm-3">
+                       
+                        <a class="btn btn-dark" href="{{route('home')}}">To check service requests</a>
+                      </div>
+                      
                     </div>
                     @else
                         

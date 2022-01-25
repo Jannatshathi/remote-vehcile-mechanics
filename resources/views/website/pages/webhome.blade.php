@@ -19,7 +19,7 @@
                 <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left"><img src="https://pro-theme.com/html/cardan/assets/img/slideshow-home-1.jpg" alt data-uk-cover></div>
                 <div class="uk-position-center uk-position-small uk-text-center">
                   <div class="first-screen__title" data-uk-slideshow-parallax="x: 100,-100"><span>We’re Leaders in Vehicle Repair, Maintenance & Inspection</span>
-                    <div class="uk-h2">Your One-Stop Solution For<br> All Vehicle Repair Needs</div>
+                    <div class="uk-h2">Welcome To<br> Remote Vehicle Mechanics</div>
                   </div>
                   <div class="first-screen__btns" data-uk-slideshow-parallax="x: 200,-200">
 
