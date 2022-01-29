@@ -78,7 +78,7 @@
           <option value="opai">Opai</option>
           <option value="card">Card</option>
           
-        </select></div><br> <br>
+        </select></div><br>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>

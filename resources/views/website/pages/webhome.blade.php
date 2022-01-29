@@ -18,7 +18,7 @@
               <div class="first-screen__item">
                 <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left"><img src="https://pro-theme.com/html/cardan/assets/img/slideshow-home-1.jpg" alt data-uk-cover></div>
                 <div class="uk-position-center uk-position-small uk-text-center">
-                  <div class="first-screen__title" data-uk-slideshow-parallax="x: 100,-100"><span>We’re Leaders in Vehicle Repair, Maintenance & Inspection</span>
+                  <div class="first-screen__title" data-uk-slideshow-parallax="x: 100,-100">
                     <div class="uk-h2">Welcome To<br> Remote Vehicle Mechanics</div>
                   </div>
                   <div class="first-screen__btns" data-uk-slideshow-parallax="x: 200,-200">
@@ -33,7 +33,7 @@
                 <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left"><img src="https://pro-theme.com/html/cardan/assets/img/slideshow-home-2.jpg" alt data-uk-cover></div>
                 <div class="uk-position-center-left uk-position-small uk-text-left uk-width-1-1">
                   <div class="uk-container uk-width-1-1">
-                      <div class="uk-h2">We Make Your Vehicle<br> In Good Shape</div>
+                      
                     </div>
                     <div class="first-screen__btns" data-uk-slideshow-parallax="x: 200,-200">
                       

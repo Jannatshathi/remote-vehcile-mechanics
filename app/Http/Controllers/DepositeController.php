@@ -59,7 +59,7 @@ class DepositeController extends Controller
         //     'remark'=>$request->remark,
         //     'transaction_id'=>$request->transaction_id
         // ]);
-        return redirect()->back()->with('success','Sucessfully deposite send');
+        return redirect()->route('website.user.profile')->with('success','Sucessfully deposite send');
     }
 
     public function viewDeposite($id){
@@ -87,13 +87,7 @@ class DepositeController extends Controller
             'amount'=> 100
         ]);
         
-        // if(auth()->User()->id){
-        //     $x=User::where('id')->get();
-        //     $y=$x+Request->amount;
-    
-        //     "amount"->$y;
-        // }
-    
+        
         return redirect()->route('admin.deposite.list');
     }
     public function deleteDeposite($id){

@@ -27,6 +27,7 @@ class LoginController extends Controller
                     }
                     $request->validate([
                         'phone'=>'required |max:11',
+                        //  | min:11|max:11
                         
                     ]);
         User::create([
