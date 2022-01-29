@@ -34,6 +34,7 @@
       <th scope="col">Service</th>
       <th scope="col">Status</th>
       <th scope="col">Action</th>
+      <th scope="col">Mechanic ID</th>
       
     </tr>
   </thead>
@@ -70,7 +71,8 @@
         
         @endif
       </td>
-      
+      {{-- @dd($x) --}}
+      <td>{{$x->mechanics_id}}</td>
     </tr>
     @endforeach
   </tbody>

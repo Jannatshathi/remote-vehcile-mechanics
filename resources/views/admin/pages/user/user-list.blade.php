@@ -7,12 +7,12 @@
     <table class="table">
     <thead>
     <tr>
-        <th scope="col">id</th>
-        <th scope="col">name</th>
-        <th scope="col">email</th>
-        <th scope="col">phone</th>
-        <th scope="col">address</th>
-        <th scope="col">image</th>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Address</th>
+        <th scope="col">Image</th>
         
 
 

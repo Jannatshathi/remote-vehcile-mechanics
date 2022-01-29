@@ -10,8 +10,8 @@
 <table class="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
-        <th scope="" >User Id</th>
+        <th scope="col">ID</th>
+        <th scope="col" >Mechanics Name</th>
         <th scope="col">Remark</th>
         <th scope="col">Transaction Id</th>
         <th scope="col">Amount</th>

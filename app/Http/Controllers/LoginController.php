@@ -27,6 +27,7 @@ class LoginController extends Controller
                     }
                     $request->validate([
                         'phone'=>'required |max:11',
+                        
                     ]);
         User::create([
             'image'=>$image_name,
@@ -38,16 +39,11 @@ class LoginController extends Controller
             'address'=>$request->address,
             'workexperience'=>$request->workexperience,
             'amount'=>$request->amount,
+            'payment'=>$request->payment,
             // 'status'=>$request->status 
         ]);
         
-        // Deposite::create([
-        //     'user_id'=>Auth::user()->id,
-        //     'remark'=>'null',
-        //     'transaction_id'=>234,
-        //     'amount'=>$request->amount,
-        //     'reciept'=>$image_name
-        // ]);
+       
         return redirect()->route('website.login');
         
     }

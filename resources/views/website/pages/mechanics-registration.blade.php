@@ -59,7 +59,7 @@
 
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Amount</label>
-        <input required name="amount" type="number" class="form-control" id="exampleInputPassword1">
+        <input required name="amount" type="number" class="form-control" id="exampleInputPassword1" min="200" placeholder="200">
       </div>
        <br>
        <br><br><br>
@@ -69,7 +69,16 @@
           <label for="exampleInputPassword1" class="form-label">Image</label>
           <input name="image_name" type="file" class="form-control" id="exampleInputPassword1">
         </div>
-  
+        <div>
+        <label for="category">Payment method</label><br>
+        <select id="category" name="payment">
+          <option value="Payment">Pay</option>
+          <option value="Bkash">Bkash</option>
+          <option value="Nagad">Nagad</option>
+          <option value="opai">Opai</option>
+          <option value="card">Card</option>
+          
+        </select></div><br> <br>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>

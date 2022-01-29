@@ -36,11 +36,11 @@
       
       <th scope="col">Mechanic Name</th>
       <th scope="col">Email</th>
-     
       <th scope="col">Phone</th>
       <th scope="col">Address</th>
       <th scope="col">Work Experience</th>
       <th scope="col">Amount</th>
+      <th scope="col">Payment Method</th>
       <th scope="col">Status</th>
       <th scope="col">Image</th>
       <th scope="col">Action</th>
@@ -57,6 +57,7 @@
       <td>{{$x->address}}</td>
       <td>{{$x->workexperience}}</td>
       <td>{{$x->amount}}</td>
+      <td>{{$x->payment_method}}</td>
       <td>{{$x->status}}</td>
       <td>
         <img src="{{url('/uploads/'.$x->image)}}"width="100px" alt="mechanic">

@@ -4,7 +4,7 @@
 
 <style>
     body {
-  background:url('http://cdn.wallpapersafari.com/13/6/Mpsg2b.jpg');
+  background-color: rgb(110, 97, 117);
   margin:0px;
   font-family: 'Ubuntu', sans-serif;
 	background-size: 100% 110%;
@@ -113,17 +113,15 @@ h1, h2, h3, h4, h5, h6, a {
           <h3>Email</h3>
           <input name='email' type="text" placeholder="email"/><br>
           <h3>Password:</h3>
-          <input name='password' type="password" placeholder="Password"/>
+          <input name='password' type="password" placeholder="password"/>
           <br>
           <br>
           <button >login</button>
           <br>
-          <h6 class="no-access">Can't access your account?</h6>
+          
         </div>
       </div>
-      <div class="error-page">
-        <div class="try-again">Error: Try again?</div>
-      </div>
+      
     </form>
   </div>
   <div class="col-md-2"></div>

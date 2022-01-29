@@ -23,21 +23,7 @@
                   </div>
                   <div class="first-screen__btns" data-uk-slideshow-parallax="x: 200,-200">
 
-                   
-                    {{-- <a class="uk-button uk-button-danger uk-button-large" href="{{route('website.user.profile')}}" data-uk-icon="triangle-right"></a>
-                    <a class="uk-button uk-button-danger uk-button-large" href="{{route('admin.request')}}" data-uk-icon="triangle-right">Request</a>
-                    <a class="uk-button uk-button-default uk-button-large" href="{{route('website.myrequest')}}" data-uk-icon="triangle-right"></a>
-                   
-                   <a class="uk-button uk-button-default uk-button-large" href="{{route('website.deposite')}}" data-uk-icon="triangle-right"></a>
-               
-                    <a class="uk-button uk-button-default uk-button-large" href="{{route('user.logout')}}" data-uk-icon="triangle-right">Logout</a>
-                    
-                    
-
-                   
-                    <a class="uk-button uk-button-default uk-button-large" href="{{route('website.login')}}" data-uk-icon="triangle-right">Login</a>
-
-                  --}}
+                  
                   </div>
                 </div>
               </div>
@@ -47,22 +33,11 @@
                 <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left"><img src="https://pro-theme.com/html/cardan/assets/img/slideshow-home-2.jpg" alt data-uk-cover></div>
                 <div class="uk-position-center-left uk-position-small uk-text-left uk-width-1-1">
                   <div class="uk-container uk-width-1-1">
-                      <div class="uk-h2">We Make Your Vehicle<br> In Good Shape</div><span>Minim veniam quis nostrud exercitation ullamco laboris nisu<br> ex sed ipsum ea reprehen deritin voluptate.</span>
+                      <div class="uk-h2">We Make Your Vehicle<br> In Good Shape</div>
                     </div>
                     <div class="first-screen__btns" data-uk-slideshow-parallax="x: 200,-200">
                       
                       
-                      {{-- @if(auth()->user())
-                      <a class="uk-button uk-button-danger uk-button-large" href="{{route('admin.request')}}" data-uk-icon="triangle-right">Request</a>
- 
-                    <a class="uk-button uk-button-default uk-button-large" href="{{route('user.logout')}}" data-uk-icon="triangle-right">Logout</a>
-
-                    <a class="uk-button uk-button-default uk-button-large" href="{{route('website.myrequest')}}" data-uk-icon="triangle-right">Myrequest</a>
-                    <a class="uk-button uk-button-default uk-button-large" href="{{route('website.deposite')}}" data-uk-icon="triangle-right">Mechanics panel</a>
-                    @else
-                    <a class="uk-button uk-button-default uk-button-large" href="{{route('website.login')}}" data-uk-icon="triangle-right">Login</a>
-
-                    @endif --}}
                   </div>
                   </div>
                 </div>
@@ -135,8 +110,8 @@
               <p>Kiusmod tempor incididunt ut labore sed dolore magnas aliquay enim ad minim veniam quis nostrud exercitation ullamco laboris nisut aliquip ex sed ipsum ea reprehen deritin voluptate.</p>
             </div>
           </div>
-          <div><img class="uk-width-1-1" src="https://pro-theme.com/html/cardan/assets/img/img-about-2.jpg" alt="img-about-2"></div>
-          <div class="uk-visible@l"><img class="uk-width-1-1" src="https://pro-theme.com/html/cardan/assets/img/img-about-3.jpg" alt="img-about-3"></div>
+          {{-- <div><img class="uk-width-1-1" src="https://pro-theme.com/html/cardan/assets/img/img-about-2.jpg" alt="img-about-2"></div> --}}
+          {{-- <div class="uk-visible@l"><img class="uk-width-1-1" src="https://pro-theme.com/html/cardan/assets/img/img-about-3.jpg" alt="img-about-3"></div>
           <div>
             <ul class="list-checked">
               <li>Top rated excellent reviews from customers</li>
@@ -145,14 +120,14 @@
               <li>Get our lifetime gurantee service works</li>
               <li>Offering 1500+ services locations around USA</li>
             </ul>
-          </div>
+          </div> --}}
         </div>
       </div>
     </div>
-    <div class="section-partners uk-section-large">
+    {{-- <div class="section-partners uk-section-large">
       <div class="uk-container">
         <div class="partners-title">
-          {{-- <h3 class="uk-h2">CARDAN</h3><span>Trusted by our millions of satisfied partners</span> --}}
+          <h3 class="uk-h2">CARDAN</h3><span>Trusted by our millions of satisfied partners</span>
         </div>
         <div data-uk-slider>
           <div class="uk-position-relative" tabindex="-1">
@@ -449,7 +424,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
     {{-- <div class="section-types-of-cars uk-section-large">
       <div class="uk-container">
         <div class="section-title uk-text-center"><span>Fixing Any Kind Of Vehicles At Cardan</span>
@@ -537,56 +512,56 @@
               <div>
                 <div class="project-item uk-inline-clip uk-transition-toggle uk-light"><a href="#!"> <img class="uk-width-1-1" src="https://pro-theme.com/html/cardan/assets/img/img-project-1.jpg" alt="project">
                     <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle uk-flex-column"><span data-uk-icon="icon: plus; ratio: 2"></span>
-                      <div class="uk-h4">Tyre Change</div><span>Auto Repair</span>
+                      <div class="uk-h4">Tyre Change</div>
                     </div>
                   </a></div>
               </div>
               <div>
                 <div class="project-item uk-inline-clip uk-transition-toggle uk-light"><a href="#!"> <img class="uk-width-1-1" src="https://pro-theme.com/html/cardan/assets/img/img-project-2.jpg" alt="project">
                     <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle uk-flex-column"><span data-uk-icon="icon: plus; ratio: 2"></span>
-                      <div class="uk-h4">Tyre Change</div><span>Auto Repair</span>
+                      <div class="uk-h4">Tool Fix</div>
                     </div>
                   </a></div>
               </div>
               <div>
                 <div class="project-item uk-inline-clip uk-transition-toggle uk-light"><a href="#!"> <img class="uk-width-1-1" src="https://pro-theme.com/html/cardan/assets/img/img-project-3.jpg" alt="project">
                     <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle uk-flex-column"><span data-uk-icon="icon: plus; ratio: 2"></span>
-                      <div class="uk-h4">Tyre Change</div><span>Auto Repair</span>
+                      <div class="uk-h4">Change Engine oil</div>
                     </div>
                   </a></div>
               </div>
               <div>
                 <div class="project-item uk-inline-clip uk-transition-toggle uk-light"><a href="#!"> <img class="uk-width-1-1" src="https://pro-theme.com/html/cardan/assets/img/img-project-4.jpg" alt="project">
                     <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle uk-flex-column"><span data-uk-icon="icon: plus; ratio: 2"></span>
-                      <div class="uk-h4">Tyre Change</div><span>Auto Repair</span>
+                      <div class="uk-h4">Brake Repair</div>
                     </div>
                   </a></div>
               </div>
               <div>
                 <div class="project-item uk-inline-clip uk-transition-toggle uk-light"><a href="#!"> <img class="uk-width-1-1" src="https://pro-theme.com/html/cardan/assets/img/img-project-5.jpg" alt="project">
                     <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle uk-flex-column"><span data-uk-icon="icon: plus; ratio: 2"></span>
-                      <div class="uk-h4">Tyre Change</div><span>Auto Repair</span>
+                      <div class="uk-h4">Filter Replacement</div>
                     </div>
                   </a></div>
               </div>
               <div>
                 <div class="project-item uk-inline-clip uk-transition-toggle uk-light"><a href="#!"> <img class="uk-width-1-1" src="https://pro-theme.com/html/cardan/assets/img/img-project-6.jpg" alt="project">
                     <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle uk-flex-column"><span data-uk-icon="icon: plus; ratio: 2"></span>
-                      <div class="uk-h4">Tyre Change</div><span>Auto Repair</span>
+                      <div class="uk-h4">Checking Lights</div>
                     </div>
                   </a></div>
               </div>
               <div>
                 <div class="project-item uk-inline-clip uk-transition-toggle uk-light"><a href="#!"> <img class="uk-width-1-1" src="https://pro-theme.com/html/cardan/assets/img/img-project-7.jpg" alt="project">
                     <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle uk-flex-column"><span data-uk-icon="icon: plus; ratio: 2"></span>
-                      <div class="uk-h4">Tyre Change</div><span>Auto Repair</span>
+                      <div class="uk-h4">Fuel Filter</div>
                     </div>
                   </a></div>
               </div>
               <div>
                 <div class="project-item uk-inline-clip uk-transition-toggle uk-light"><a href="#!"> <img class="uk-width-1-1" src="https://pro-theme.com/html/cardan/assets/img/img-project-8.jpg" alt="project">
                     <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-default uk-flex uk-flex-center uk-flex-middle uk-flex-column"><span data-uk-icon="icon: plus; ratio: 2"></span>
-                      <div class="uk-h4">Tyre Change</div><span>Auto Repair</span>
+                      <div class="uk-h4">Engine fix</div>
                     </div>
                   </a></div>
               </div>
@@ -708,7 +683,7 @@
             <div class="stat-item">
               <div class="stat-item__top">
                 <div class="stat-item__icon"><img src="https://pro-theme.com/html/cardan/assets/img/ico-stat-1.png" alt="ico-stat"></div>
-                <div class="stat-item__value">900+</div>
+                <div class="stat-item__value">500+</div>
               </div>
               <div class="stat-item__title">Vehicles repaired</div>
             </div>
@@ -717,7 +692,7 @@
             <div class="stat-item">
               <div class="stat-item__top">
                 <div class="stat-item__icon"><img src="https://pro-theme.com/html/cardan/assets/img/ico-stat-2.png" alt="ico-stat"></div>
-                <div class="stat-item__value">45+</div>
+                <div class="stat-item__value">20+</div>
               </div>
               <div class="stat-item__title">Workshop network</div>
             </div>
@@ -726,7 +701,7 @@
             <div class="stat-item">
               <div class="stat-item__top">
                 <div class="stat-item__icon"><img src="https://pro-theme.com/html/cardan/assets/img/ico-stat-3.png" alt="ico-stat"></div>
-                <div class="stat-item__value">680+</div>
+                <div class="stat-item__value">500+</div>
               </div>
               <div class="stat-item__title">happy customers</div>
             </div>
@@ -735,7 +710,7 @@
             <div class="stat-item">
               <div class="stat-item__top">
                 <div class="stat-item__icon"><img src="https://pro-theme.com/html/cardan/assets/img/ico-stat-4.png" alt="ico-stat"></div>
-                <div class="stat-item__value">27+</div>
+                <div class="stat-item__value">20+</div>
               </div>
               <div class="stat-item__title">expert technicians</div>
             </div>
@@ -743,91 +718,7 @@
         </div>
       </div>
     </div>
-    <div class="section-news uk-section-large">
-      <div class="uk-container">
-        <div class="section-title"><span>Read What’s Happening At Cardan</span>
-          <h3 class="uk-h2">Latest News & Updates</h3><a class="uk-button uk-button-default uk-button-large" href="https://pro-theme.com/html/cardan/page-blog.html" data-uk-icon="triangle-right">Read more news</a>
-        </div>
-        <div class="section-content">
-          <div class="blog-slider" data-uk-slider>
-            <div class="uk-position-relative" tabindex="-1">
-              <ul class="uk-slider-items uk-grid uk-grid-medium uk-child-width-1-2@s uk-child-width-1-3@m">
-                <li>
-                  <div class="blog-item blog-item--slider">
-                    <div class="blog-item__media"><a href="#!"><img src="https://pro-theme.com/html/cardan/assets/img/blog-1.jpg" alt="Generator Components Which You Should Know"></a>
-                      <div class="blog-item__category">Auto repair</div>
-                    </div>
-                    <div class="blog-item__body">
-                      <div class="blog-item__info">
-                        <div class="blog-item__date">January 31, 2021</div>
-                        <div class="blog-item__author">By <a href="#!">Smith Henry</a></div>
-                      </div>
-                      <div class="blog-item__title">Generator Components Which You Should Know</div>
-                      <div class="blog-item__intro">Magna aliqua umt enimd mini venia quis ulamco aliquip commodo cons equat duis aute irue derit ...</div>
-                    </div>
-                    <div class="blog-item__bottom"> <a class="uk-button-link" href="#!" data-uk-icon="triangle-right">Read More </a></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="blog-item blog-item--slider">
-                    <div class="blog-item__media"><a href="#!"><img src="https://pro-theme.com/html/cardan/assets/img/blog-2.jpg" alt="We Do Auto Repair And Inspection Commitment"></a>
-                      <div class="blog-item__category">maintenance</div>
-                    </div>
-                    <div class="blog-item__body">
-                      <div class="blog-item__info">
-                        <div class="blog-item__date">January 31, 2021</div>
-                        <div class="blog-item__author">By <a href="#!">Smith Henry</a></div>
-                      </div>
-                      <div class="blog-item__title">We Do Auto Repair And Inspection Commitment</div>
-                      <div class="blog-item__intro">Magna aliqua umt enimd mini venia quis ulamco aliquip commodo cons equat duis aute irue derit ...</div>
-                    </div>
-                    <div class="blog-item__bottom"> <a class="uk-button-link" href="#!" data-uk-icon="triangle-right">Read More </a></div>
-                  </div>
-                </li>
-                <li>
-                  <div class="blog-item blog-item--slider">
-                    <div class="blog-item__media"><a href="#!"><img src="https://pro-theme.com/html/cardan/assets/img/blog-3.jpg" alt="Inadequate Engine Oil Will Cause Damage The Parts"></a>
-                      <div class="blog-item__category">car engine</div>
-                    </div>
-                    <div class="blog-item__body">
-                      <div class="blog-item__info">
-                        <div class="blog-item__date">January 31, 2021</div>
-                        <div class="blog-item__author">By <a href="#!">Smith Henry</a></div>
-                      </div>
-                      <div class="blog-item__title">Inadequate Engine Oil Will Cause Damage The Parts</div>
-                      <div class="blog-item__intro">Magna aliqua umt enimd mini venia quis ulamco aliquip commodo cons equat duis aute irue derit ...</div>
-                    </div>
-                    <div class="blog-item__bottom"> <a class="uk-button-link" href="#!" data-uk-icon="triangle-right">Read More </a></div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin-medium-top"></ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    {{-- <div class="section-subscribe">
-      <div class="section-subscribe__content">
-        <div class="uk-container">
-          <div class="subscribe-box">
-            <div class="uk-grid uk-flex-middle uk-child-width-1-2@m" data-uk-grid>
-              <div>
-                <div class="section-title">
-                  <div class="uk-h2">Newsletter Subscription</div><span>Get Latest Auto News & Updates Directly To Inbox</span>
-                </div>
-              </div>
-              <div>
-                <div class="subscribe-box__form">
-                  <form action="#!">
-                    <div class="uk-flex uk-flex-middle"><input class="uk-input uk-form-large" type="email" name="email" placeholder="Write your email ..."><button class="uk-button uk-button-danger uk-button-large" type="submit" data-uk-icon="triangle-right">Subscribe</button></div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> --}}
+    
     </div>
   </main>
 @endsection

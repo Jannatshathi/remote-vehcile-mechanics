@@ -10,8 +10,7 @@
     </h1>
   </div>
 </div>
-
-
+@if (auth()->user()->role=='admin')
 
 <div class="d-flex justify-content-around">
   <div class="card" style="width: 18rem;">
@@ -38,6 +37,7 @@
       <a href="{{route('admin.service.list')}}" class="btn btn-primary">View</a>
     </div>
   </div>
+  @endif
   <div class="card" style="width: 18rem;">
     <div class="card-body">
       <h5 class="card-title">Request</h5>
@@ -45,7 +45,7 @@
       <a href="{{route('admin.mechanics.list')}}" class="btn btn-primary">View</a>
     </div>
   </div>
-  
+  @if (auth()->user()->role=='admin')
 </div>
 <div class="d-flex justify-content-around">
   <div class="card" style="width: 18rem;">
@@ -55,7 +55,7 @@
       <a href="{{route('admin.mechanics.list')}}" class="btn btn-primary">View</a>
     </div>
   </div>
-  
+  @endif
 </div>
 
 @endsection

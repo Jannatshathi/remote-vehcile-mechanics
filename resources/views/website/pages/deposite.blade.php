@@ -1,27 +1,16 @@
 @extends('website.master')
 @section('content')
+
 @if(session()->has('success'))
     <p class="alert alert-success">
       {{session()->get('success')}}
     </p>
     @endif
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-</head>
-<body>
-  
-  <div class="container">
+
     <h1><b>Deposite</b></h1>
    
-    <hr>
 
     
     @if ($errors->any())
@@ -40,6 +29,7 @@
      
       @csrf
       @method("PATCH")
+      
         <div class="form-group">
           <label for="name" style="font-size:20px;"><b>Remark</label></b>
           <input type="text" class="form-control" id="name"  value="{{$dep->remark}}" name="remark">
@@ -53,24 +43,26 @@
         
 
         <div class="form-group">
-          <label for="address" style="font-size:20px;"><b>Amount</label></b>
-          <input type="text" class="form-control" id="address"  value="{{$dep->amount}}" name="amount">
+          <label for="amount" style="font-size:20px;"><b>Amount</label></b>
+          <input type="number" class="form-control" id="amount"  value="{{$dep->amount}}" name="amount">
          
         </div>
 
-    {{-- <div class="form-group">
-      <label for="amount" style="font-size:20px;"><b>Reciept</label></b>
-      <input type="file" class="form-control" id="amount"  placeholder="Enter the receipt" name='image'>
+        <div class="form-group">
+          <label for="method" style="font-size:20px;"><b>Payment Method</label></b>
+          <input type="text" class="form-control" id="method"  value="{{$dep->payment_method}}" name="payment_method  ">
+         
+        </div>
+        
+     <br><br>
+     <div style="margin-top: 5px;">
+      <button type="submit" class="btn btn-success">Submit</button>
+     </div>
+    
      
-    </div> --}}
-     
-    <button type="submit" class="button btn-submit">Submit</button>
-     
-    </div>
    
 </form>   
-<br> 
-</body>
-</html>
+
+</div>
     
 @endsection

@@ -2,21 +2,7 @@
     <div class="page-header__top">
       <div class="uk-container uk-container-xlarge">
         <div class="page-header__inner">
-          {{-- <div class="page-header__top-left">
-            <ul>
-              <li><i class="fas fa-map-marker-alt"></i><span>1138  Havanna St, San Francisco <b>CA 94108</b></span></li>
-              <li><i class="far fa-clock"></i><span>Working Hours <b>Mon to Sat  9am - 7pm</b>  Sunday <b>Closed</b></span></li>
-            </ul>
-          </div> --}}
-          {{-- <div class="page-header__top-right">
-            <ul class="social">
-              <li class="social-item"><a class="social-item__link" href="#!"><i class="fab fa-twitter"></i></a></li>
-              <li class="social-item"><a class="social-item__link" href="#!"><i class="fab fa-facebook-f"></i></a></li>
-              <li class="social-item"><a class="social-item__link" href="#!"><i class="fab fa-google-plus-g"></i></a></li>
-              <li class="social-item"><a class="social-item__link" href="#!"><i class="fab fa-youtube"></i></a></li>
-              <li class="social-item"><a class="social-item__link" href="#!"><i class="fab fa-pinterest-p"></i></a></li>
-            </ul><a class="search-btn" href="#modal-search" data-uk-search-icon data-uk-toggle></a>
-          </div> --}}
+        
         </div>
       </div>
     </div>
@@ -31,18 +17,8 @@
                 <li><a href="{{route('webhome')}}">Home</a>
                  
                 </li>
-                <li><a href="#">About us</a></li>
-                <li><a href="{{route('website.service.list')}}">Services<span data-uk-icon="chevron-down"></span></a>
-                  <div class="uk-navbar-dropdown">
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                      {{-- <li><a href="https://pro-theme.com/html/cardan/page-services-grid.html">Services Grid</a></li> --}}
-                      {{-- <li><a href="https://pro-theme.com/html/cardan/page-services-list.html">Services List</a></li> --}}
-                      {{-- <li><a href="https://pro-theme.com/html/cardan/page-services-article.html">Services Single</a></li> --}}
-                    </ul>
-                  </div>
-                </li>
-                {{-- <li><a href="{{route('website.mechanics.list')}}">Our Machanics<span data-uk-icon="chevron-down"></span></a> --}}
-                </li>
+                
+                <li><a href="{{route('website.service.list')}}">Services</a>
                 
                 <li><a href="{{route('website.vehcile.list')}}">Vehicle</a></li>
                 
