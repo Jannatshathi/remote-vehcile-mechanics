@@ -42,7 +42,7 @@
     <div class="card-body">
       <h5 class="card-title">Request</h5>
       {{$all['requests']}}
-      <a href="{{route('admin.mechanics.list')}}" class="btn btn-primary">View</a>
+      <a href="{{route('admin.request.list')}}" class="btn btn-primary">View</a>
     </div>
   </div>
   @if (auth()->user()->role=='admin')
@@ -52,7 +52,7 @@
     <div class="card-body">
       <h5 class="card-title">Deposite</h5>
       {{$all['deposites']}}
-      <a href="{{route('admin.mechanics.list')}}" class="btn btn-primary">View</a>
+      <a href="{{route('admin.deposite.list')}}" class="btn btn-primary">View</a>
     </div>
   </div>
   @endif
