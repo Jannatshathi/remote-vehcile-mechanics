@@ -69,7 +69,7 @@
           <label for="exampleInputPassword1" class="form-label">Image</label>
           <input name="image_name" type="file" class="form-control" id="exampleInputPassword1">
         </div>
-        <div>
+        {{-- <div>
         <label for="category">Payment method</label><br>
         <select id="category" name="payment">
           <option value="Payment">Pay</option>
@@ -78,7 +78,7 @@
           <option value="opai">Opai</option>
           <option value="card">Card</option>
           
-        </select></div><br>
+        </select></div><br> --}}
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>

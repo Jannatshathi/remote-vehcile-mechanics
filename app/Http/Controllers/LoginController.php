@@ -40,7 +40,7 @@ class LoginController extends Controller
             'address'=>$request->address,
             'workexperience'=>$request->workexperience,
             'amount'=>$request->amount,
-            'payment'=>$request->payment,
+            // 'payment'=>$request->payment,
             // 'status'=>$request->status 
         ]);
         

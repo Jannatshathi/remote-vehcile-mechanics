@@ -24,6 +24,7 @@
 <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Request List
 </button>
+<div id="printreciept">
 <form action="{{route('admin.report')}}"  method="GET" style="text-align:center;">
   <div class="row" >
 
@@ -37,6 +38,7 @@
       <input name="todate" type="date" class="form-control" id="todate" >
     </div>
       
+    
       <div class="col-3 mt-5 pt-2">
           <button  type="submit" class="btn btn-success btn-sm">Search</button>
       </div>
@@ -67,4 +69,15 @@
     @endforeach
   </tbody>
 </table>
+<button style="float: right;" class="btn btn-primary" type="submit" onClick="PrintDiv('printreciept');" value="Print">Print</button>
+ </div>
+ <script language="javascript">
+  function PrintDiv(divName) {
+      var printContents = document.getElementById(divName).innerHTML;
+      var originalContents = document.body.innerHTML;
+      document.body.innerHTML = printContents;
+      window.print();
+      document.body.innerHTML = originalContents;
+  }
+  </script>
 @endsection

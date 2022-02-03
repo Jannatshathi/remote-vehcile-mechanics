@@ -43,13 +43,13 @@
         </div>
 
 
-        <label for="category">Service Type</label><br>
+        <label for="category">Services</label><br>
         <select id="category" name="service_id">
-          <option value="Service type">Service type</option>
-          <option value="1" placeholder="washing" >Washing</option>
-          <option value="2" placeholder="repair" >Repair</option>
+          <option value="Service type">Service</option>
+          <option value="1" placeholder="washing" >Car Washing</option>
+          <option value="2" placeholder="repair" >Glass Repair</option>
           <option value="3" placeholder="tool fix">Tool fix</option>
-          <option value="4"placeholder="parts change">Parts Change</option>
+          <option value="4"placeholder="parts change">Tyre puncture</option>
           <option value="Others Services">Others Services</option>
           
         </select><br> <br>

@@ -7,7 +7,7 @@ use App\Models\Service;
 use App\Models\Myrequest;
 use Illuminate\Http\Request;
 use App\Models\Request_service;
-use Illuminate\Support\Facades\Auth;
+// use Illuminate\Support\Facades\Auth;
 
 
 class RequestController extends Controller
@@ -17,16 +17,16 @@ class RequestController extends Controller
     }
 
     public function requestList(){
-        if(Auth::User()->role=='admin')
-        {
-            $request=Myrequest::all();
-        }
-        else 
-        {
+        // if(Auth::User()->role=='admin')
+        // {
+             $request=Myrequest::all();
+        // }
+        // else 
+        // {
 
-            $request=Myrequest::where('mechanics_id', Auth::User()->id)->get();
-            //dd($request);
-        }
+        //     $request=Myrequest::where('mechanics_id', Auth::User()->id)->get();
+        //     //dd($request);
+        // }
         
         // dd($request);
         return view('admin.pages.request-list',compact('request'));
