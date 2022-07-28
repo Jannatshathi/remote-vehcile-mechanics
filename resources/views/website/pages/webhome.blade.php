@@ -53,7 +53,7 @@
         </div>
       </div>
     </div>
-    <div class="section-features uk-section-large">
+    {{-- <div class="section-features uk-section-large">
       <div class="uk-container">
         <div data-uk-slider>
           <div class="uk-position-relative" tabindex="-1">
@@ -69,13 +69,13 @@
                 </div>
               </li>
               <li>
-                <div class="feature-item">
-                  <div class="feature-item__icon"><img src="https://pro-theme.com/html/cardan/assets/img/ico-feature-2.svg" alt="ico-feature" data-uk-svg></div>
-                  <div class="feature-item__desc">
-                    <div class="feature-item__title">Trusted Workshop</div>
-                    <div class="feature-item__text">Enim venia quis nostrud exrcit ulamco laboris nsut aliquip com conseq reprehenderit.</div>
-                    <div class="feature-item__more"> <a class="uk-button-link" href="#!" data-uk-icon="triangle-right">Read More </a></div>
-                  </div>
+                  <div class="feature-item">
+                    <div class="feature-item__icon"><img src="https://pro-theme.com/html/cardan/assets/img/ico-feature-2.svg" alt="ico-feature" data-uk-svg></div>
+                    <div class="feature-item__desc">
+                      <div class="feature-item__title">Trusted Workshop</div>
+                      <div class="feature-item__text">We can refe</div>
+                      <div class="feature-item__more"> <a class="uk-button-link" href="#!" data-uk-icon="triangle-right">Read More </a></div>
+                    </div> 
                 </div>
               </li>
               <li>
@@ -83,8 +83,8 @@
                   <div class="feature-item__icon"><img src="https://pro-theme.com/html/cardan/assets/img/ico-feature-3.svg" alt="ico-feature" data-uk-svg></div>
                   <div class="feature-item__desc">
                     <div class="feature-item__title">Service Any Vehicle</div>
-                    <div class="feature-item__text">Enim venia quis nostrud exrcit ulamco laboris nsut aliquip com conseq reprehenderit.</div>
-                    <div class="feature-item__more"> <a class="uk-button-link" href="#!" data-uk-icon="triangle-right">Read More </a></div>
+                    <div class="feature-item__text">We provide the diffrent type of vehicle services.</div>
+                    {{-- <div class="feature-item__more"> <a class="uk-button-link" href="#!" data-uk-icon="triangle-right">Read More </a></div> --}}
                   </div>
                 </div>
               </li>
@@ -92,7 +92,7 @@
           </div>
           <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin-top"></ul>
         </div>
-      </div>
+      </div> 
     </div>
     <div class="section-about uk-section-large">
       <div class="uk-container">
@@ -107,7 +107,7 @@
               <h3 class="uk-h2">We’re Committed To Repair<br> Meets The Quality Standards</h3>
             </div>
             <div class="section-content">
-              <p>Kiusmod tempor incididunt ut labore sed dolore magnas aliquay enim ad minim veniam quis nostrud exercitation ullamco laboris nisut aliquip ex sed ipsum ea reprehen deritin voluptate.</p>
+              <p>The services we provide, we try to give our best to fulfill the  customer requirements.</p>
             </div>
           </div>
           {{-- <div><img class="uk-width-1-1" src="https://pro-theme.com/html/cardan/assets/img/img-about-2.jpg" alt="img-about-2"></div> --}}
@@ -570,7 +570,7 @@
         </div>
       </div>
     </div>
-    <div class="section-reviews uk-section-large">
+    {{-- <div class="section-reviews uk-section-large">
       <div class="uk-container">
         <div class="section-title uk-text-center"><span>We Promise You To Give Best Repair Services</span>
           <h3 class="uk-h2">Nicest Words From Customers</h3>
@@ -583,7 +583,7 @@
                   <div class="review-item">
                     <div class="review-item__box">
                       <div class="review-item__body">
-                        <div class="review-item__title">Satisfied With The Workshop Facilities At Cardan Auto Repair Workshop</div>
+                        <div class="review-item__title">Satisfied With their services</div>
                         <div class="review-item__text">At dolore magna aliqua umt enim ad mini veniam quis ulamco aliquip commodo da consequat duis aute irue derit voluptate cillum dolore afugiat.</div>
                       </div>
                       <div class="review-item__user">
@@ -674,9 +674,9 @@
             <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin-medium-top"></ul>
           </div>
         </div>
-      </div>
+      </div> --}}
     </div>
-    <div class="section-stats">
+    {{-- <div class="section-stats">
       <div class="section-stats__shape">
         <div class="uk-grid uk-grid-large uk-child-width-auto uk-flex-center">
           <div>
@@ -717,7 +717,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
     
     </div>
   </main>
