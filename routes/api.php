@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\ServicetypeController;
 use App\Http\Controllers\Api\UserController;
+use App\Models\Servicetype;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,4 +24,8 @@ Route::get('/users',[UserController::class,'index']);
 Route::post('/users/create',[UserController::class,'create']);
 Route::delete('/users/delete/{id}',[UserController::class, 'delete']);
 Route::post('/users/update/{id}',[UserController::class, 'update']);
+//servicetype
 Route::get('/servicetype',[ServicetypeController::class,'index']);
+Route::post('/servicetype/create',[ServicetypeController::class,'create']);
+Route::post('/servicetype/update/{id}',[ServicetypeController::class,'update']);
+Route::delete('/servicetype/delete/{id}',[ServicetypeController::class,'delete']);
