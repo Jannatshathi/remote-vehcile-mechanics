@@ -21,6 +21,7 @@ class Service_typeController extends Controller
     }
     public function servicetypelist(){
         $stype=Servicetype::all();
+        $stype = Servicetype::paginate(5);
 
         return view('admin.pages.service.service-type-list',compact('stype'));
     }

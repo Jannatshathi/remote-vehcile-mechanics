@@ -29,4 +29,5 @@
       @endforeach
     </tbody>
   </table>
+  {{$stype->links()}}
 @endsection
