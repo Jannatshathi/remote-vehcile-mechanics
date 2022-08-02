@@ -10,12 +10,19 @@ use Throwable;
 class ServicetypeController extends Controller
 {
     public function index(){
-        $servicetypes = Servicetype::all();
-        if($servicetypes){
-            return $this->responseWithSuccess($servicetypes, "your request has been created successfully");
+        //$servicetypes = Servicetype::all();
+        // if($servicetypes){
+        //     return $this->responseWithSuccess($servicetypes, "your request has been created successfully");
+        // }
+        // else{
+        //     return $this->responseWithError($servicetypes, "your request has been failed");
+        // }
+        try{
+            $servicetypes = Servicetype::all();
+            return $this->responseWithSuccess($servicetypes, "your request has been proceed successfully");
         }
-        else{
-            return $this->responseWithError($servicetypes, "your request has been failed");
+        catch(\Throwable $th){
+            return $this->responseWithError($servicetypes, "your request has been denied");
         }
     }
     public function create(Request $request){
